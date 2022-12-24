@@ -15,7 +15,7 @@ const Home = () =>{
                         Hello, 
                     </BodyTitle>
                     <BodyTitle>
-                        My Name Is,
+                        My name is
                     </BodyTitle>
                     <BodyName>
                         John Leidy II
