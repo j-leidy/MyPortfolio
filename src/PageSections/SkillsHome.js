@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, IconText, IconWithText, SkillsBody, SkillsRow, SkillsTitle } from "./SkillsStyleHome";
+import { Icon, IconWithText, SkillsBody, SkillsRow, SkillsTitle } from "./SkillsStyleHome";
 
 import iconc from '../Icons/cpng.png';
 import iconsqlite from '../Icons/sqlitepng.png';

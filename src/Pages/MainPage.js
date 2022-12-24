@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton} from "../ComponentStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
-import ParticlesComponent from '../Components/Particles/Particles.js';
 import { WholePage } from "./MainPageStyle";
 
 class MainPage extends Component{
