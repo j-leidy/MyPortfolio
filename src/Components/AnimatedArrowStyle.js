@@ -26,6 +26,9 @@ export const Arrow = styled.div`
     animation-name: ${GlowAnim};
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    box-shadow: 20px 20px 0px -16px rgba(255,255,255,0.79);
+    -webkit-box-shadow: 20px 20px 0px -16px rgba(255,255,255,0.79);
+    -moz-box-shadow: 20px 20px 0px -16px rgba(255,255,255,0.79);
 `;
 
 export const TotalContainer = styled.div`

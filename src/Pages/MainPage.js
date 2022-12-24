@@ -5,6 +5,7 @@ import Home from '../PageSections/Home.js';
 
 
 import { WholePage } from "./MainPageStyle";
+import AnimArrow from "../Components/AnimatedArrow";
 
 class MainPage extends Component{
     constructor(){
@@ -79,6 +80,7 @@ class MainPage extends Component{
                 </MobileNav>
                 <WholePage>  
                     <Home id = "home"/>
+                    <AnimArrow/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                 </WholePage> 
             </>

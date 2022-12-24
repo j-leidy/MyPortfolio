@@ -2,7 +2,6 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Body, BodyTitle, BodyText, BodyName, BodyDetails, StaticText, PortraitContainer, Portrait, TypeWriterHolder, HomeContent, PortraitFullscreen} from "./HomeStyle";
 import TempPortrait from '../Images/TempPortrait.jpg'
-import AnimArrow from "../Components/AnimatedArrow";
 
 const Home = () =>{
     return(
@@ -41,7 +40,6 @@ const Home = () =>{
                 </BodyDetails>
             </HomeContent>
             <PortraitFullscreen src={TempPortrait}/>
-            <AnimArrow/>
         </Body>
         
     );
