@@ -18,6 +18,7 @@ export const Body = styled.div`
     }
     background: rgba(10, 10, 10, 0.95);
     margin-top: 10vh;
+    margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     color: #ffffff;
@@ -35,6 +36,7 @@ export const HomeContent = styled.div`
     flex-direction: column;
     align-items: left;
     margin-left: 30px;
+    margin: auto;
     width: 50%;
     @media screen and (max-width: 550px){
         background: none;
@@ -77,8 +79,8 @@ export const PortraitFullscreen = styled.img`
     padding: auto;
     border: 1px solid #32de84;
     border-radius: 50%;
-    width: 20%;
-    height: 20%;
+    width: 200px;
+    height: 200px;
     @media screen and (max-width: 550px){
         display: none;
     }

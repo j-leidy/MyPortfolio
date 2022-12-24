@@ -1,3 +1,13 @@
-html{
-  scrollbar-width: 0;
+
+.remove_scroll{
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  caret-color: transparent;
+  scrollbar-width: none;
+  overflow: auto;
+  scrollbar-track-color: black;
 }

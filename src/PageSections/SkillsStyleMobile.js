@@ -4,11 +4,8 @@ export const SkillsBody = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 50px;
-    border-radius: 28px;
-    @media screen and (max-width: 550px){
-        display: none;
-    }
+    background: #0A0A0A;
+    width: 100%;
 `;
 
 export const SkillsTitle = styled.div`

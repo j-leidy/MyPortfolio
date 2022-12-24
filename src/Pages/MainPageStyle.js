@@ -4,8 +4,9 @@ export const WholePage = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
+    width: auto;
     height: 100%;
     caret-color: transparent;
+    scrollbar-width: none;
     overflow: auto;
 `;

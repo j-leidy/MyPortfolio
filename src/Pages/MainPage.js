@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton} from "../ComponentStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
+
+
 import { WholePage } from "./MainPageStyle";
 
 class MainPage extends Component{
@@ -75,12 +77,10 @@ class MainPage extends Component{
 
                     </MobileNavBar>
                 </MobileNav>
-                <WholePage>
-                    
+                <WholePage>  
                     <Home id = "home"/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
-                </WholePage>
-                
+                </WholePage> 
             </>
         )
     }

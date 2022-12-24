@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, IconWithText, SkillsBody, SkillsRow, SkillsTitle } from "./SkillsStyleHome";
+import { Icon, IconWithText, SkillsBody, SkillsRow, SkillsTitle } from "./SkillsStyleMobile";
 
 import iconc from '../Icons/cpng.png';
 import iconsqlite from '../Icons/sqlitepng.png';
@@ -13,7 +13,7 @@ import reacticon from '../Icons/reacticon.png';
 
 
 
-const SkillsHome = () => {
+const SkillsMobile = () => {
     return(
         <SkillsBody>
             <SkillsTitle>
@@ -57,4 +57,4 @@ const SkillsHome = () => {
     );
 };
 
-export default SkillsHome;
+export default SkillsMobile;

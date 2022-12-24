@@ -5,10 +5,11 @@ import MainPage from './Pages/MainPage';
 
 function App() {
   return (
-    <>
+    <div className='remove_scroll'>
       <ParticlesComponent/>
+      
       <MainPage/>
-    </>
+    </div>
   );
 }
 
