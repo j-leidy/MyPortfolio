@@ -19,7 +19,7 @@ export const ArrowContainer = styled.div`
 `;
 
 export const Arrow = styled.div`
-z-index: -1;
+    z-index: -1;
     width: 50px;
     height: 50px;
     transform: rotate(45deg);

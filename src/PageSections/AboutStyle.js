@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AboutBody = styled.div`
+    z-index: -1;
     width: 80%;
     height: 100%;
     color: white;
@@ -10,6 +11,7 @@ export const AboutBody = styled.div`
     }
 `;
 export const AboutContent = styled.div`
+    z-index: -1;
     margin: auto;
     width: 50%;
     @media screen and (max-width: 550px){
@@ -17,6 +19,7 @@ export const AboutContent = styled.div`
     }
 `;
 export const AboutTitle = styled.div`
+    z-index: -1;
     transition: 5s all ease;
     margin: auto;
     text-align: center;
@@ -26,6 +29,7 @@ export const AboutTitle = styled.div`
 `;
 
 export const AboutParagraph = styled.div`
+    z-index: -1;
     transition: 5s all ease;
     text-indent: 10%;
     margin: auto;
