@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton} from "../ComponentStyling/NavBarStyle";
+import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton, MobileNavIconHolder} from "../ComponentStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
 
@@ -53,6 +53,7 @@ class MainPage extends Component{
             <>
                 <MobileNav >
                     <MobileNavBar>
+                        <MobileNavIconHolder/>
                         <BurgerCheckHolder active = {this.state.checked}>
                             <BurgerSpanOne active = {this.state.checked}></BurgerSpanOne>
                             <BurgerSpanTwo active = {this.state.checked}></BurgerSpanTwo>

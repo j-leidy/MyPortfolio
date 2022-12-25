@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DesktopSkillsBody = styled.div`
-    z-index: -1;
+    z-index: 1;
     transition: 3s all ease;
     background: #0A0A0A;
     width: 80%;
@@ -45,6 +45,12 @@ export const DesktopRowItemLeft = styled.div`
     align-items: left;
     border: 1px solid #32de84;
     border-radius: 20px;
+    :hover{
+        box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        background: #32de84;
+    }
 
 `;
 
@@ -57,6 +63,12 @@ export const DesktopRowItemRight = styled.div`
     align-items: right;
     border: 1px solid #32de84;
     border-radius: 20px;
+    :hover{
+        box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        background: #32de84;
+    }
 
 `;
 

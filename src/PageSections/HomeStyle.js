@@ -82,8 +82,8 @@ export const PortraitFullscreen = styled.img`
     padding: auto;
     border: 1px solid #32de84;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     @media screen and (max-width: 550px){
         display: none;
     }

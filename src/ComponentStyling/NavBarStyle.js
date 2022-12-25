@@ -1,10 +1,11 @@
 
 import styled from "styled-components";
 
-import TLSLogo from '../Icons/TempLogo.png';
+import navicon from '../Icons/testlefticon.png';
 
 export const MobileNav = styled.nav`
     z-index: 2;
+    transition: 3s all ease;
     position: fixed;
     top: 0;
     right: 0;
@@ -21,12 +22,27 @@ export const MobileNavBar = styled.div`
 `;
 
 export const MobileNavIconHolder = styled.div`
-    width: 20vw;
-    height: 100%;
-    background: url(${TLSLogo});
+    margin-left: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40px;
+    height: 40px;
+    background: url(${navicon});
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 50%;
+    border: 1px solid #32de84;
+
+    box-shadow: 0px 0px 5px 1px rgba(50,222,132,0.75);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(50,222,132,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(50,222,132,0.75);
+
+    @media screen and (max-width: 550px){
+        width: 30px;
+        height: 30px;
+        margin-left: 5%;
+    }
 `;
 
 
@@ -35,17 +51,17 @@ export const BurgerCheckHolder = styled.div`
     transition: all 0.53s ease;
     position: absolute;
     top: 1.5vh;
-    right: 7vw;
+    right: 5vw;
     
     display: flex;
-    width: 3vw;
-    height: 3vw;
+    width: 35px;
+    height: 30px;
 
     @media screen and (max-width: 550px){
         top: 1.5vh;
-        right: 7vw;
+        right: 4vw;
     }
-
+    
 
 `;
 
@@ -62,6 +78,7 @@ export const BurgerSpanOne = styled.span`
     border-radius: 3px;
     z-index: ${(props) => (props.active ? "3" : "2")};
     transform: ${(props) => (props.active ? "rotate(45deg)": '')};
+    
     
 `;
 export const BurgerSpanTwo = styled.span`
@@ -99,6 +116,7 @@ export const FakeCheckbox = styled.input`
         top: 5px;
         right: -5px;
     }
+    
     
 `;
 

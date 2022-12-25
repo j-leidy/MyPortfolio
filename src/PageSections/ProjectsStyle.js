@@ -78,6 +78,9 @@ export const ProjectsCard = styled.div`
         padding-right:0;
         border-radius: 10px;
         border: 1px solid #32de84;
+        box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
     }
     border-radius: 20px;
     border: 1px solid #32de84;
@@ -103,7 +106,7 @@ export const ProjectsImage = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    transition: 2s all ease;
+    transition: 1s all ease;
     :hover{
         background: #32de84;
     }
@@ -117,7 +120,7 @@ export const ProjectsImage = styled.img`
 
 
 export const ProjectsLink = styled.a`
-    transition: 2s all ease;
+    transition: 1s all ease;
     border-radius: 20px;
     
     :hover{
