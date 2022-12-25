@@ -15,6 +15,7 @@ export const AboutBody = styled.div`
 export const AboutContent = styled.div`
     z-index: -1;
     margin: auto;
+    padding-top: 6vh;
     width: 50%;
     @media screen and (max-width: 550px){
         width: 80%;
@@ -37,8 +38,10 @@ export const AboutParagraph = styled.div`
     margin: auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    font-size: 20px;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (max-width: 550px){
         text-indent: 20%;
+        font-size: 16px;
     }
 `;

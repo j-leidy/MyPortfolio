@@ -4,6 +4,7 @@ import styled from "styled-components";
 import TLSLogo from '../Icons/TempLogo.png';
 
 export const MobileNav = styled.nav`
+    z-index: 2;
     position: fixed;
     top: 0;
     right: 0;
@@ -59,7 +60,7 @@ export const BurgerSpanOne = styled.span`
     height: 5px;
     margin: 2px;
     border-radius: 3px;
-    z-index: ${(props) => (props.active ? "2" : "1")};
+    z-index: ${(props) => (props.active ? "3" : "2")};
     transform: ${(props) => (props.active ? "rotate(45deg)": '')};
     
 `;
@@ -84,14 +85,14 @@ export const BurgerSpanThree = styled.span`
     height: 5px;
     margin: 2px;
     border-radius: 3px;
-    z-index: ${(props) => (props.active ? "2" : "1")};
+    z-index: ${(props) => (props.active ? "3" : "2")};
     transform: ${(props) => (props.active ? "rotate(-45deg)": '')};
 
 `;
 
 export const FakeCheckbox = styled.input`
     position: absolute;
-    z-index: ${(props) => (props.active ? "3" : "2")};
+    z-index: ${(props) => (props.active ? "4" : "3")};
     transform: scale(4);
     opacity: 0;
     @media screen and (max-width: 550px){

@@ -1,4 +1,4 @@
-import React, {Component, createRef} from "react";
+import React, {Component} from "react";
 import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton} from "../ComponentStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
@@ -7,6 +7,7 @@ import Home from '../PageSections/Home.js';
 import { WholePage } from "./MainPageStyle";
 import AnimArrow from "../Components/AnimatedArrow";
 import About from "../PageSections/About";
+import Projects from "../PageSections/Projects";
 
 class MainPage extends Component{
     constructor(){
@@ -72,10 +73,13 @@ class MainPage extends Component{
                                     <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"about")}>About</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton href="/resume">Resume</MobileNavCardButton>
+                                    <MobileNavCardButton href="/resume">Experience</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton >Work</MobileNavCardButton>
+                                    <MobileNavCardButton >Projects</MobileNavCardButton>
+                                </MobileNavCardLinkDiv>
+                                <MobileNavCardLinkDiv>
+                                    <MobileNavCardButton >Contact</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                             </MobileNavCardLinkHolder>
                         </MobileNavCard>
@@ -87,6 +91,7 @@ class MainPage extends Component{
                     <AnimArrow/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                     <div className = "container" id="about"><About/></div>
+                    <div className = "container" id="projects"><Projects/></div>
                 </WholePage> 
             </>
         )
