@@ -24,25 +24,25 @@ class MainPage extends Component{
     handleCheckbox(event){
         if(event === true){
             //this is if the checkbox is checked
-            console.log(event,"  checked")
             this.setState({
                 checked : event
-            },() => {console.log("Call back when true: " , this.state.checked)})
+            },() => {})
         }
         if(event === false){
             //this is if the checkbox is not checked
-            console.log(event,"  not checked")
             this.setState({
                 checked : event
-            },() => {console.log("Call back when false: " , this.state.checked)})
+            },() => {})
         }
     };
     
 
     handleButtonClick = (e,sectionName) =>{
-        console.log(e)
         const target = document.getElementById(sectionName)
-        target.scrollIntoView()
+        target.scrollIntoView({behavior: "smooth"})
+        this.setState({
+            checked : false
+        })
     }
     
     render(){return(
@@ -63,10 +63,10 @@ class MainPage extends Component{
                         <MobileNavCard active = {this.state.checked}>
                             <MobileNavCardLinkHolder>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"WorkSection")}>Home</MobileNavCardButton>
+                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"home")}>Home</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton href="/contact">Contact</MobileNavCardButton>
+                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"about")}>About</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
                                     <MobileNavCardButton href="/resume">Resume</MobileNavCardButton>
@@ -80,10 +80,10 @@ class MainPage extends Component{
                     </MobileNavBar>
                 </MobileNav>
                 <WholePage>  
-                    <Home id = "home"/>
+                    <div className="container" id="home"><Home/></div>
                     <AnimArrow/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
-                    <About/>
+                    <div className = "container" id="about"><About/></div>
                 </WholePage> 
             </>
         )

@@ -38,16 +38,21 @@ export const SkillsTitleTwo = styled.div`
 `;
 
 export const SkillsRow = styled.div`
-
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
 `;
 
 const BackgroundAnim = keyframes`
-    0%{transform: rotate(0deg)}
-    50%{transform: rotate(180deg)}
-    100%{transform: ratate(360deg)}
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 `;
 
 export const IconWithText = styled.div`
@@ -59,21 +64,20 @@ export const IconWithText = styled.div`
     height: 50px;
     background: #0A0A0A;
     border-radius 50%;
-    right: 11%;
+    right: 8.5%;
     
 `;
 
 export const Glow = styled.div`
-    margin: 20px;
-    filter: blur(8px);
     border-radius: 50%;
+    filter: blur(2px);
     position: relative;
-    left: 5.5%;
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(90deg, rgba(50,222,132,1) 0%, rgba(255,255,255,1) 50%, rgba(69,252,238,1) 100%);
+    left: 8.5%;
+    width: 51px;
+    height: 51px;
+    background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 100%);
     animation-name: ${BackgroundAnim};
-    animation-duration: 10s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 `;
 export const IconText = styled.div`

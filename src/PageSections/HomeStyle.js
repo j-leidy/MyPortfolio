@@ -28,6 +28,8 @@ export const Body = styled.div`
     justify-content: center;
     align-items: left;
     z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
     
 
 `;

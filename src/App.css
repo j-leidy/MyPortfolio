@@ -11,3 +11,11 @@
   overflow: auto;
   scrollbar-track-color: black;
 }
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}

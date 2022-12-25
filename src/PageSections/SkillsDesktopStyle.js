@@ -5,6 +5,8 @@ export const DesktopSkillsBody = styled.div`
     transition: 2s all ease;
     background: #0A0A0A;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (max-width: 550px){
         display: none;
