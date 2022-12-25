@@ -64,6 +64,8 @@ export const ProjectsCard = styled.div`
     transition: 3s all ease;
     margin-top: 5vh;
     margin-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
     width: 100%;
     height: 100%;
     display: flex;
@@ -72,6 +74,8 @@ export const ProjectsCard = styled.div`
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (max-width: 550px){
         flex-direction: column;
+        padding-left:0;
+        padding-right:0;
     }
     
 `;

@@ -70,15 +70,13 @@ export const IconWithText = styled.div`
 
 export const Glow = styled.div`
     border-radius: 50%;
-    filter: blur(2px);
+    filter: blur(5px);
     position: relative;
     left: 8.5%;
     width: 51px;
     height: 51px;
-    background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 100%);
-    animation-name: ${BackgroundAnim};
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 53%, rgba(255,235,0,1) 76%, rgba(255,46,0,1) 100%);
+    animation: ${BackgroundAnim} 3s linear infinite;
 `;
 export const IconText = styled.div`
     text-align: center;
