@@ -130,6 +130,10 @@ export const BodyDetails = styled.div`
         font-size: 30px;
         flex-direction: row;
     }
+
+    @media screen and (max-width: 400px){
+        font-size: 27px;
+    }
     
 `;
 
