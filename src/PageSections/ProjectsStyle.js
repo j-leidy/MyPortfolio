@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const ProjectsBody = styled.div`
     z-index: 1;
@@ -46,6 +46,7 @@ export const ProjectsDescription = styled.div`
     @media screen and (max-width: 550px){
         display: none;
         font-size: 16px;
+
     }
 `;
 
@@ -82,23 +83,44 @@ export const ProjectsCard = styled.div`
 
 export const ProjectsCardTitle = styled.div`
     color: white;
+
     text-align: center;
     margin: auto;
+    margin-bottom: 2vh;
     padding: auto;
     width: 100%;
     height: 100%;
     font-size: 30px;
+
+    @media screen and (max-width: 550px){
+        text-align: left;
+    }
     
 `;
 
 export const ProjectsImage = styled.img`
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    transition: 2s all ease;
+    :hover{
+        background: #32de84;
+    }
     @media screen and (max-width: 550px){
         width: 100%;
         height: 100%;
     }
 `;
 
+
+
 export const ProjectsLink = styled.a`
+    transition: 2s all ease;
+    border-radius: 20px;
+    :hover{
+        box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        background: #32de84;
+    }
 `;

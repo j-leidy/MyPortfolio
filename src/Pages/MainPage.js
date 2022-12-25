@@ -73,10 +73,10 @@ class MainPage extends Component{
                                     <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"about")}>About</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton href="/resume">Experience</MobileNavCardButton>
+                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"projects")}>Projects</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton >Projects</MobileNavCardButton>
+                                    <MobileNavCardButton >Experience</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
                                     <MobileNavCardButton >Contact</MobileNavCardButton>
