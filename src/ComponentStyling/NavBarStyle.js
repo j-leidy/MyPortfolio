@@ -150,8 +150,10 @@ export const MobileNavCardLinkDiv = styled.div`
     height: auto;
     margin: auto;
     border-bottom: 1px solid #ffffff;
+    font-size: 20px;
     @media screen and (max-width: 550px){
         border: 0px;
+        font-size: 16px;
     }
 `;
 

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const ProjectsBody = styled.div`
     z-index: 1;
@@ -66,7 +66,6 @@ export const ProjectsCard = styled.div`
     margin-top: 5vh;
     margin-bottom: 2vh;
     padding-left: 2vw;
-    padding-right: 2vw;
     width: 100%;
     height: 100%;
     display: flex;
@@ -77,8 +76,11 @@ export const ProjectsCard = styled.div`
         flex-direction: column;
         padding-left:0;
         padding-right:0;
+        border-radius: 10px;
+        border: 1px solid #32de84;
     }
-    
+    border-radius: 20px;
+    border: 1px solid #32de84;
 `;
 
 export const ProjectsCardTitle = styled.div`
@@ -93,7 +95,6 @@ export const ProjectsCardTitle = styled.div`
     font-size: 30px;
 
     @media screen and (max-width: 550px){
-        text-align: left;
     }
     
 `;
@@ -109,6 +110,7 @@ export const ProjectsImage = styled.img`
     @media screen and (max-width: 550px){
         width: 100%;
         height: 100%;
+        border-radius: 10px;
     }
 `;
 
@@ -117,10 +119,15 @@ export const ProjectsImage = styled.img`
 export const ProjectsLink = styled.a`
     transition: 2s all ease;
     border-radius: 20px;
+    
     :hover{
         box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         background: #32de84;
+    }
+
+    @media screen and (max-width: 550px){
+        border-radius: 10px;
     }
 `;
