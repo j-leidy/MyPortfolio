@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DesktopSkillsBody = styled.div`
     z-index: -1;
-    transition: 5s all ease;
+    transition: 3s all ease;
     background: #0A0A0A;
     width: 80%;
     margin-left: auto;

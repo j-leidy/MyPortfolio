@@ -25,7 +25,7 @@ export const ProjectsContent = styled.div`
 export const ProjectsTitle = styled.div`
     width: 50%;
     z-index: -1;
-    transition: 5s all ease;
+    transition: 3s all ease;
     margin: auto;
     text-align: center;
     font-size: 30px;
@@ -61,7 +61,7 @@ export const ProjectsTitleDesContainer = styled.div`
 `;
 
 export const ProjectsCard = styled.div`
-    transition: 5s all ease;
+    transition: 3s all ease;
     margin-top: 5vh;
     margin-bottom: 2vh;
     width: 100%;

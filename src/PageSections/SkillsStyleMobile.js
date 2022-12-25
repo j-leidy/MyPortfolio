@@ -3,7 +3,7 @@ import { keyframes } from "styled-components";
 
 export const SkillsBody = styled.div`
     z-index: -1;
-    transition: 2s all ease;
+    transition: 3s all ease;
     display: flex;
     flex-direction: column;
     align-items: center;

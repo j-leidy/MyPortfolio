@@ -12,6 +12,9 @@ const Projects = () => {
     const ProjectsCardRefOne = useRef();
     const [CardOneVisible, setCardOneVisible] = useState();
 
+    const ProjectsCardRefTwo = useRef();
+    const [CardTwoVisible, setCardTwoVisible] = useState();
+
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setTitleVisible(entry.isIntersecting)
@@ -23,7 +26,14 @@ const Projects = () => {
             console.log(CardOneVisible)
         });
         observerCardOne.observe(ProjectsCardRefOne.current)
-    },[ProjectsTitleRef,TitleVisible,ProjectsCardRefOne,CardOneVisible]);
+        const observerCardTwo = new IntersectionObserver(([entry])=>{
+            setCardTwoVisible(entry.isIntersecting)
+            console.log(CardTwoVisible)
+        });
+        observerCardTwo.observe(ProjectsCardRefTwo.current)
+
+
+    },[ProjectsTitleRef,TitleVisible,ProjectsCardRefOne,CardOneVisible,ProjectsCardRefTwo,CardTwoVisible]);
     return(
         <ProjectsBody>
             <ProjectsContent>
@@ -44,7 +54,7 @@ const Projects = () => {
                         <ProjectsImage src={JuiceBotImage}/>
                     </ProjectsLink>
                 </ProjectsCard>
-                <ProjectsCard ref={ProjectsCardRefOne} inView = {CardOneVisible}>
+                <ProjectsCard ref={ProjectsCardRefTwo} inView = {CardTwoVisible}>
                     <ProjectsTitleDesContainer>
                         <ProjectsCardTitle>
                             C++ DB Explorer

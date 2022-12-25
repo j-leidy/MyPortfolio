@@ -23,7 +23,7 @@ export const AboutContent = styled.div`
 `;
 export const AboutTitle = styled.div`
     z-index: -1;
-    transition: 5s all ease;
+    transition: 3s all ease;
     margin: auto;
     text-align: center;
     font-size: 30px;
@@ -33,7 +33,7 @@ export const AboutTitle = styled.div`
 
 export const AboutParagraph = styled.div`
     z-index: -1;
-    transition: 5s all ease;
+    transition: 3s all ease;
     text-indent: 10%;
     margin: auto;
     margin-top: 5vh;
