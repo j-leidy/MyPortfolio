@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton} from "../ComponentStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
@@ -12,14 +12,14 @@ class MainPage extends Component{
     constructor(){
         super()
         this.state = {
-            checked : false,
+            checked : false
         }
 
-        this.handleCheckbox = this.handleCheckbox.bind(this)
-        this.handleButtonClick = this.handleButtonClick.bind(this)
+        
+        this.checkRef = React.createRef();
+        this.handleCheckbox = this.handleCheckbox.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
 
-    }
-    componentDidMount(){
     }
     handleCheckbox(event){
         if(event === true){
@@ -42,8 +42,10 @@ class MainPage extends Component{
         target.scrollIntoView({behavior: "smooth"})
         this.setState({
             checked : false
-        })
-    }
+            
+        },()=>{}) 
+        this.checkRef.current.checked = false;
+    };
     
     render(){return(
         
@@ -55,6 +57,7 @@ class MainPage extends Component{
                             <BurgerSpanTwo active = {this.state.checked}></BurgerSpanTwo>
                             <BurgerSpanThree active = {this.state.checked}></BurgerSpanThree>
                             <FakeCheckbox 
+                            ref={this.checkRef}
                             type= "checkbox"
                             onChange={(e) => this.handleCheckbox(e.target.checked)}
                             active = {this.state.checked}
