@@ -1,5 +1,5 @@
-import React from "react";
-import { Icon, IconWithText, SkillsBody, SkillsRow, SkillsTitle } from "./SkillsStyleMobile";
+import React, { useEffect, useRef, useState } from "react";
+import { Glow, Icon, IconWithText, SkillsBody, SkillsRow} from "./SkillsStyleMobile";
 
 import iconc from '../Icons/cpng.png';
 import iconsqlite from '../Icons/sqlitepng.png';
@@ -14,43 +14,81 @@ import reacticon from '../Icons/reacticon.png';
 
 
 const SkillsMobile = () => {
+
+    const SkillsBodyRef = useRef();
+    const [BodyVisible, setBodyVisible] = useState();
+    useEffect(()=>{
+        const observer = new IntersectionObserver(([entry])=>{
+            setBodyVisible(entry.isIntersecting)
+            console.log(BodyVisible)
+        });
+        observer.observe(SkillsBodyRef.current)
+    },[SkillsBodyRef,BodyVisible]);
+
+
+
+
     return(
-        <SkillsBody>
-            <SkillsTitle>
-                Toolkit
-            </SkillsTitle>
+        <SkillsBody ref={SkillsBodyRef} inView = {BodyVisible}>
             <SkillsRow>
-                <IconWithText>
-                    <Icon src={iconc}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={iconsqlite}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={pythonicon}/>
-                </IconWithText>
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={iconc}/>
+                    </IconWithText>
+                
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={iconsqlite}/>
+                    </IconWithText>
+                
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={pythonicon}/>
+                    </IconWithText>
+                
             </SkillsRow>
             <SkillsRow>
-                <IconWithText>
-                    <Icon src={mongodbicon}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={discordicon}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={cssicon}/>
-                </IconWithText>
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={mongodbicon}/>
+                    </IconWithText>
+                
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={discordicon}/>
+                    </IconWithText>
+                
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={cssicon}/>
+                    </IconWithText>
+                
             </SkillsRow>
             <SkillsRow>
-                <IconWithText>
-                    <Icon src={htmlicon}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={jsicon}/>
-                </IconWithText>
-                <IconWithText>
-                    <Icon src={reacticon}/>
-                </IconWithText>
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={htmlicon}/>
+                    </IconWithText>
+                
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={jsicon}/>
+                    </IconWithText>
+                    
+                <Glow>
+                </Glow>
+                    <IconWithText>
+                        <Icon src={reacticon}/>
+                    </IconWithText>
+                
             </SkillsRow>
 
         </SkillsBody>

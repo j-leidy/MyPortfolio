@@ -12,12 +12,13 @@ export const Body = styled.div`
         height: 100%;
         justify-content: center;
         align-items: left;
+        margin-top: 10vh;
         z-index: -1;
         border-right: none;
         background: rgba(10, 10, 10, 0);
     }
     background: rgba(10, 10, 10, 0.95);
-    margin-top: 10vh;
+    margin-top: 30vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
@@ -111,7 +112,7 @@ export const BodyName = styled.div`
     color: #ffffff;
     font-size: 70px;
     @media screen and (max-width: 550px){
-        font-size: 50px
+        font-size: 50px;
     }
 `;
 

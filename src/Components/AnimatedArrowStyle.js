@@ -13,11 +13,13 @@ const GlowAnim = keyframes`
 
 export const ArrowContainer = styled.div`
     height: 50vh;
+    z-index: -1;
 
     
 `;
 
 export const Arrow = styled.div`
+z-index: -1;
     width: 50px;
     height: 50px;
     transform: rotate(45deg);

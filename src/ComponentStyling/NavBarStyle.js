@@ -3,10 +3,6 @@ import styled from "styled-components";
 
 import TLSLogo from '../Icons/TempLogo.png';
 
-
-
-
-
 export const MobileNav = styled.nav`
     position: fixed;
     top: 0;
@@ -124,7 +120,7 @@ export const MobileNavCard = styled.div`
     top: -5px;
     width: 100vw;
     height: 75vh;
-    background: black;
+    background: #0A0A0A;
     transition: top 0.5s ease, right 0.5s ease, box-shadow 1s ease, -webkit-box-shadow 1s ease, -moz-box-shadow 1s ease;
     z-index: 1;
     top: ${(props) => (props.active ? "0px" : "-2000px")};
@@ -152,7 +148,7 @@ export const MobileNavCardLinkDiv = styled.div`
     width: 25vw;
     height: auto;
     margin: auto;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ffffff;
     @media screen and (max-width: 550px){
         border: 0px;
     }
