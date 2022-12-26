@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsBody = styled.div`
     z-index: 1;
-    width: 80%;
+    width: 70%;
     height: 100%;
     color: white;
     margin-left: auto;
@@ -29,11 +29,14 @@ export const ProjectsTitle = styled.div`
     margin: auto;
     text-align: center;
     font-size: 30px;
+    font-weight: 600;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     border-bottom: 2px solid #32de84;
     @media screen and (max-width: 550px){
         width: 100%;
     }
+
+    
     
 `;
 
@@ -44,7 +47,7 @@ export const ProjectsDescription = styled.div`
     padding: auto;
     font-size: 20px;
     text-indent: 15%;
-    display: none;
+    margin-top: 5vh;
     @media screen and (max-width: 550px){
         display: none;
         font-size: 16px;
@@ -53,6 +56,7 @@ export const ProjectsDescription = styled.div`
     @media screen and (max-width: 820px){
         display: none;
     }
+    
 `;
 
 export const ProjectsTitleDesContainer = styled.div`
@@ -99,12 +103,18 @@ export const ProjectsCardTitle = styled.div`
     padding: auto;
     width: 100%;
     height: 100%;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 600;
 
     @media screen and (max-width: 550px){
         border-radius: 10px 10px 0 0;
         background: #32de84;
         border: 1px solid #32de84;
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 990px){
+        color: #32de84;
     }
     
 `;

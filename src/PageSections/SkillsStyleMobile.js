@@ -65,7 +65,7 @@ export const IconWithText = styled.div`
     width: 50px;
     height: 50px;
     background: #0A0A0A;
-    border-radius 50%;
+    border-radius: 50%;
     
 `;
 

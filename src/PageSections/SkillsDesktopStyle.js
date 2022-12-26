@@ -4,7 +4,7 @@ export const DesktopSkillsBody = styled.div`
     z-index: 1;
     transition: 3s all ease;
     background: #0A0A0A;
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     opacity: ${(props) => (props.inView ? "1" : "0")};
@@ -32,7 +32,7 @@ export const DesktopSkillRow = styled.div`
     display: flex;
     flex-direction: row;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 20px;
     
 `;
 
@@ -75,11 +75,15 @@ export const DesktopRowItemRight = styled.div`
 export const DesktopRowItemLeftText = styled.div`
     margin-left: auto;
     margin-right: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
 `;
 
 export const DesktopRowItemRightText = styled.div`
     margin-right: auto;
     margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
 `;
 
 export const DesktopRowItemLeftIcon = styled.img`

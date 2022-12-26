@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutBody = styled.div`
     z-index: -1;
-    width: 80%;
+    width: 70%;
     height: 100%;
     color: white;
     margin-left: auto;
@@ -21,7 +21,7 @@ export const AboutContent = styled.div`
         width: 80%;
     }
     @media screen and (max-width: 820px){
-        width: 70%;
+        width: 80%;
     }
 `;
 export const AboutTitle = styled.div`
@@ -30,6 +30,7 @@ export const AboutTitle = styled.div`
     margin: auto;
     text-align: center;
     font-size: 30px;
+    font-weight: 600;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     border-bottom: 2px solid #32de84;
 `;
@@ -46,5 +47,6 @@ export const AboutParagraph = styled.div`
     @media screen and (max-width: 550px){
         text-indent: 20%;
         font-size: 16px;
+        width: 100%;
     }
 `;

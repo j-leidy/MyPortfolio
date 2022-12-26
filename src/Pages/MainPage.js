@@ -8,6 +8,8 @@ import { WholePage } from "./MainPageStyle";
 import AnimArrow from "../Components/AnimatedArrow";
 import About from "../PageSections/About";
 import Projects from "../PageSections/Projects";
+import Experience from "../PageSections/Experience";
+import Degrees from "../PageSections/Degrees";
 
 class MainPage extends Component{
     constructor(){
@@ -77,10 +79,10 @@ class MainPage extends Component{
                                     <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"projects")}>Projects</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton >Experience</MobileNavCardButton>
+                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"experience")}>Experience</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                                 <MobileNavCardLinkDiv>
-                                    <MobileNavCardButton >Contact</MobileNavCardButton>
+                                    <MobileNavCardButton onClick={(e) => this.handleButtonClick(e,"degrees")}>Degrees</MobileNavCardButton>
                                 </MobileNavCardLinkDiv>
                             </MobileNavCardLinkHolder>
                         </MobileNavCard>
@@ -93,6 +95,8 @@ class MainPage extends Component{
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                     <div className = "container" id="about"><About/></div>
                     <div className = "container" id="projects"><Projects/></div>
+                    <div className="container" id = "experience"><Experience/></div>
+                    <div className="container" id = "degrees"><Degrees/></div>
                 </WholePage> 
             </>
         )
