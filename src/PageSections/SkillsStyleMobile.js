@@ -61,7 +61,7 @@ export const IconWithText = styled.div`
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    right: 5%;
+    right: 5.5%;
     width: 50px;
     height: 50px;
     background: #0A0A0A;
@@ -73,14 +73,14 @@ export const Glow = styled.div`
     border-radius: 50%;
     filter: blur(5px);
     position: relative;
-    left: 12%;
+    left: 11%;
     width: 51px;
     height: 51px;
     background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 53%, rgba(255,235,0,1) 76%, rgba(255,46,0,1) 100%);
     animation: ${BackgroundAnim} 3s linear infinite;
 
     @media screen and (max-width: 550px){
-        left: 12%;
+        left: 11%;
     }
 `;
 export const IconText = styled.div`
