@@ -1,5 +1,5 @@
 import React from "react";
-import { DegreeEntry, DegreeName, DegreesBody, DegreeTitle, EntriesContainer, GraduationYear, IconNYContainer, NameYearContainer, SchoolIcon, SchoolIconDiv } from "./DegreesStyle";
+import { DegreeEntry, DegreeName, DegreesBody, DegreeTitle, EntriesContainer, GraduationYear, IconNYContainer, NameYearContainer, SchoolIcon} from "./DegreesStyle";
 
 import IvyLogo from "../Icons/IvyLogo.png"
 import IUPUILogo from "../Icons/IUPUILogo.png"
