@@ -59,8 +59,10 @@ export const EntryParagraph = styled.div`
     color: #ffffff;
     text-indent: 5%;
     font-size: 20px;
+    width: 70%;
     @media screen and (max-width: 550px){
         font-size: 16px;
         text-indent: 20%;
+        width: 100%;
     }
 `;

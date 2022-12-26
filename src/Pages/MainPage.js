@@ -95,8 +95,8 @@ class MainPage extends Component{
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                     <div className = "container" id="about"><About/></div>
                     <div className = "container" id="projects"><Projects/></div>
-                    <div className="container" id = "experience"><Experience/></div>
                     <div className="container" id = "degrees"><Degrees/></div>
+                    <div className="container" id = "experience"><Experience/></div>
                 </WholePage> 
             </>
         )
