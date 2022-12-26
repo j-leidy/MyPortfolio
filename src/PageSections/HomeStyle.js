@@ -46,6 +46,9 @@ export const HomeContent = styled.div`
         margin: 0;
         width: 100%;
     }
+    @media screen and (max-width: 820px){
+        width: 90%;
+    }
 
 `;
 
@@ -67,6 +70,7 @@ export const PortraitContainer = styled.div`
         padding: 0;
         display: none;
     }
+    
 `;
 
 export const Portrait = styled.img`
@@ -85,6 +89,10 @@ export const PortraitFullscreen = styled.img`
     width: 300px;
     height: 300px;
     @media screen and (max-width: 550px){
+        display: none;
+    }
+
+    @media screen and (max-width: 820px){
         display: none;
     }
 `;

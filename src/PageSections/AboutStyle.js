@@ -20,6 +20,9 @@ export const AboutContent = styled.div`
     @media screen and (max-width: 550px){
         width: 80%;
     }
+    @media screen and (max-width: 820px){
+        width: 70%;
+    }
 `;
 export const AboutTitle = styled.div`
     z-index: -1;
