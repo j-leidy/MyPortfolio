@@ -38,8 +38,7 @@ export const SkillsTitleTwo = styled.div`
 `;
 
 export const SkillsRow = styled.div`
-    padding-left: 15%;
-    padding-right: 15%;
+    width: 100%;
     margin-bottom: 5%;
     display: flex;
     flex-direction: row;
@@ -64,7 +63,6 @@ export const IconWithText = styled.div`
     height: 50px;
     background: #0A0A0A;
     border-radius 50%;
-    right: 8.5%;
     
 `;
 
@@ -72,7 +70,7 @@ export const Glow = styled.div`
     border-radius: 50%;
     filter: blur(5px);
     position: relative;
-    left: 8.5%;
+    left: 14%;
     width: 51px;
     height: 51px;
     background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 53%, rgba(255,235,0,1) 76%, rgba(255,46,0,1) 100%);
