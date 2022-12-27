@@ -43,7 +43,7 @@ export const HomeContent = styled.div`
     width: 50%;
     @media screen and (max-width: 550px){
         background: none;
-        margin: 0;
+        margin: auto;
         width: 100%;
     }
     @media screen and (max-width: 820px){
@@ -77,6 +77,7 @@ export const Portrait = styled.img`
     margin: auto;
     padding: auto;
     border-radius: 50%;
+
     
     
 `;
