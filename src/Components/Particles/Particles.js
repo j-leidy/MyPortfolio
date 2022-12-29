@@ -19,10 +19,10 @@ const ParticlesComponent = () =>{
                 },
                 "particles": {
                     "number": {
-                        "value": 20,
+                        "value": 10,
                         "density": {
                             "enable": true,
-                            "value_area": 200
+                            "value_area": 100
                         }
                     },
                     "color": {
@@ -45,7 +45,7 @@ const ParticlesComponent = () =>{
                         }
                     },
                     "size": {
-                        "value": 4,
+                        "value": 5,
                         "random": false,
                         "anim": {
                             "enable": false,

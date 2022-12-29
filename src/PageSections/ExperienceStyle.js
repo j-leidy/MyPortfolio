@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ExperienceBody =styled.div`
     margin-top: 5vh;
+    margin-bottom: 5vh;
     z-index: -1;
     width: 70%;
     background: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 64%, rgba(10,10,10,0.9612045501794468) 75%, rgba(10,10,10,0.9275911048012955) 80%, rgba(10,10,10,0.8771709367340687) 85%, rgba(10,10,10,0.798739564185049) 90%, rgba(10,10,10,0.5858544101234244) 95%, rgba(10,10,10,0) 100%);

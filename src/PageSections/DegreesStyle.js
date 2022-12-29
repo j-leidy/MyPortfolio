@@ -20,6 +20,8 @@ export const EntriesContainer = styled.div`
     }
 `;
 export const DegreeTitle = styled.div`
+    transition: 2s all ease;
+    opacity: ${(props) => (props.inView ? "1" : "0")};
     width: 50%;
     color: #ffffff;
     z-index: -1;
@@ -33,10 +35,12 @@ export const DegreeTitle = styled.div`
     }
 `;
 export const DegreeEntry = styled.div`
+    transition: 2s all ease;
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
+    opacity: ${(props) => (props.inView ? "1" : "0")};
 `;
 export const SchoolIcon = styled.img`
     width: 100px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { DegreeEntry, DegreeName, DegreesBody, DegreeTitle, EntriesContainer, GraduationYear, IconNYContainer, NameYearContainer, SchoolIcon} from "./DegreesStyle";
 
 import IvyLogo from "../Icons/IvyLogo.png"
@@ -6,14 +6,33 @@ import IUPUILogo from "../Icons/IUPUILogo.png"
 
 
 const Degrees = () => {
-    
+    const DegreeTitleRef = useRef();
+    const DegreeOneRef = useRef();
+    const DegreeTwoRef = useRef();
+    const [DegreeTitleVisible, setDegreeTitleVisible] = useState();
+    const [DegreeOneVisible, setDegreeOneVisible] = useState();
+    const [DegreeTwoVisible, setDegreeTwoVisible] = useState();
+    useEffect(()=>{
+        const observerDegreeTitle = new IntersectionObserver(([entry])=>{
+            setDegreeTitleVisible(entry.isIntersecting)
+        });
+        observerDegreeTitle.observe(DegreeTitleRef.current)
+        const observerDegreeOne = new IntersectionObserver(([entry])=>{
+            setDegreeOneVisible(entry.isIntersecting)
+        });
+        observerDegreeOne.observe(DegreeOneRef.current)
+        const observerDegreeTwo = new IntersectionObserver(([entry])=>{
+            setDegreeTwoVisible(entry.isIntersecting)
+        });
+        observerDegreeTwo.observe(DegreeTwoRef.current)
+    },[DegreeTitleRef,DegreeOneRef,DegreeTwoRef,DegreeTitleVisible,DegreeOneVisible,DegreeTwoVisible]);
     return(
         <DegreesBody>
-            <DegreeTitle>
+            <DegreeTitle ref={DegreeTitleRef} inView = {DegreeTitleVisible}>
                 Degrees
             </DegreeTitle>
             <EntriesContainer>
-                <DegreeEntry>
+                <DegreeEntry ref = {DegreeOneRef} inView = {DegreeOneVisible}>
                     <IconNYContainer>
                         <SchoolIcon src={IvyLogo}/>
                         <NameYearContainer>
@@ -26,7 +45,7 @@ const Degrees = () => {
                         </NameYearContainer>
                     </IconNYContainer>
                 </DegreeEntry>
-                <DegreeEntry>
+                <DegreeEntry ref = {DegreeTwoRef} inView = {DegreeTwoVisible}>
                     <IconNYContainer>
                         <SchoolIcon src={IUPUILogo}/>
                         <NameYearContainer>
