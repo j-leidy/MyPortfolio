@@ -22,7 +22,7 @@ export const EntriesContainer = styled.div`
 export const DegreeTitle = styled.div`
     transition: 2s all ease;
     opacity: ${(props) => (props.inView ? "1" : "0")};
-    width: 50%;
+    width: 70%;
     color: #ffffff;
     z-index: -1;
     margin: auto;

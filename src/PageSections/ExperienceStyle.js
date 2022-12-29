@@ -12,7 +12,7 @@ export const ExperienceBody =styled.div`
 `;
 export const ExperienceTitle = styled.div`
     transition: 2s all ease;
-    width: 50%;
+    width: 70%;
     color: #ffffff;
     z-index: -1;
     margin: auto;

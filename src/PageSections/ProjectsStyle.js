@@ -23,7 +23,7 @@ export const ProjectsContent = styled.div`
     }
 `;
 export const ProjectsTitle = styled.div`
-    width: 50%;
+    width: 70%;
     z-index: -1;
     transition: 3s all ease;
     margin: auto;

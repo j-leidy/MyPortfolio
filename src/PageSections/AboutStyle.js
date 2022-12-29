@@ -16,7 +16,7 @@ export const AboutContent = styled.div`
     z-index: -1;
     margin: auto;
     padding-top: 6vh;
-    width: 50%;
+    width: 70%;
     @media screen and (max-width: 550px){
         width: 80%;
     }
