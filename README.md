@@ -4,6 +4,9 @@
 This website is pretty straight forward. This is the implementation for Netlify. I am currently not using a backend, however I have a codebase with a backend fully implemented. 
 That website is on a MERN stack. Below I will add some documentation on specific sections of the website I think are useful for others. Open to suggestions on ways to improve my implementation.
 
+## Code Details Section:
+*adding soon*
+
 ## Below are screenshots of the website:
 <details>
 
@@ -22,7 +25,8 @@ That website is on a MERN stack. Below I will add some documentation on specific
 
 </details>
 
-## You can also directly visit the website at https://leidydev.netlify.app/
+## You can also directly visit the live website: 
+https://leidydev.netlify.app/
 
 __Thanks for stopping by!__
 
