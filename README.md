@@ -1,3 +1,8 @@
+<style>
+green = {color : #32de84}
+</style>
+
+
 # John Leidy II Portfolio Website
 ## Built using React.js
 
@@ -6,7 +11,7 @@ That website is on a MERN stack. Below I will add some documentation on specific
 
 ## Code Details Section:
 
-<span style = "color: #32de84; font-size: 20px;">Intersection Observer</span>
+<green>Intersection Observer</green>
 <details>
 
 <summary>View Code</summary>
