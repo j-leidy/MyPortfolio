@@ -1,5 +1,5 @@
 <style>
-green = {color : #32de84}
+green = {color : green}
 </style>
 
 
