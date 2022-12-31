@@ -6,7 +6,7 @@ That website is on a MERN stack. Below I will add some documentation on specific
 
 ## Code Details Section:
 
-### Lazy Load Implementation
+<span style = "color: #32de84; font-size: 20px;">Intersection Observer</span>
 <details>
 
 <summary>View Code</summary>
