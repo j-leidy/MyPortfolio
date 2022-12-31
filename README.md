@@ -40,6 +40,49 @@ export const AboutTitle = styled.div`
 ```
 </details>
 
+### Tracking state of a checkbox in a class component
+<details>
+
+<summary>View Code</summary>
+
+#### JS File inside of your function component
+```
+constructor(){
+    super()
+    this.state = {
+        checked : false
+    }
+
+    this.checkRef = React.createRef();
+    this.handleCheckbox = this.handleCheckbox.bind(this);
+}
+
+
+handleCheckbox(event){
+    if(event === true){
+        //this is if the checkbox is checked
+        this.setState({
+            checked : event
+        },() => {})
+    }
+    if(event === false){
+        //this is if the checkbox is not checked
+        this.setState({
+            checked : event
+        },() => {})
+    }
+};
+
+render(){return(
+    <Checkbox
+    ref = {this.checkRef}
+    onChange = {(e) => this.handleCheckbox(e.target.checked)}
+    />
+)}
+```
+</details>
+
+
 
 ## Below are screenshots of the website:
 <details>
