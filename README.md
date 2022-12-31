@@ -11,7 +11,7 @@ That website is on a MERN stack. Below I will add some documentation on specific
 
 ## Code Details Section:
 
-<green>Intersection Observer</green>
+### Intersection Observer
 <details>
 
 <summary>View Code</summary>
