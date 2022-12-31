@@ -1,8 +1,3 @@
-<style>
-green = {color : green}
-</style>
-
-
 # John Leidy II Portfolio Website
 ## Built using React.js
 
