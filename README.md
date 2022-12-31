@@ -45,7 +45,7 @@ export const AboutTitle = styled.div`
 
 <summary>View Code</summary>
 
-#### JS File inside of your function component
+#### JS File inside of your class component
 ```
 constructor(){
     super()
