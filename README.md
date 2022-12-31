@@ -7,6 +7,10 @@ That website is on a MERN stack. Below I will add some documentation on specific
 ## Code Details Section:
 
 ### Lazy Load Implementation
+<details>
+
+<summary>View Code</summary>
+
 #### JS File inside of your function component
 ```
 const AboutTitleRef = useRef();
@@ -34,6 +38,8 @@ export const AboutTitle = styled.div`
 `;
 
 ```
+</details>
+
 
 ## Below are screenshots of the website:
 <details>
