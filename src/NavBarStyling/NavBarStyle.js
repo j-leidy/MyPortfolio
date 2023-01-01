@@ -187,6 +187,8 @@ export const MobileNavCardLinkHolder = styled.div`
 `;
 
 export const SliderBG = styled.div`
+
+
     @media screen and (max-width: 550px){
         border-radius: 8px 8px 8px 8px;
         background: red;
@@ -200,6 +202,14 @@ export const SliderBG = styled.div`
         background-position: center;
     }
 
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background: url(${(props) => (props.active ? Bright : Darktwo)});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
 `;
 export const SliderCheckHolder = styled.div`
     @media screen and (max-width: 550px){
@@ -208,6 +218,11 @@ export const SliderCheckHolder = styled.div`
         margin-bottom: auto;
         margin-left: 5vw;
     }
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2vw;
+
     
 
 `;
@@ -220,4 +235,9 @@ export const SliderCheckbox = styled.input`
         z-index: 2;
         opacity: 0;
     }
+    z-index: 2;
+    opacity: 0;
+    transform: scale(1);
+    width: 40px;
+    height: 40px;
 `;
