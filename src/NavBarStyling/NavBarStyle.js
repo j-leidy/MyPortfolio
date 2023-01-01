@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import navicon from '../Icons/testlefticon.png';
 
-import Bright from "../Icons/Bright.png"
-import Darktwo from "../Icons/Darktwo.png"
+import Bright from "../Icons/BrightLight.png"
+import Darktwo from "../Icons/DarkLight.png"
 
 
 export const MobileNav = styled.nav`
@@ -193,8 +193,8 @@ export const SliderBG = styled.div`
         border-radius: 8px 8px 8px 8px;
         background: red;
         margin-left: auto;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         z-index: 1;
         background: url(${(props) => (props.active ? Bright : Darktwo)});
         background-size: contain;
