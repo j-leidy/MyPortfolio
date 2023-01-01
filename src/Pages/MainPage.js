@@ -122,7 +122,7 @@ class MainPage extends Component{
                 </MobileNav>
                 <WholePage>  
                     <div className="container" id="home"><Home lightdark = {this.state.lightmode}/></div>
-                    <AnimArrow/>
+                    <AnimArrow lightdark = {this.state.lightmode}/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                     <div className = "container" id="about"><About lightdark = {this.state.lightmode}/></div>
                     <div className = "container" id="projects"><Projects lightdark = {this.state.lightmode}/></div>

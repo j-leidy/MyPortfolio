@@ -1,11 +1,11 @@
 import React from "react";
 import { ArrowContainer, Arrow, TotalContainer } from "./AnimatedArrowStyle";
 
-const AnimArrow = () =>{
+const AnimArrow = ({lightdark}) =>{
     return(
         <TotalContainer>
             <ArrowContainer>
-                <Arrow></Arrow>
+                <Arrow active = {lightdark}></Arrow>
             </ArrowContainer>
         </TotalContainer>
     );

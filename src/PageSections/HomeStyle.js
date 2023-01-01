@@ -140,7 +140,7 @@ export const BodyDetails = styled.div`
     width: 100%;
 
     @media screen and (max-width: 550px){
-        font-size: 30px;
+        font-size: 28px;
         flex-direction: row;
     }
 
