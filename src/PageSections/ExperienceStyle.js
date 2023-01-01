@@ -30,17 +30,27 @@ export const ExperienceEntry = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 5vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (max-width: 550px){
         flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 `;
 
 export const EntryTitleDurationContainer = styled.div`
     margin-bottom: 2vh;
-    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
     @media screen and (max-width: 550px){
         width: 80%;
+        margin-left: 0;
+        margin-right: 0;
     }
 `;
 
@@ -63,10 +73,14 @@ export const EntryParagraph = styled.div`
     color: #ffffff;
     text-indent: 5%;
     font-size: 20px;
-    width: 70%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
     @media screen and (max-width: 550px){
         font-size: 16px;
         text-indent: 20%;
+        margin-right: auto;
+        margin-left: auto;
         width: 100%;
     }
 `;
