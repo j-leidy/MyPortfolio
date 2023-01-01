@@ -18,7 +18,7 @@ const Footer = () => {
                     Built using React
                 </AuthorItem>
                 <AuthorItemCopyright>
-                    All site content © 2023 John Leidy II
+                    Source Code, Images, Text, Content  © 2023 John Leidy II
                 </AuthorItemCopyright>
             </AuthorFooter>
             <SocialLinksFooter>

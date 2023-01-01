@@ -47,7 +47,7 @@ export const AuthorItem = styled.div`
 export const AuthorItemCopyright = styled.div`
     width: 100%;
     color: white;
-    font-size: 10px;
+    font-size: 8px;
     @media screen and (max-width: 550px){
         margin: 0;
         padding: 0;
