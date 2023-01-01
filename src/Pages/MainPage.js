@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton, MobileNavIconHolder, SliderBG,  SliderCheckHolder, SliderCheckbox} from "../NavBarStyling/NavBarStyle";
+import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton, MobileNavIconHolder, SliderBG,  SliderCheckHolder, SliderCheckbox, ExtraGlow} from "../NavBarStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
 import { WholePage } from "./MainPageStyle";
@@ -78,6 +78,7 @@ class MainPage extends Component{
                     <MobileNavBar>
                         <MobileNavIconHolder/>
                         <SliderCheckHolder>
+                            <ExtraGlow active = {this.state.lightmode}/>
                             <SliderBG active = {this.state.lightmode}>
                                 <SliderCheckbox
                                 type = "checkbox"

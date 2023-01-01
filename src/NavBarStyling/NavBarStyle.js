@@ -191,7 +191,6 @@ export const SliderBG = styled.div`
 
     @media screen and (max-width: 550px){
         border-radius: 8px 8px 8px 8px;
-        background: red;
         margin-left: auto;
         width: 30px;
         height: 30px;
@@ -210,6 +209,29 @@ export const SliderBG = styled.div`
     background-repeat: no-repeat;
     background-position: center;
 
+`;
+
+export const ExtraGlow = styled.div`
+    @media screen and (max-width: 550px){
+        z-index: 1;
+        transition: 3s all ease;
+        position: relative;
+        border-radius: 50%;
+        top: 15px;
+        background: ${(props) => (props.active ? "rgba(255,190,0,0.2)" : "rgba(255,190,0,0)")};
+        box-shadow: ${(props) => (props.active ? "4px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
+        -webkit-box-shadow: ${(props) => (props.active ? "3px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
+        -moz-box-shadow: ${(props) => (props.active ? "3px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
+    }
+    z-index: 1;
+    transition: 3s all ease;
+    position: relative;
+    border-radius: 50%;
+    top: 15px;
+    background: ${(props) => (props.active ? "rgba(255,190,0,0.2)" : "rgba(255,190,0,0)")};
+    box-shadow: ${(props) => (props.active ? "4px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
+    -webkit-box-shadow: ${(props) => (props.active ? "3px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
+    -moz-box-shadow: ${(props) => (props.active ? "3px 0px 25px 8px rgba(255,190,0,0.83)" : "1px 0px 25px 8px rgba(0,0,0,0)")};
 `;
 export const SliderCheckHolder = styled.div`
     @media screen and (max-width: 550px){
