@@ -39,6 +39,9 @@ export const ExperienceEntry = styled.div`
 export const EntryTitleDurationContainer = styled.div`
     margin-bottom: 2vh;
     width: 30%;
+    @media screen and (max-width: 550px){
+        width: 80%;
+    }
 `;
 
 export const EntryTitle = styled.div`

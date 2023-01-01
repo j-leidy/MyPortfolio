@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthorFooter, AuthorItem, AuthorName, FooterBody, GithubLink, ImageLink, LinkedInLink, LinkImage, SocialLinksFooter } from "./FooterStyle";
+import { AuthorFooter, AuthorItem, AuthorItemCopyright, AuthorName, FooterBody, GithubLink, ImageLink, LinkedInLink, LinkImage, SocialLinksFooter } from "./FooterStyle";
 
 import GitIcon from "../Icons/GithubWhite.png"
 import LinkdIcon from  "../Icons/LIWhite.png"
@@ -17,6 +17,9 @@ const Footer = () => {
                 <AuthorItem>
                     Built using React
                 </AuthorItem>
+                <AuthorItemCopyright>
+                    All site content © 2023 John Leidy II
+                </AuthorItemCopyright>
             </AuthorFooter>
             <SocialLinksFooter>
                 <GithubLink >

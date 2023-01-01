@@ -44,6 +44,16 @@ export const AuthorItem = styled.div`
         padding: 0;
     }
 `;
+export const AuthorItemCopyright = styled.div`
+    width: 100%;
+    color: white;
+    font-size: 10px;
+    @media screen and (max-width: 550px){
+        margin: 0;
+        padding: 0;
+        
+    }
+`;
 
 export const SocialLinksFooter = styled.div`
     width: 10%;
