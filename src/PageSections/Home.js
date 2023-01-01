@@ -3,9 +3,10 @@ import Typewriter from 'typewriter-effect';
 import { Body, BodyTitle, BodyText, BodyName, BodyDetails, StaticText, PortraitContainer, Portrait, TypeWriterHolder, HomeContent, PortraitFullscreen} from "./HomeStyle";
 import TempPortrait from '../Images/TempPortrait.jpg'
 
-const Home = () =>{
+const Home = ({lightdark}) =>{
+    console.log(lightdark)
     return(
-        <Body>
+        <Body active = {lightdark}>
             <HomeContent>
                 <PortraitContainer>
                     <Portrait src= {TempPortrait}/>
@@ -17,11 +18,11 @@ const Home = () =>{
                     <BodyTitle>
                         My name is
                     </BodyTitle>
-                    <BodyName>
+                    <BodyName active = {lightdark}>
                         John Leidy II
                     </BodyName>
                 </BodyText>
-                <BodyDetails>
+                <BodyDetails active = {lightdark}>
                     <StaticText>
                         I'm a
                     </StaticText>

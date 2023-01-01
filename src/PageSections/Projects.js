@@ -4,7 +4,7 @@ import { ProjectsBody, ProjectsCard, ProjectsCardTitle, ProjectsContent, Project
 import JuiceBotImage from '../Images/test.png'
 import DbImg from '../Images/CDBCard.png'
 
-const Projects = () => {
+const Projects = ({lightdark}) => {
     
     const ProjectsTitleRef = useRef();
     const [TitleVisible, setTitleVisible] = useState();
@@ -18,24 +18,21 @@ const Projects = () => {
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setTitleVisible(entry.isIntersecting)
-            console.log(TitleVisible)
         });
         observer.observe(ProjectsTitleRef.current)
         const observerCardOne = new IntersectionObserver(([entry])=>{
             setCardOneVisible(entry.isIntersecting)
-            console.log(CardOneVisible)
         });
         observerCardOne.observe(ProjectsCardRefOne.current)
         const observerCardTwo = new IntersectionObserver(([entry])=>{
             setCardTwoVisible(entry.isIntersecting)
-            console.log(CardTwoVisible)
         });
         observerCardTwo.observe(ProjectsCardRefTwo.current)
 
 
     },[ProjectsTitleRef,TitleVisible,ProjectsCardRefOne,CardOneVisible,ProjectsCardRefTwo,CardTwoVisible]);
     return(
-        <ProjectsBody>
+        <ProjectsBody active = {lightdark}>
             <ProjectsContent>
                 <ProjectsTitle ref={ProjectsTitleRef} inView = {TitleVisible}>
                     Projects

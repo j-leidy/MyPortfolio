@@ -13,14 +13,13 @@ import reacticon from '../Icons/reacticon.png';
 
 
 
-const SkillsMobile = () => {
+const SkillsMobile = ({lightdark}) => {
 
     const SkillsBodyRef = useRef();
     const [BodyVisible, setBodyVisible] = useState();
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setBodyVisible(entry.isIntersecting)
-            console.log(BodyVisible)
         });
         observer.observe(SkillsBodyRef.current)
     },[SkillsBodyRef,BodyVisible]);
@@ -29,7 +28,7 @@ const SkillsMobile = () => {
 
 
     return(
-        <SkillsBody ref={SkillsBodyRef} inView = {BodyVisible}>
+        <SkillsBody ref={SkillsBodyRef} inView = {BodyVisible} active = {lightdark}>
             <SkillsRow>
                 <Glow>
                 </Glow>

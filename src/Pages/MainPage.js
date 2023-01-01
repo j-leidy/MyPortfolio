@@ -1,9 +1,7 @@
 import React, {Component} from "react";
-import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton, MobileNavIconHolder} from "../NavBarStyling/NavBarStyle";
+import {MobileNav,MobileNavBar, BurgerCheckHolder, FakeCheckbox, BurgerSpanOne, BurgerSpanTwo, BurgerSpanThree, MobileNavCard, MobileNavCardLinkHolder, MobileNavCardLinkDiv, MobileNavCardButton, MobileNavIconHolder, SliderBG,  SliderCheckHolder, SliderCheckbox} from "../NavBarStyling/NavBarStyle";
 import '../App.css';
 import Home from '../PageSections/Home.js';
-
-
 import { WholePage } from "./MainPageStyle";
 import AnimArrow from "../Components/AnimatedArrow";
 import About from "../PageSections/About";
@@ -12,11 +10,13 @@ import Experience from "../PageSections/Experience";
 import Degrees from "../PageSections/Degrees";
 import Footer from "../PageSections/Footer";
 
+
 class MainPage extends Component{
     constructor(){
         super()
         this.state = {
-            checked : false
+            checked : false,
+            lightmode : false
         }
 
         
@@ -25,18 +25,37 @@ class MainPage extends Component{
         this.handleButtonClick = this.handleButtonClick.bind(this);
 
     }
-    handleCheckbox(event){
-        if(event === true){
+    handleCheckbox(event,which){
+        if(event === true && which === "menu"){
             //this is if the checkbox is checked
             this.setState({
                 checked : event
+                
             },() => {})
+
         }
-        if(event === false){
+        if(event === false && which === "menu"){
             //this is if the checkbox is not checked
             this.setState({
                 checked : event
             },() => {})
+        }
+        if(event === true && which === "lightdark"){
+            //this is if the checkbox is checked
+            this.props.setLightOrDark(event)
+            this.setState({
+                lightmode : event
+                
+            },() => {})
+            
+        }
+        if(event === false && which === "lightdark"){
+            //this is if the checkbox is not checked
+            this.props.setLightOrDark(event)
+            this.setState({
+                lightmode : event
+            },() => {})
+            
         }
     };
     
@@ -52,11 +71,21 @@ class MainPage extends Component{
     };
     
     render(){return(
-        
+            
             <>
+                
                 <MobileNav >
                     <MobileNavBar>
                         <MobileNavIconHolder/>
+                        <SliderCheckHolder>
+                            <SliderBG active = {this.state.lightmode}>
+                                <SliderCheckbox
+                                type = "checkbox"
+                                onChange= {(e) => this.handleCheckbox(e.target.checked,"lightdark")}
+                                active = {this.state.lightmode}
+                                />
+                            </SliderBG>
+                        </SliderCheckHolder>
                         <BurgerCheckHolder active = {this.state.checked}>
                             <BurgerSpanOne active = {this.state.checked}></BurgerSpanOne>
                             <BurgerSpanTwo active = {this.state.checked}></BurgerSpanTwo>
@@ -64,7 +93,7 @@ class MainPage extends Component{
                             <FakeCheckbox 
                             ref={this.checkRef}
                             type= "checkbox"
-                            onChange={(e) => this.handleCheckbox(e.target.checked)}
+                            onChange={(e) => this.handleCheckbox(e.target.checked,"menu")}
                             active = {this.state.checked}
                             />
                         </BurgerCheckHolder>
@@ -91,16 +120,17 @@ class MainPage extends Component{
                     </MobileNavBar>
                 </MobileNav>
                 <WholePage>  
-                    <div className="container" id="home"><Home/></div>
+                    <div className="container" id="home"><Home lightdark = {this.state.lightmode}/></div>
                     <AnimArrow/>
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
-                    <div className = "container" id="about"><About/></div>
-                    <div className = "container" id="projects"><Projects/></div>
-                    <div className="container" id = "degrees"><Degrees/></div>
-                    <div className="container" id = "experience"><Experience/></div>
+                    <div className = "container" id="about"><About lightdark = {this.state.lightmode}/></div>
+                    <div className = "container" id="projects"><Projects lightdark = {this.state.lightmode}/></div>
+                    <div className="container" id = "degrees"><Degrees lightdark = {this.state.lightmode}/></div>
+                    <div className="container" id = "experience"><Experience lightdark = {this.state.lightmode}/></div>
                     <div className="container" id = "footer"><Footer/></div>
                 </WholePage> 
             </>
+            
         )
     }
 }

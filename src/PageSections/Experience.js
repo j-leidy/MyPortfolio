@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { EntryDuration, EntryParagraph, EntryTitle, EntryTitleDurationContainer, ExperienceBody, ExperienceEntry, ExperienceTitle } from "./ExperienceStyle";
 
 
-const Experience = () => {
+const Experience = ({lightdark}) => {
     const ExperienceTitleRef = useRef();
     const ExperienceEntryOneRef = useRef();
     const ExperienceEntryTwoRef = useRef();
@@ -12,22 +12,19 @@ const Experience = () => {
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setTitleVisible(entry.isIntersecting)
-            console.log(TitleVisible)
         });
         observer.observe(ExperienceTitleRef.current)
         const observerEntryOne = new IntersectionObserver(([entry])=>{
             setExperienceEntryOneVisible(entry.isIntersecting)
-            console.log(ExperienceEntryOneVisible)
         });
         observerEntryOne.observe(ExperienceEntryOneRef.current)
         const observerEntryTwo = new IntersectionObserver(([entry])=>{
             setExperienceEntryTwoVisible(entry.isIntersecting)
-            console.log(ExperienceEntryTwoVisible)
         });
         observerEntryTwo.observe(ExperienceEntryTwoRef.current)
     },[ExperienceTitleRef,ExperienceEntryOneRef,ExperienceEntryTwoRef,TitleVisible,ExperienceEntryOneVisible,ExperienceEntryTwoVisible]);
     return(
-        <ExperienceBody>
+        <ExperienceBody active = {lightdark}>
             <ExperienceTitle ref={ExperienceTitleRef} inView = {TitleVisible}>
                 Experience
             </ExperienceTitle>

@@ -17,14 +17,14 @@ export const Body = styled.div`
         border-right: none;
         background: rgba(10, 10, 10, 0);
     }
-    background: rgba(10, 10, 10, 0.95);
-    margin-top: 30vh;
+    background: ${(props) => (props.active ? "rgba(255,255,255, 0.95)" : "rgba(10,10,10,0.95)")};
+    margin-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     color: #ffffff;
     width: 80%;
-    height: 100%;
+    height: 60vh;
     justify-content: center;
     align-items: left;
     z-index: -1;
@@ -120,7 +120,8 @@ export const BodyTitle = styled.div`
 `;
 
 export const BodyName = styled.div`
-    color: #ffffff;
+    transition: 3s all ease;
+    color: ${(props) => (props.active ? "black" : "white")};
     font-size: 70px;
     @media screen and (max-width: 550px){
         font-size: 50px;
@@ -129,11 +130,12 @@ export const BodyName = styled.div`
 
 
 export const BodyDetails = styled.div`
+    transition: 3s all ease;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: auto;
-    color: #ffffff;
+    color: ${(props) => (props.active ? "black" : "white")};
     font-size: 40px;
     width: 100%;
 

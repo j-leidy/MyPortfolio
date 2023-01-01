@@ -3,11 +3,21 @@ import {loadFull} from "tsparticles"
 import Particles from "react-tsparticles";
 
 
-const ParticlesComponent = () =>{
+const ParticlesComponent = ({active}) =>{
+    let color = "#000000"
+    let color_rest = "#000000"
     const particlesInit = async (main) => {
         console.log(main);
         await loadFull(main);
       };
+    if (active === true){
+        color = "#ffffff"
+        color_rest = "#000000"
+    }
+    if (active === false){
+        color = "#0A0A0A"
+        color_rest = "#ffffff"
+    }
     return(
             <Particles 
             id="tsparticles"
@@ -15,7 +25,7 @@ const ParticlesComponent = () =>{
             options = {{
                 "fullScreen" :{
                     "enable" : true,
-                    "zIndex" : -5,
+                    "zIndex" : -10,
                 },
                 "particles": {
                     "number": {
@@ -26,7 +36,7 @@ const ParticlesComponent = () =>{
                         }
                     },
                     "color": {
-                        "value": "#000000"
+                        "value": color_rest
                     },
                     "shape": {
                         "type": "none",
@@ -67,7 +77,7 @@ const ParticlesComponent = () =>{
                     "line_linked": {
                         "enable": true,
                         "distance": 100,
-                        "color": "#ffffff",
+                        "color": color_rest,
                         "opacity": 1,
                         "width": 1
                     },
@@ -124,7 +134,7 @@ const ParticlesComponent = () =>{
                 },
                 "retina_detect": true,
                 "background": {
-                    "color": "#0A0A0A",
+                    "color": color,
                     "image": "",
                     "position": "absolute",
                     "repeat": "no-repeat",

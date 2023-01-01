@@ -3,11 +3,12 @@ import { keyframes } from "styled-components";
 
 export const SkillsBody = styled.div`
     z-index: -1;
-    transition: 3s all ease;
+    transition-property: opacity;
+    transition-duration: 3s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #0A0A0A;
+    background: ${(props) => (props.active ? "#ffffff" : "#0A0A0A")};
     width: 100%;
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (min-width: 900px){

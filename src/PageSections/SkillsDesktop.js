@@ -10,20 +10,19 @@ import cssicon from '../Icons/cssicon.png';
 import htmlicon from '../Icons/htmlicon.png';
 import jsicon from '../Icons/jsicon.png';
 
-const SkillsDesktop = () => {
+const SkillsDesktop = ({lightdark}) => {
     const SkillsBodyRef = useRef();
     const [BodyVisible, setBodyVisible] = useState();
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setBodyVisible(entry.isIntersecting)
-            console.log(BodyVisible)
         });
         observer.observe(SkillsBodyRef.current)
     },[SkillsBodyRef,BodyVisible]);
     return(
-        <DesktopSkillsBody ref={SkillsBodyRef} inView = {BodyVisible}>
+        <DesktopSkillsBody ref={SkillsBodyRef} inView = {BodyVisible} active = {lightdark}>
             <SkillsDesktopContent>
-                <DesktopSkillRow>
+                <DesktopSkillRow active = {lightdark}>
                     <DesktopRowItemLeft>
                         <DesktopRowItemLeftIcon src={iconc}/>
                         <DesktopRowItemLeftText>
@@ -37,7 +36,7 @@ const SkillsDesktop = () => {
                         <DesktopRowItemRightIcon src= {iconsqlite}/>
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow>
+                <DesktopSkillRow active = {lightdark}>
                     <DesktopRowItemLeft>
                         <DesktopRowItemLeftIcon src={pythonicon}/>
                         <DesktopRowItemLeftText>
@@ -51,7 +50,7 @@ const SkillsDesktop = () => {
                         <DesktopRowItemRightIcon src= {mongodbicon}/>
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow>
+                <DesktopSkillRow active = {lightdark}>
                     <DesktopRowItemLeft>
                         <DesktopRowItemLeftIcon src={discordicon}/>
                         <DesktopRowItemLeftText>
@@ -65,7 +64,7 @@ const SkillsDesktop = () => {
                         <DesktopRowItemRightIcon src= {cssicon}/>
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow>
+                <DesktopSkillRow active = {lightdark}>
                     <DesktopRowItemLeft>
                         <DesktopRowItemLeftIcon src={htmlicon}/>
                         <DesktopRowItemLeftText>

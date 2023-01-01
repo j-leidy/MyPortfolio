@@ -3,7 +3,7 @@ import { AboutBody, AboutContent, AboutParagraph, AboutTitle } from "./AboutStyl
 import SkillsDesktop from "./SkillsDesktop";
 import SkillsMobile from "./SkillsMobile";
 
-const About = () =>{
+const About = ({lightdark}) =>{
     const AboutTitleRef = useRef();
     const AboutParagraphRef = useRef();
     const [TitleVisible, setTitleVisible] = useState();
@@ -11,12 +11,10 @@ const About = () =>{
     useEffect(()=>{
         const observer = new IntersectionObserver(([entry])=>{
             setTitleVisible(entry.isIntersecting)
-            console.log(TitleVisible)
         });
         observer.observe(AboutTitleRef.current)
         const observerParagraph = new IntersectionObserver(([entry])=>{
             setParagraphVisible(entry.isIntersecting)
-            console.log(ParagraphVisible)
         });
         observerParagraph.observe(AboutParagraphRef.current)
     },[AboutTitleRef,AboutParagraphRef,TitleVisible,ParagraphVisible]);
@@ -24,7 +22,7 @@ const About = () =>{
 
     return(
         <>
-            <AboutBody>
+            <AboutBody active = {lightdark}>
                 <AboutContent>
                     <AboutTitle ref={AboutTitleRef} inView = {TitleVisible}>
                         About
@@ -38,8 +36,8 @@ const About = () =>{
                     </AboutParagraph>
                 </AboutContent>
             </AboutBody>
-            <SkillsMobile/>
-            <SkillsDesktop/>
+            <SkillsMobile lightdark = {lightdark}/>
+            <SkillsDesktop lightdark = {lightdark}/>
         </>
     );  
 };

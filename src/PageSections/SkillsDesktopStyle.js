@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const DesktopSkillsBody = styled.div`
     z-index: 1;
-    transition: 3s all ease;
-    background: #0A0A0A;
+    transition-property: opacity;
+    transition-duration: 3s;
+    background: ${(props) => (props.active ? "#ffffff" : "#0A0A0A")};
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -16,7 +17,6 @@ export const DesktopSkillsBody = styled.div`
 export const SkillsDesktopContent = styled.div`
     margin: auto;
     width: 100%;
-    background: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 64%, rgba(10,10,10,0.9612045501794468) 75%, rgba(10,10,10,0.9275911048012955) 80%, rgba(10,10,10,0.8771709367340687) 85%, rgba(10,10,10,0.798739564185049) 90%, rgba(10,10,10,0.5858544101234244) 95%, rgba(10,10,10,0) 100%);
     padding-top: 10vh;
     padding-bottom: 5vh;
 `;
@@ -24,6 +24,7 @@ export const SkillsDesktopContent = styled.div`
 
 
 export const DesktopSkillRow = styled.div`
+    transition: 3s all ease;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -31,7 +32,7 @@ export const DesktopSkillRow = styled.div`
     height: 100%;
     display: flex;
     flex-direction: row;
-    color: #ffffff;
+    color: ${(props) => (props.active ? "#000000" : "#ffffff")};
     font-size: 20px;
     
 `;

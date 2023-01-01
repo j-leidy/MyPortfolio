@@ -5,7 +5,7 @@ import IvyLogo from "../Icons/IvyLogo.png"
 import IUPUILogo from "../Icons/IUPUILogo.png"
 
 
-const Degrees = () => {
+const Degrees = ({lightdark}) => {
     const DegreeTitleRef = useRef();
     const DegreeOneRef = useRef();
     const DegreeTwoRef = useRef();
@@ -27,7 +27,7 @@ const Degrees = () => {
         observerDegreeTwo.observe(DegreeTwoRef.current)
     },[DegreeTitleRef,DegreeOneRef,DegreeTwoRef,DegreeTitleVisible,DegreeOneVisible,DegreeTwoVisible]);
     return(
-        <DegreesBody>
+        <DegreesBody active = {lightdark}>
             <DegreeTitle ref={DegreeTitleRef} inView = {DegreeTitleVisible}>
                 Degrees
             </DegreeTitle>
