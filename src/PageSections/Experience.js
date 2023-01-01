@@ -37,26 +37,26 @@ const Experience = () => {
                         Jimmy Johns
                     </EntryTitle>
                     <EntryDuration>
-                        2015-Present
+                        2015- May, 2017 & Jan 2018 - Present
                     </EntryDuration>
                 </EntryTitleDurationContainer>
                 <EntryParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    In this position I utilized my ability to function well in a chaotic environment to efficiently deliver food to customers. 
+                    I worked with technology to route orders and learned the general structure of a city block number system.
                 </EntryParagraph>
             </ExperienceEntry>
             <ExperienceEntry ref={ExperienceEntryTwoRef} inView = {ExperienceEntryTwoVisible}>
                 <EntryTitleDurationContainer>
                     <EntryTitle>
-                        Previous Job
+                        Progressive Lawnscaping
                     </EntryTitle>
                     <EntryDuration>
-                        ---- - 2015
+                        May 2017 to Sept. 2017
                     </EntryDuration>
                 </EntryTitleDurationContainer>
                 <EntryParagraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    During my time working in Lawnscaping I got hands on with tools and equipment to provide an aesthetically pleasing Landscape for the customers home. 
+                    We did everything from tree removal to patio installation. 
                 </EntryParagraph>
             </ExperienceEntry>
         </ExperienceBody>

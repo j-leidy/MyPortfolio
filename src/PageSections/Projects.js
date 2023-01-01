@@ -46,8 +46,9 @@ const Projects = () => {
                             JuiceBot
                         </ProjectsCardTitle>
                         <ProjectsDescription>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Welcome to JuiceBot! The AIO discord.py bot equipped with functions from saying hello to a full RPG-Like system to encourage users to communicate and interact with each other. This bot has an economy along with skills users can level up. 
+                            It curates user interaction with an Activity Level that increases with messaging in your server as well as their interaction with skills and the economy of JuiceBot. At one point the bot used MongoDB as its database, however it was later switched over to using .json files. 
+                            While using MongoDB was a great learning experience .json files proved to be simpler and much quicker for this use case. This program is not currently on GitHub, but If you have any questions or would like to see what I've made contact me on my LinkedIn page at the bottom of the screen.
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsLink href="https://github.com/j-leidy" target="_blank">
@@ -60,8 +61,9 @@ const Projects = () => {
                             C++ DB Explorer
                         </ProjectsCardTitle>
                         <ProjectsDescription>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Command line executor of SQL commands. This program implements almost all SQL commands in C++ using SQLITE3. With this program users are able to not only manipulate .db files in every way, but also create their own .db from the ground up. 
+                            I got my inspiration from DB Browser, a program we used in class. I realized while using this and being introduced to SQLITE3 I could recreate this in C++. Now with it's implementation I could utilize this piece of software I made as a backend 
+                            for a frontend application. Feel free to take a look on GitHub! 
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsLink href="https://github.com/j-leidy" target="_blank">

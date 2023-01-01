@@ -30,8 +30,11 @@ const About = () =>{
                         About
                     </AboutTitle>
                     <AboutParagraph ref={AboutParagraphRef} inView = {ParagraphVisible}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    My name is, John Leidy II, and I am a developer striving to learn new technologies while working and progressing in my B.S. in Computer Science. I was born in a small town and moved twice until I landed in Indiana. 
+                    In my time here I have rebuilt my life from the ground up and learned how to be a contributing member of society. From the bottom, to where I am now I have learned what it takes to grow my life. I now have progressed from 
+                    not being productive for myself and others to spending my free time building my toolkit, supporting myself and building my list of credentials through education. 
+                    I have a passion for all things tech and spend a lot of my free time creating new pieces of software. I have done everything from command line applications written in c++ to front end development using React. 
+                    Below are some examples for things I have created. If there are any questions about any projects I have created feel free to reach out via my linkdin at the bottom of the page. 
                     </AboutParagraph>
                 </AboutContent>
             </AboutBody>
