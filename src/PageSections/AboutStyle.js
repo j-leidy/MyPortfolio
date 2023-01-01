@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutBody = styled.div`
     transition-property: color;
-    transition-duration: 3s;
+    transition-duration: 1s ease;
     z-index: -1;
     width: 70%;
     height: 100%;

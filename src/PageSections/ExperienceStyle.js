@@ -4,7 +4,7 @@ export const ExperienceBody =styled.div`
     margin-top: 5vh;
     margin-bottom: 5vh;
     transition-property: color;
-    transition-duration: 3s;
+    transition-duration: 1s ease;
     color: ${(props) => (props.active ? "black" : "white")};
     z-index: -1;
     width: 70%;

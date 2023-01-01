@@ -4,7 +4,7 @@ import { keyframes } from "styled-components";
 export const SkillsBody = styled.div`
     z-index: -1;
     transition-property: opacity;
-    transition-duration: 3s;
+    transition-duration: 1s ease;
     display: flex;
     flex-direction: column;
     align-items: center;

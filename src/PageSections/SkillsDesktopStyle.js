@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DesktopSkillsBody = styled.div`
     z-index: 1;
     transition-property: opacity;
-    transition-duration: 3s;
+    transition-duration: 1s;
     background: ${(props) => (props.active ? "#ffffff" : "#0A0A0A")};
     width: 70%;
     margin-left: auto;
@@ -24,7 +24,7 @@ export const SkillsDesktopContent = styled.div`
 
 
 export const DesktopSkillRow = styled.div`
-    transition: 3s all ease;
+    transition: 1s all ease;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;

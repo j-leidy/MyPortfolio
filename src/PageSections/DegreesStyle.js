@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DegreesBody =styled.div`
     z-index: -1;
     transition-property: color;
-    transition-duration: 3s;
+    transition-duration: 1s ease;
     color: ${(props) => (props.active ? "black" : "white")};
     margin-top: 5vh;
     width: 70%;
