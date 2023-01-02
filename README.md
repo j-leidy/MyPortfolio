@@ -82,6 +82,15 @@ render(){return(
 ```
 </details>
 
+### Passing setState into a class component to set the state for use in another component
+<details>
+
+<summary>View Code</summary>
+
+
+
+
+</details>
 
 
 ## Below are screenshots of the website:
