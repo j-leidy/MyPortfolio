@@ -87,8 +87,19 @@ render(){return(
 
 <summary>View Code</summary>
 
-
-
+```
+function App() {
+  const [lightordark, setLightOrDark] = React.useState(false)
+  return (
+    <div className='remove_scroll'>
+      <ParticlesComponent active = {lightordark}/>
+      <MainPage setLightOrDark = {setLightOrDark}/>
+    </div>
+    
+  );
+  
+};
+```
 
 </details>
 
