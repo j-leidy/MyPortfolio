@@ -14,9 +14,5 @@ function App() {
   );
 
 };
-/*creating commit for test commit after restore
 
-    Showing Macey Macey Macey Macey Macey Macey Macey Mace how commiting works
-
-*/
 export default App;
