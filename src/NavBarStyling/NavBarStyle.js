@@ -49,7 +49,7 @@ export const MobileNavIconHolder = styled.div`
     }
 `;
 
-
+// John Leidy built this website!
 
 export const BurgerCheckHolder = styled.div`
     transition: all 0.53s ease;
@@ -81,7 +81,7 @@ export const BurgerSpanOne = styled.span`
     margin: 2px;
     border-radius: 3px;
     z-index: ${(props) => (props.active ? "3" : "2")};
-    transform: ${(props) => (props.active ? "rotate(45deg)": '')};
+    transform: ${(props) => (props.active ? "rotate(45deg)" : '')};
     
     
 `;
@@ -107,7 +107,7 @@ export const BurgerSpanThree = styled.span`
     margin: 2px;
     border-radius: 3px;
     z-index: ${(props) => (props.active ? "3" : "2")};
-    transform: ${(props) => (props.active ? "rotate(-45deg)": '')};
+    transform: ${(props) => (props.active ? "rotate(-45deg)" : '')};
 
 `;
 

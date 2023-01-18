@@ -55,7 +55,7 @@ const BackgroundAnim = keyframes`
         transform: rotate(360deg);
     }
 `;
-
+// John Leidy built this website!
 export const IconWithText = styled.div`
     position: relative;
     display: flex;

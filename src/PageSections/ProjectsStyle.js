@@ -17,7 +17,7 @@ export const ProjectsBody = styled.div`
     }
 `;
 
-
+// John Leidy built this website!
 export const ProjectsContent = styled.div`
     margin: auto;
     padding-top: 6vh;
