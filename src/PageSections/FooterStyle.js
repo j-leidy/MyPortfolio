@@ -12,6 +12,7 @@ export const FooterBody = styled.div`
     @media screen and (max-width: 550px){
         height: 10vh;
         padding-top: 5%;
+        padding-bottom: 30%;
     }
 `;
 
@@ -70,7 +71,7 @@ export const SocialLinksFooter = styled.div`
 export const GithubLink = styled.div`
     width: 100%;
     height: 50%;
-`;  
+`;
 
 export const LinkedInLink = styled.div`
     width: 100%;

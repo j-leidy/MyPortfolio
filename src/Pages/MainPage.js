@@ -23,18 +23,8 @@ class MainPage extends Component {
         this.checkRef = React.createRef();
         this.handleCheckbox = this.handleCheckbox.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
-        this.hideAddressBar = this.hideAddressBar.bind(this);
 
     }
-
-    componentDidMount() {
-        window.addEventListener('touchmove', this.hideAddressBar, { passive: false });
-    }
-    hideAddressBar = () => {
-        setTimeout(() => {
-            window.scrollTo(0, 1);
-        }, 100);
-    };
 
     handleCheckbox(event, which) {
         if (event === true && which === "menu") {

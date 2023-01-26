@@ -8,5 +8,6 @@ export const WholePage = styled.div`
     height: 100%;
     caret-color: transparent;
     scrollbar-width: none;
-    overflow: auto;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 `;

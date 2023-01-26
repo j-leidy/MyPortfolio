@@ -9,6 +9,8 @@
   scrollbar-width: none;
   overflow: auto;
   scrollbar-track-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -18,8 +20,4 @@
   align-items: center;
   margin: auto;
   padding: auto;
-}
-
-body {
-  min-height: 100vh;
 }
