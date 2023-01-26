@@ -160,5 +160,12 @@ export const ProjectsLink = styled.a`
 
     @media screen and (max-width: 550px){
         border-radius: 10px;
+        :hover{
+            box-shadow: 0px 0px 0px 0px rgba(50,222,132,0.75);
+            -webkit-box-shadow: 0px 0px 0px px rgba(50,222,132,0.75);
+            -moz-box-shadow: 0px 0px 0px px rgba(50,222,132,0.75);
+            background: none;
+        }
+
     }
 `;
