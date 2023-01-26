@@ -12,7 +12,7 @@ export const FooterBody = styled.div`
     @media screen and (max-width: 550px){
         height: 10vh;
         padding-top: 5%;
-        padding-bottom: 30%;
+        padding-bottom: 20%;
     }
 `;
 
