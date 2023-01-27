@@ -11,6 +11,7 @@
     "react-helmet": "^6.1.0",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.7.0",
+    "reactstrap": "^9.1.5",
     "styled-components": "^5.3.6",
     "tsparticles": "^2.7.0",
     "typewriter-effect": "^2.19.0",

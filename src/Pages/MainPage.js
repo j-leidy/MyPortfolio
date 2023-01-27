@@ -9,6 +9,7 @@ import Projects from "../PageSections/Projects";
 import Experience from "../PageSections/Experience";
 import Degrees from "../PageSections/Degrees";
 import Footer from "../PageSections/Footer";
+import ContactSection from "../PageSections/ContactSection";
 
 
 class MainPage extends Component {
@@ -130,6 +131,7 @@ class MainPage extends Component {
                     <div className="container" id="projects"><Projects lightdark={this.state.lightmode} /></div>
                     <div className="container" id="degrees"><Degrees lightdark={this.state.lightmode} /></div>
                     <div className="container" id="experience"><Experience lightdark={this.state.lightmode} /></div>
+                    <div className="container" id="contact"><ContactSection lightdark={this.state.lightmode}/> </div>
                     <div className="container" id="footer"><Footer /></div>
                 </WholePage>
             </>
