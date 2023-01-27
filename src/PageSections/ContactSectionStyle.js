@@ -225,6 +225,7 @@ export const SubmitButton = styled.button`
         width: calc(100% + 2px);
         height: calc(100% + 2px);
         padding: 2px;
+        filter: blur(5px);
         animation: ${ButtonAnim} 50s linear infinite;
         transition: opacity 0.3s ease-in-out;
         border-radius: 10px;
@@ -287,6 +288,7 @@ export const SubmitButton = styled.button`
             z-index: -1;
             width: calc(100% + 2px);
             height: calc(100% + 2px);
+            filter: blur(5px);
             animation: ${ButtonAnim} 30s linear infinite;
             transition: opacity 0.3s ease-in-out;
             border-radius: 10px;

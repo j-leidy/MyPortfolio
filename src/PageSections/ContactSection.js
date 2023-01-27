@@ -77,7 +77,7 @@ const ContactSection = ({ lightdark }) => {
                         <PhoneNumberInput type="text" name="phone-number " placeholder="Phone Number" lightdark={lightdark}></PhoneNumberInput>
                     </InputContainer>
                     <InputContainer>
-                        <textarea name="message" placeholder="What can we help you with?" style={textAreaStyles}></textarea>
+                        <textarea name="message" placeholder="Enter your message here!" style={textAreaStyles}></textarea>
                     </InputContainer>
                     <SubmitButton type="submit" lightdark={lightdark}>Submit</SubmitButton>
                 </form>
