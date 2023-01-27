@@ -4,6 +4,10 @@ export const FormContainer = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    margin: auto;
+    margin-top: 5%;
+    opacity: ${(props) => (props.inView ? "1" : "0")};
+    transition: 2s all ease;
     @media screen and (max-width: 550px){
         width: 100%;
         height: 100%;
@@ -25,11 +29,14 @@ export const ContactSectionBody = styled.div`
         opacity: ${(props) => (props.inView ? "1" : "0")};
         transition: 2s all ease;
     }
-    width: 100%;
+    width: 40%;
     height: 100%;
     margin: auto;
-    mergin-top: 10%;
+    mergin-top: 20%;
     margin-bottom: 10%;
+    opacity: ${(props) => (props.inView ? "1" : "0")};
+    color: ${(props) => (props.lightdark ? "black" : "white")};
+    transition: 2s all ease;
 `;
 
 export const ContactTitle = styled.div`
@@ -61,9 +68,10 @@ export const FullNameInput = styled.input`
     font-size: 16px;
     border-width: 2px;
     border-color: white;
-    background-color: black;
+    background-color: ${(props) => (props.lightdark ? "black" : "white")};
     border-style: solid;
     border-radius: 5px;
+    color: ${(props) => (props.lightdark ? "white" : "black")};
     :focus{
         caret-color: black;
         outline: none;
@@ -94,9 +102,10 @@ export const EmailInput = styled.input`
     font-size: 16px;
     border-width: 2px;
     border-color: black;
-    background-color: none;
+    background-color: ${(props) => (props.lightdark ? "black" : "white")};
     border-style: solid;
     border-radius: 5px;
+    color: ${(props) => (props.lightdark ? "white" : "black")};
     :focus{
         caret-color: black;
         outline: none;
@@ -127,10 +136,10 @@ export const PhoneNumberInput = styled.input`
     font-size: 16px;
     border-width: 2px;
     border-color: black;
-    background-color: none;
-    color: #000000;
+    background-color: ${(props) => (props.lightdark ? "black" : "white")};
     border-style: solid;
     border-radius: 5px;
+    color: ${(props) => (props.lightdark ? "white" : "black")};
     :focus{
         caret-color: black;
         outline: none;
@@ -181,7 +190,7 @@ export const SubmitButton = styled.button`
     outline: none;
     color: rgb(255, 255, 255);
     background: #111;
-    width: 20%;
+    width: 50%;
     cursor: pointer;
     position: relative;
     z-index: 0;
