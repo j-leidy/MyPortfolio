@@ -21,7 +21,7 @@ export const ContactSectionBody = styled.div`
         margin: auto;
         mergin-top: 10%;
         margin-bottom: 10%;
-        color: ${(props) =>(props.lightdark ? "black" : "white")}
+        color: ${(props) => (props.lightdark ? "black" : "white")}
         opacity: ${(props) => (props.inView ? "1" : "0")};
         transition: 2s all ease;
     }
@@ -40,6 +40,7 @@ export const ContactTitle = styled.div`
     font-size: 30px;
     font-weight: 600;
     opacity: 1;
+    color: ${(props) => (props.lightdark ? "black" : "white")};
     border-bottom: 2px solid #32de84;
 `;
 
@@ -61,13 +62,12 @@ export const FullNameInput = styled.input`
     border-width: 2px;
     border-color: white;
     background-color: black;
-    color: ${(props) =>(props.lightdark ? "white" : "black")};
     border-style: solid;
     border-radius: 5px;
     :focus{
         caret-color: black;
         outline: none;
-        border-color: ${AccentColorGreen};
+        border-color: ${(props) => (props.lightdark ? AccentColorPurple : AccentColorGreen)};
     }
     @media screen and (max-width: 550px){
         margin: auto;
@@ -78,8 +78,8 @@ export const FullNameInput = styled.input`
         font-size: 16px;
         border-width: 2px;
         border-color: white;
-        background-color: ${(props)=>(props.lightdark ? "black" : "white")};
-        color: ${(props) =>(props.lightdark ? "black" : "white")};
+        color: ${(props) => (props.lightdark ? "white" : "black")};
+        background-color: ${(props) => (props.lightdark ? "black" : "white")};
         border-style: solid;
         border-radius: 5px;
     }
@@ -95,13 +95,12 @@ export const EmailInput = styled.input`
     border-width: 2px;
     border-color: black;
     background-color: none;
-    color: #000000;
     border-style: solid;
     border-radius: 5px;
     :focus{
         caret-color: black;
         outline: none;
-        border-color: ${AccentColorGreen};
+        border-color: ${(props) => (props.lightdark ? AccentColorPurple : AccentColorGreen)};
     }
     @media screen and (max-width: 550px){
         margin: auto;
@@ -112,8 +111,8 @@ export const EmailInput = styled.input`
         font-size: 16px;
         border-width: 2px;
         border-color: white;
-        background-color: black;
-        color: white;
+        color: ${(props) => (props.lightdark ? "white" : "black")};
+        background-color: ${(props) => (props.lightdark ? "black" : "white")};
         border-style: solid;
         border-radius: 5px;
     }
@@ -145,9 +144,9 @@ export const PhoneNumberInput = styled.input`
         padding: 10px;
         font-size: 16px;
         border-width: 2px;
-        border-color: ${(props)=>(props.lightdark ? AccentColorGreen : "white")};
-        background-color: black;
-        color: white;
+        color: ${(props) => (props.lightdark ? "white" : "black")};
+        border-color: ${(props) => (props.lightdark ? AccentColorGreen : "white")};
+        background-color: ${(props) => (props.lightdark ? "black" : "white")};
         border-style: solid;
         border-radius: 5px;
     }
@@ -175,7 +174,7 @@ const ButtonAnim = keyframes`
 export const SubmitButton = styled.button`
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     transition: 1s all ease;
     padding: 0.6em 2em;
     border: none;
@@ -216,6 +215,7 @@ export const SubmitButton = styled.button`
         z-index: -1;
         width: calc(100% + 2px);
         height: calc(100% + 2px);
+        padding: 2px;
         animation: ${ButtonAnim} 50s linear infinite;
         transition: opacity 0.3s ease-in-out;
         border-radius: 10px;
@@ -241,7 +241,7 @@ export const SubmitButton = styled.button`
     @media screen and (max-width: 550px){
         margin: auto;
         margin-top: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 50px;
         
         padding: 0.6em 2em;
         border: none;
@@ -272,8 +272,8 @@ export const SubmitButton = styled.button`
                 ${MainColor}
             );
             position: absolute;
-            top: -1px;
-            left: -1px;
+            top: -2px;
+            left: -2px;
             background-size: 400%;
             z-index: -1;
             width: calc(100% + 2px);
