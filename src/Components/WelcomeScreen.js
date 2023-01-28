@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TypewriterContainer, WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenTitleText, WelcomeScrenTitle } from "./WelcomeScreenStyle";
+import { WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenLoadingContainer, WelcomeScreenLoadingContainerItem, WelcomeScreenLoadingContainerTypeWriterContainer, WelcomeScreenLoadingContainerTypeWriterStatic, WelcomeScreenLoadingFrame, WelcomeScreenLoadingFrameIconHolder, WelcomeScreenLoadingMini, WelcomeScreenLoadingFrameX, WelcomeScreenTitleText, WelcomeScrenTitle } from "./WelcomeScreenStyle";
 import Typewriter from 'typewriter-effect';
 
 const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
@@ -9,6 +9,7 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
         setClicked(true);
         particlesStateSetter(true);
         homeStateSetter(true);
+        Typewriter.stop();
     }
 
 
@@ -18,19 +19,32 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
             <WelcomeScreenButtonRight onClick={enterClicked} entered={clicked} />
             <WelcomeButtonText onClick={enterClicked} entered={clicked}>Click to enter</WelcomeButtonText>
             <WelcomeScrenTitle entered={clicked} ><WelcomeScreenTitleText>John Leidy II</WelcomeScreenTitleText></WelcomeScrenTitle>
-            <TypewriterContainer entered={clicked}>
-                Initializing
-                <Typewriter
-                    options={{
-                        strings: ["..."],
-                        autoStart: true,
-                        loop: true,
-                        cursor: "",
 
-                    }}
-                />
-            </TypewriterContainer>
             <WelcomeScreenBody entered={clicked} />
+            <WelcomeScreenLoadingFrame entered={clicked} />
+            <WelcomeScreenLoadingFrameIconHolder entered={clicked}>
+                <WelcomeScreenLoadingMini>_</WelcomeScreenLoadingMini>
+                <WelcomeScreenLoadingFrameX>✕ </WelcomeScreenLoadingFrameX>
+            </WelcomeScreenLoadingFrameIconHolder>
+            <WelcomeScreenLoadingContainer entered={clicked}>
+                <WelcomeScreenLoadingContainerItem>Welcome</WelcomeScreenLoadingContainerItem>
+                <WelcomeScreenLoadingContainerItem>Website Title: John Leidy II Portfolio</WelcomeScreenLoadingContainerItem>
+                <WelcomeScreenLoadingContainerTypeWriterContainer>
+                    <WelcomeScreenLoadingContainerTypeWriterStatic><span>root:</span><span>~</span>$</WelcomeScreenLoadingContainerTypeWriterStatic>
+                    <Typewriter
+                        options={{
+                            strings: ["REDACTED...", "........", "Init NAVBAR...", "Init HOME...", "........", "REDACTED...", "........", "Init ABOUT...", "Init PROJECTS...", "REDACTED...", "Init EXPERIENCE...", "init DEGREES...", "REDACTED...", "init CONTACT...", "building dependencies......", "REDACTED..."],
+                            autoStart: true,
+                            loop: true,
+                            cursor: "",
+                            delay: 30,
+                            deleteSpeed: 2,
+                            pauseFor: 400
+
+                        }}
+                    />
+                </WelcomeScreenLoadingContainerTypeWriterContainer>
+            </WelcomeScreenLoadingContainer>
         </>
 
     );

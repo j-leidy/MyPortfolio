@@ -14,6 +14,9 @@ export const FooterBody = styled.div`
         padding-top: 5%;
         padding-bottom: 20%;
     }
+    @media screen and (min-width: 2560px){
+        font-size: 25px;
+    }
 `;
 
 export const AuthorFooter = styled.div`
@@ -58,7 +61,7 @@ export const AuthorItemCopyright = styled.div`
 
 export const SocialLinksFooter = styled.div`
     width: 10%;
-    height: 50%;
+    height: 100%;
     margin: auto;
     padding: auto;
     text-align: right;
@@ -66,16 +69,25 @@ export const SocialLinksFooter = styled.div`
         height: 100%;
         width: 40%;
     }
+    @media screen and (min-width: 2560px){
+        margin-top: 1%;
+    }
 `;
 
 export const GithubLink = styled.div`
     width: 100%;
     height: 50%;
+    @media screen and (min-width: 2560px){
+        height: 50%;
+    }
 `;
 
 export const LinkedInLink = styled.div`
     width: 100%;
     height: 50%;
+    @media screen and (min-width: 2560px){
+        height: 50%;
+    }
 `;
 
 export const LinkImage = styled.img`
@@ -87,6 +99,10 @@ export const LinkImage = styled.img`
         -moz-box-shadow: 0px 0px 30px 0px rgba(50,222,132,0.9);
     }
     border-radius: 50%;
+    @media screen and (min-width: 2560px){
+        width: 60px;
+        height: 60px;
+    }
     
     
 `;

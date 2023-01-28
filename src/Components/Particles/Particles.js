@@ -18,10 +18,10 @@ const ParticlesComponent = ({ active, entered }) => {
                 },
                 "particles": {
                     "number": {
-                        "value": entered ? 10 : 15,
+                        "value": entered ? 20 : 80,
                         "density": {
                             "enable": true,
-                            "value_area": 80
+                            "value_area": 500
                         }
                     },
                     "color": {
@@ -44,7 +44,7 @@ const ParticlesComponent = ({ active, entered }) => {
                         }
                     },
                     "size": {
-                        "value": 5,
+                        "value": 1,
                         "random": false,
                         "anim": {
                             "enable": false,
@@ -65,34 +65,34 @@ const ParticlesComponent = ({ active, entered }) => {
                     },
                     "line_linked": {
                         "enable": true,
-                        "distance": 100,
+                        "distance": 200,
                         "color": active ? "#000000" : entered ? "#ffffff" : "#000000",
                         "opacity": 1,
                         "width": 1
                     },
                     "move": {
                         "enable": true,
-                        "speed": 0.2,
+                        "speed": entered ? 0.3 : 2,
                         "direction": "none",
                         "random": false,
                         "straight": false,
                         "out_mode": "out",
                         "attract": {
-                            "enable": false,
+                            "enable": entered,
                             "rotateX": 600,
-                            "rotateY": 1200
+                            "rotateY": 600
                         }
                     }
                 },
                 "interactivity": {
                     "events": {
                         "onhover": {
-                            "enable": false,
-                            "mode": ["grab"]
+                            "enable": !entered,
+                            "mode": ["repulse"]
                         },
                         "onclick": {
-                            "enable": false,
-                            "mode": "bubble"
+                            "enable": !entered,
+                            "mode": "remove"
                         },
                         "resize": true
                     },
@@ -111,10 +111,10 @@ const ParticlesComponent = ({ active, entered }) => {
                             "speed": 5
                         },
                         "repulse": {
-                            "distance": 200
+                            "distance": 50
                         },
                         "push": {
-                            "particles_nb": 4
+                            "particles_nb": 50
                         },
                         "remove": {
                             "particles_nb": 2
@@ -122,6 +122,8 @@ const ParticlesComponent = ({ active, entered }) => {
                     }
                 },
                 "retina_detect": true,
+                "smooth": true,
+                "fpsLimit": 120,
                 "background": {
                     "color": active ? "#ffffff" : entered ? "#0A0A0A" : "#ffffff",
                     "image": "",

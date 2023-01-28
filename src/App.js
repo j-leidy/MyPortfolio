@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import ParticlesComponent from './Components/Particles/Particles';
 import MainPage from './Pages/MainPage';
@@ -9,6 +9,7 @@ function App() {
   const [lightordark, setLightOrDark] = React.useState(false);
   const [enteredWelcome, setEnteredWelcome] = React.useState(false);
   const [homeEnter, setHomeEnter] = React.useState(false);
+
   return (
 
     <div className='remove_scroll'>
