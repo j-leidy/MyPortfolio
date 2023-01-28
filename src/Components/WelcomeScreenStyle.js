@@ -16,6 +16,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     transition: 1s all ease;
     cursor: pointer;
     background: white;
+    user-select: none;
     @media screen and (min-width: 1920px){
         position: absolute;
         left: calc(50% - 200px);
@@ -54,6 +55,7 @@ export const WelcomeScreenButtonRight = styled.div`
     transition: 1s all ease;
     cursor: pointer;
     background: white;
+    user-select: none;
     @media screen and (min-width: 1920px){
         position: absolute;
         right: calc(50% - 200px);
@@ -106,6 +108,7 @@ export const WelcomeButtonText = styled.div`
     text-align: center;
     animation: ${TextFader} 5s linear infinite;
     cursor: pointer;
+    user-select: none;
     @media screen and (min-width: 2560px){
         font-size: 60px;
         top: calc(50% - 30px);
