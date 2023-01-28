@@ -5,7 +5,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     position: absolute;
     bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
     left: calc(50% - 100px);
-
+    transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
     width: 100px;
     height: 200px;
     background: white;
@@ -18,6 +18,7 @@ export const WelcomeScreenButtonLeft = styled.div`
 export const WelcomeScreenButtonRight = styled.div`
     position: absolute;
     right: calc(50% - 100px);
+    transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
     width: 100px;
     height: 200px;
     background: white;

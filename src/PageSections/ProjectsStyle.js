@@ -38,6 +38,9 @@ export const ProjectsTitle = styled.div`
     @media screen and (max-width: 550px){
         width: 100%;
     }
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
+    }
 
     
     
@@ -61,6 +64,9 @@ export const ProjectsDescription = styled.div`
     @media screen and (max-width: 820px){
         display: none;
         padding-bottom: 0px;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 30px;
     }
     
 `;
@@ -125,6 +131,9 @@ export const ProjectsCardTitle = styled.div`
 
     @media screen and (min-width: 990px){
         color: #32de84;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 50px;
     }
     
 `;

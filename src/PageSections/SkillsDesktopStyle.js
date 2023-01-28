@@ -12,6 +12,9 @@ export const DesktopSkillsBody = styled.div`
     @media screen and (max-width: 550px){
         display: none;
     }
+    @media screen and (max-width: 850px){
+        display: none;
+    }
 `;
 
 export const SkillsDesktopContent = styled.div`
@@ -34,6 +37,9 @@ export const DesktopSkillRow = styled.div`
     flex-direction: row;
     color: ${(props) => (props.active ? "#000000" : "#ffffff")};
     font-size: 20px;
+    @media screen and (min-width: 2560px){
+        font-size: 30px;
+    }
     
 `;
 

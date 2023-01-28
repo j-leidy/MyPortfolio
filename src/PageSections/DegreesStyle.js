@@ -36,6 +36,9 @@ export const DegreeTitle = styled.div`
     @media screen and (max-width: 550px){
         width: 100%;
     }
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
+    }
 `;
 export const DegreeEntry = styled.div`
     transition: 2s all ease;

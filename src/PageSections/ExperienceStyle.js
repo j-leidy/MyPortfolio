@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ExperienceBody =styled.div`
+export const ExperienceBody = styled.div`
     margin-top: 5vh;
     margin-bottom: 5vh;
     transition-property: color;
@@ -25,6 +25,9 @@ export const ExperienceTitle = styled.div`
     opacity: ${(props) => (props.inView ? "1" : "0")};
     @media screen and (max-width: 550px){
         width: 100%;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
     }
 `;
 export const ExperienceEntry = styled.div`
@@ -63,6 +66,7 @@ export const EntryTitle = styled.div`
     @media screen and (max-width: 550px){
         font-size: 20px;
     }
+    
 `;
 
 export const EntryDuration = styled.div`

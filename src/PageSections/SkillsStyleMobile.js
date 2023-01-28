@@ -14,6 +14,9 @@ export const SkillsBody = styled.div`
     @media screen and (min-width: 900px){
         display: none;
     }
+    @media screen and (max-width: 820px){
+        width: 70%;
+    }
     
 `;
 

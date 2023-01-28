@@ -78,13 +78,14 @@ export const PortraitContainer = styled.div`
         display: none;
     }
     
+    
 `;
 
 export const Portrait = styled.img`
     margin: auto;
     padding: auto;
     border-radius: 50%;
-
+    
     
     
 `;
@@ -102,6 +103,10 @@ export const PortraitFullscreen = styled.img`
 
     @media screen and (max-width: 820px){
         display: none;
+    }
+    @media screen and (min-width: 2560px){
+        width: 600px;
+        height: 600px;
     }
 `;
 
@@ -122,7 +127,13 @@ export const BodyTitle = styled.div`
     font-size: 30px;
     color: #32de84;
     @media screen and (max-width: 550px){
-        font-size: 20px
+        font-size: 20px;
+    }
+    @media screen and (max-width: 850px){
+        font-size: 25px;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
     }
 `;
 
@@ -131,10 +142,13 @@ export const BodyName = styled.div`
     color: ${(props) => (props.active ? "black" : "white")};
     font-size: 70px;
     @media screen and (max-width: 550px){
-        font-size: 45px;
+        font-size: 40px;
     }
     @media screen and (max-width: 400px){
         font-size: 40px;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 100px;
     }
 `;
 
