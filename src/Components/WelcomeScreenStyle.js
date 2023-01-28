@@ -15,13 +15,13 @@ export const WelcomeScreenButtonLeft = styled.div`
     border-left: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
     cursor: pointer;
+    background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(143,86,255,0) 100%);
     @media screen and (min-width: 1920px){
         position: absolute;
         left: calc(50% - 200px);
         transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
         width: 200px;
         height: 400px;
-        background: white;
         z-index: 22;
         border-top-left-radius: 200px;
         border-bottom-left-radius: 200px;
@@ -33,7 +33,6 @@ export const WelcomeScreenButtonLeft = styled.div`
         transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
         width: 400px;
         height: 800px;
-        background: white;
         z-index: 22;
         border-top-left-radius: 500px;
         border-bottom-left-radius: 500px;
@@ -54,13 +53,13 @@ export const WelcomeScreenButtonRight = styled.div`
     border-right: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
     cursor: pointer;
+    background: linear-gradient(270deg, rgba(255,255,255,0.9) 0%, rgba(143,86,255,0) 100%);
     @media screen and (min-width: 1920px){
         position: absolute;
         right: calc(50% - 200px);
         transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
         width: 200px;
         height: 400px;
-        background: white;
         z-index: 22;
         border-top-right-radius: 200px;
         border-bottom-right-radius: 200px;
@@ -72,7 +71,6 @@ export const WelcomeScreenButtonRight = styled.div`
         transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
         width: 400px;
         height: 800px;
-        background: white;
         z-index: 22;
         border-top-right-radius: 500px;
         border-bottom-right-radius: 500px;
@@ -124,15 +122,18 @@ export const WelcomeScrenTitle = styled.div`
     opacity: ${(props) => (props.entered ? "0" : "1")};
     width: 300px;
     height: 70px;
-    top: 20%;
+    top: 10%;
     left: calc(50% - 150px);
     font-weight: 600;
     font-size: 25px;
     text-align: center;
     color: black;
-    background: rgba(255, 255, 255,0.8);
     border-radius: 10px;
     transition: 1s all ease;
+    border-bottom: 1px solid ${AccentColorGreen};
+    @media screen and (max-width: 550px){
+        font-size: 30px;
+    }
     @media screen and (min-width: 2560px){
         font-size: 60px;
         width: 1000px;
@@ -158,9 +159,9 @@ export const TypewriterContainer = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "21")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
     position: absolute;
-    top: 70%;
-    left: calc(50% - 65px);
-    font-size: 25px;
+    top: 80%;
+    left: calc(50% - 46px);
+    font-size: 20px;
     width: 200px;
     height: 10%;
     display: flex;
@@ -188,8 +189,9 @@ export const WelcomeScreenBody = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "20")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
     position: absolute;
-    background-color: ${(props) => (props.entered ? "rgba(0,0,0,0)" : "rgba(255,255,255,0.3)")};
+    background: ${(props) => (props.entered ? "rgba(0,0,0,0)" : "linear-gradient(0deg, rgba(104,96,255,0.6137770708869485) 0%, rgba(143,86,255,0.15061917615010645) 100%)")};
     transition: zIndex 5s, opacity 20s, background-color 0s;
     overflow: none;
+
 `;
 
