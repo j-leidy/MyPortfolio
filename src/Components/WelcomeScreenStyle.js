@@ -8,12 +8,36 @@ export const WelcomeScreenButtonLeft = styled.div`
     transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
     width: 100px;
     height: 200px;
-    background: white;
+    background: ${(props) => (props.entered ? "black" : "white")};
     z-index: 22;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     border-left: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
+    @media screen and (min-width: 1920px){
+        position: absolute;
+        left: calc(50% - 200px);
+        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        width: 200px;
+        height: 400px;
+        background: white;
+        z-index: 22;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+        bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 200px)")};
+    }
+    @media screen and (min-width: 2560px){
+        position: absolute;
+        left: calc(50% - 400px);
+        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        width: 400px;
+        height: 800px;
+        background: white;
+        z-index: 22;
+        border-top-left-radius: 500px;
+        border-bottom-left-radius: 500px;
+        bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 400px)")};
+    }
 `;
 export const WelcomeScreenButtonRight = styled.div`
     position: absolute;
@@ -21,13 +45,38 @@ export const WelcomeScreenButtonRight = styled.div`
     transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
     width: 100px;
     height: 200px;
-    background: white;
+    background: ${(props) => (props.entered ? "black" : "white")};
     z-index: 22;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
     border-right: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
+    @media screen and (min-width: 1920px){
+        position: absolute;
+        right: calc(50% - 200px);
+        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        width: 200px;
+        height: 400px;
+        background: white;
+        z-index: 22;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 200px)")};
+    }
+    @media screen and (min-width: 2560px){
+        position: absolute;
+        right: calc(50% - 400px);
+        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        width: 400px;
+        height: 800px;
+        background: white;
+        z-index: 22;
+        border-top-right-radius: 500px;
+        border-bottom-right-radius: 500px;
+        top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 400px)")};
+    }
+    
 `;
 
 const TextFader = keyframes`   
@@ -56,6 +105,14 @@ export const WelcomeButtonText = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "22")};
     text-align: center;
     animation: ${TextFader} 5s linear infinite;
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
+        top: calc(50% - 30px);
+    }
+    @media screen and (min-width: 1920px){
+        font-size: 40px;
+        top: calc(50% - 20px);
+    }
 `;
 
 export const WelcomeScrenTitle = styled.div`
@@ -73,6 +130,18 @@ export const WelcomeScrenTitle = styled.div`
     background: rgba(255, 255, 255,0.8);
     border-radius: 10px;
     transition: 1s all ease;
+    @media screen and (min-width: 2560px){
+        font-size: 60px;
+        width: 1000px;
+        left: calc(50% - 500px);
+        top: 10%;
+    }
+    @media screen and (min-width: 1920px){
+        font-size: 40px;
+        width: 1000px;
+        left: calc(50% - 500px);
+        top:5%;
+    }
 
 `;
 export const WelcomeScreenTitleText = styled.div`
@@ -94,6 +163,18 @@ export const TypewriterContainer = styled.div`
     display: flex;
     flex-direction: row;
     transition: 1s all ease;
+    @media screen and (min-width: 2560px){
+        font-size: 40px;
+        width: 1000px;
+        left: calc(50% - 110px);
+        top: 90%;
+    }
+    @media screen and (min-width: 1920px){
+        font-size: 30px;
+        width: 1000px;
+        left: calc(50% - 85px);
+        top: 90%;
+    }
 `;
 
 

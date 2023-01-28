@@ -66,6 +66,9 @@ export const EntryTitle = styled.div`
     @media screen and (max-width: 550px){
         font-size: 20px;
     }
+    @media screen and (min-width: 2560px){
+        font-size: 40px;
+    }
     
 `;
 
@@ -86,5 +89,8 @@ export const EntryParagraph = styled.div`
         margin-right: auto;
         margin-left: auto;
         width: 100%;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 30px;
     }
 `;

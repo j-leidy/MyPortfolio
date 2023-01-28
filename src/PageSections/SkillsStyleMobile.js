@@ -14,9 +14,10 @@ export const SkillsBody = styled.div`
     @media screen and (min-width: 900px){
         display: none;
     }
-    @media screen and (max-width: 820px){
-        width: 70%;
+    @media screen and (max-width: 550px){
+        width: 90%;
     }
+
     
 `;
 
@@ -29,6 +30,9 @@ export const SkillsTitleContainer = styled.div`
     font-size: 30px;
     background: #32de84;
     border-radius: 10px;
+    @media screen and (max-width: 550px){
+        width: 100%;
+    }
 `;
 
 export const SkillsTitle = styled.div`

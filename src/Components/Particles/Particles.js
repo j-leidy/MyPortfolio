@@ -18,10 +18,10 @@ const ParticlesComponent = ({ active, entered }) => {
                 },
                 "particles": {
                     "number": {
-                        "value": entered ? 10 : 50,
+                        "value": entered ? 10 : 15,
                         "density": {
                             "enable": true,
-                            "value_area": 100
+                            "value_area": 80
                         }
                     },
                     "color": {
@@ -48,8 +48,8 @@ const ParticlesComponent = ({ active, entered }) => {
                         "random": false,
                         "anim": {
                             "enable": false,
-                            "speed": 40,
-                            "size_min": 0.1,
+                            "speed": 2,
+                            "size_min": 0.5,
                             "sync": false
                         }
                     },

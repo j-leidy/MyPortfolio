@@ -11,7 +11,7 @@ export const AboutBody = styled.div`
     margin-right: auto;
     background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(255,255,255,0.7511205165660014) 0%, rgba(255,255,255,0.9107843821122199) 7%, rgba(255,255,255,0.9640056706276261) 15%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0.9612045501794468) 85%, rgba(255,255,255,0.9135855025603992) 93%, rgba(255,255,255,0.7511205165660014) 100%)" : "linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(10,10,10,1) 64%, rgba(10,10,10,0.9612045501794468) 75%, rgba(10,10,10,0.9275911048012955) 80%, rgba(10,10,10,0.8771709367340687) 85%, rgba(10,10,10,0.798739564185049) 90%, rgba(10,10,10,0.5858544101234244) 95%, rgba(10,10,10,0) 100%)")};
     @media screen and (max-width: 550px){
-        width: 100%;
+        width: 80%;
     }
 `;
 export const AboutContent = styled.div`
@@ -23,6 +23,8 @@ export const AboutContent = styled.div`
     width: 70%;
     @media screen and (max-width: 550px){
         width: 80%;
+        padding-left: 0;
+        padding-right:0;
     }
     @media screen and (max-width: 820px){
         width: 100%;

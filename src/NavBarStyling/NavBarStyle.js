@@ -82,6 +82,7 @@ export const BurgerCheckHolder = styled.div`
     @media screen and (min-width: 2560px){
         width: 60px;
         height: 60px;
+        right: 13vw;
     }
     
 
