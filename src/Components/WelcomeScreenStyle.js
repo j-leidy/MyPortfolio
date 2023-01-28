@@ -15,7 +15,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     border-left: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
     cursor: pointer;
-    background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(143,86,255,0) 100%);
+    background: white;
     @media screen and (min-width: 1920px){
         position: absolute;
         left: calc(50% - 200px);
@@ -53,7 +53,7 @@ export const WelcomeScreenButtonRight = styled.div`
     border-right: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
     cursor: pointer;
-    background: linear-gradient(270deg, rgba(255,255,255,0.9) 0%, rgba(143,86,255,0) 100%);
+    background: white;
     @media screen and (min-width: 1920px){
         position: absolute;
         right: calc(50% - 200px);
@@ -189,7 +189,7 @@ export const WelcomeScreenBody = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "20")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
     position: absolute;
-    background: ${(props) => (props.entered ? "rgba(0,0,0,0)" : "linear-gradient(0deg, rgba(104,96,255,0.6137770708869485) 0%, rgba(143,86,255,0.15061917615010645) 100%)")};
+    background: ${(props) => (props.entered ? "rgba(0,0,0,0)" : "none")};
     transition: zIndex 5s, opacity 20s, background-color 0s;
     overflow: none;
 
