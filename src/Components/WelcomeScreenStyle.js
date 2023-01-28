@@ -136,6 +136,7 @@ export const WelcomeScrenTitle = styled.div`
     border-radius: 10px;
     transition: 1s all ease;
     border-bottom: 1px solid ${AccentColorGreen};
+    -webkit-tap-highlight-color: transparent;
     @media screen and (max-width: 550px){
         font-size: 30px;
     }
@@ -152,7 +153,7 @@ export const WelcomeScrenTitle = styled.div`
 
 `;
 export const WelcomeScreenTitleText = styled.div`
-    
+    cursor: default;
     width: 100%;
     height: 100%;
     position: relative;
@@ -173,6 +174,7 @@ export const TypewriterContainer = styled.div`
     flex-direction: row;
     transition: 1s all ease;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 2560px){
         font-size: 40px;
         width: 1000px;
@@ -215,6 +217,7 @@ export const WelcomeScreenLoadingContainer = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "22")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
     transition: 1s all ease;
+    -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 1920px){
         width: 500px;
         left: calc(50% - 250px);
@@ -234,6 +237,8 @@ export const WelcomeScreenLoadingFrame = styled.div`
     padding: 6px;
     border-radius: 10px;
     transition: 1s all ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
     @media screen and (min-width: 1920px){
         width: 504px;
         left: calc(50% - 252px);
@@ -253,6 +258,8 @@ export const WelcomeScreenLoadingFrameIconHolder = styled.div`
     color: white;
     padding: 0;
     transition: 2s all ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
     @media screen and (min-width: 1920px){
         left: calc(50% + 220px);
     }
@@ -268,6 +275,8 @@ export const WelcomeScreenLoadingFrameX = styled.div`
     padding-bottom: 4px;
     padding-top: -2px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
 
 `;
 
@@ -281,9 +290,13 @@ export const WelcomeScreenLoadingMini = styled.div`
     padding-bottom: 4px;
     padding-top: -2px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
 `;
 export const WelcomeScreenLoadingContainerItem = styled.div`
     font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
 
 `;
 
@@ -294,9 +307,13 @@ export const WelcomeScreenLoadingContainerTypeWriterContainer = styled.div`
     display: flex;
     flex-direction: row;
     transition: 1s all ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
 `;
 
 export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
     margin-right: 5px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
 `;
 
