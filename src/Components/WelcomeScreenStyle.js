@@ -13,7 +13,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     border-left: 1px solid ${AccentColorGreen};
-    transition: 3s all ease;
+    transition: 1s all ease;
 `;
 export const WelcomeScreenButtonRight = styled.div`
     position: absolute;
@@ -26,7 +26,7 @@ export const WelcomeScreenButtonRight = styled.div`
     border-bottom-right-radius: 100px;
     top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
     border-right: 1px solid ${AccentColorGreen};
-    transition: 3s all ease;
+    transition: 1s all ease;
 `;
 
 const TextFader = keyframes`   

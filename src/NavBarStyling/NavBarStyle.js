@@ -16,7 +16,7 @@ export const MobileNav = styled.nav`
     display: flex;
     width: 100%;
     margin: 0;
-    transition: 5s all ease;
+    transition: 2s all ease;
 `;
 export const MobileNavBar = styled.div`
     display: flex;
