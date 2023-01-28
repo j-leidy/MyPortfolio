@@ -17,6 +17,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     cursor: pointer;
     background: white;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 1920px){
         position: absolute;
         left: calc(50% - 200px);
@@ -56,6 +57,7 @@ export const WelcomeScreenButtonRight = styled.div`
     cursor: pointer;
     background: white;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 1920px){
         position: absolute;
         right: calc(50% - 200px);
@@ -109,6 +111,7 @@ export const WelcomeButtonText = styled.div`
     animation: ${TextFader} 5s linear infinite;
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 2560px){
         font-size: 60px;
         top: calc(50% - 30px);
