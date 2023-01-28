@@ -17,7 +17,7 @@ class MainPage extends Component {
         super()
         this.state = {
             checked: false,
-            lightmode: false
+            lightmode: false,
         }
 
 
@@ -77,7 +77,7 @@ class MainPage extends Component {
 
             <>
 
-                <MobileNav >
+                <MobileNav inside={this.props.enter} >
                     <MobileNavBar>
                         <MobileNavIconHolder />
                         <SliderCheckHolder>
@@ -124,14 +124,14 @@ class MainPage extends Component {
                     </MobileNavBar>
                 </MobileNav>
                 <WholePage>
-                    <div className="container" id="home"><Home lightdark={this.state.lightmode} /></div>
+                    <div className="container" id="home"><Home lightdark={this.state.lightmode} welcome={this.props.enter} /></div>
                     <AnimArrow lightdark={this.state.lightmode} />
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
                     <div className="container" id="about"><About lightdark={this.state.lightmode} /></div>
                     <div className="container" id="projects"><Projects lightdark={this.state.lightmode} /></div>
                     <div className="container" id="degrees"><Degrees lightdark={this.state.lightmode} /></div>
                     <div className="container" id="experience"><Experience lightdark={this.state.lightmode} /></div>
-                    <div className="container" id="contact"><ContactSection lightdark={this.state.lightmode}/> </div>
+                    <div className="container" id="contact"><ContactSection lightdark={this.state.lightmode} /> </div>
                     <div className="container" id="footer"><Footer /></div>
                 </WholePage>
             </>

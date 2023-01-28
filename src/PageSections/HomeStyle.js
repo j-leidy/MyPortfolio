@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
- 
+
 export const Body = styled.div`
 
 
@@ -30,6 +30,9 @@ export const Body = styled.div`
     z-index: -1;
     margin-left: auto;
     margin-right: auto;
+    opacity: ${(props) => (props.inside ? "1" : "0")};
+    transition: 3s all ease;
+    
     
 
 `;
@@ -41,10 +44,14 @@ export const HomeContent = styled.div`
     margin-left: 30px;
     margin: auto;
     width: 50%;
+    opacity: ${(props) => (props.inside ? "1" : "0")};
+    transition: 3s all ease;
     @media screen and (max-width: 550px){
         background: none;
         margin: auto;
         width: 100%;
+        opacity: ${(props) => (props.inside ? "1" : "0")};
+        transition: 3s all ease;
     }
     @media screen and (max-width: 820px){
         width: 90%;
@@ -124,7 +131,10 @@ export const BodyName = styled.div`
     color: ${(props) => (props.active ? "black" : "white")};
     font-size: 70px;
     @media screen and (max-width: 550px){
-        font-size: 50px;
+        font-size: 45px;
+    }
+    @media screen and (max-width: 400px){
+        font-size: 40px;
     }
 `;
 
@@ -140,12 +150,12 @@ export const BodyDetails = styled.div`
     width: 100%;
 
     @media screen and (max-width: 550px){
-        font-size: 28px;
+        font-size: 22px;
         flex-direction: row;
     }
 
     @media screen and (max-width: 400px){
-        font-size: 27px;
+        font-size: 20px;
     }
     
 `;

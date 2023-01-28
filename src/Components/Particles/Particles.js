@@ -1,35 +1,53 @@
 import React from "react";
-import {loadFull} from "tsparticles"
+import { loadFull } from "tsparticles"
 import Particles from "react-tsparticles";
 
 
-const ParticlesComponent = ({active}) =>{
+const ParticlesComponent = ({ active, entered }) => {
     let color = "#000000"
     let color_rest = "#000000"
+    let z = 15;
+    let num = 30;
+    console.log("particles entered: ", entered);
     const particlesInit = async (main) => {
         console.log(main);
         await loadFull(main);
-      };
-    if (active === true){
+    };
+    if (active === true) {
         color = "#ffffff"
         color_rest = "#000000"
     }
-    if (active === false){
-        color = "#0A0A0A"
-        color_rest = "#ffffff"
+    if (active === false) {
+        if (entered === true) {
+            color = "#0A0A0A"
+            color_rest = "#ffffff"
+        }
+        if (entered === false) {
+            color = "#ffffff"
+            color_rest = "#000000"
+        }
     }
-    return(
-            <Particles 
+    if (entered === true) {
+        z = -15;
+        num = 10;
+
+    }
+    if (entered === false) {
+        z = 15;
+        num = 30;
+    }
+    return (
+        <Particles
             id="tsparticles"
             init={particlesInit}
-            options = {{
-                "fullScreen" :{
-                    "enable" : true,
-                    "zIndex" : -10,
+            options={{
+                "fullScreen": {
+                    "enable": true,
+                    "zIndex": z,
                 },
                 "particles": {
                     "number": {
-                        "value": 10,
+                        "value": num,
                         "density": {
                             "enable": true,
                             "value_area": 100
@@ -119,7 +137,7 @@ const ParticlesComponent = ({active}) =>{
                             "size": 40,
                             "duration": 2,
                             "opacity": 8,
-                            "speed": 3
+                            "speed": 5
                         },
                         "repulse": {
                             "distance": 200
@@ -140,12 +158,14 @@ const ParticlesComponent = ({active}) =>{
                     "repeat": "no-repeat",
                     "size": "cover"
                 },
-                "style" : {
-                    
+                "style": {
+                    "transition": "1s all ease",
+                    "width": "100%",
+                    "height": "100%"
                 }
             }}
 
-            />
+        />
     );
 };
 
