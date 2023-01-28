@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenLoadingContainer, WelcomeScreenLoadingContainerItem, WelcomeScreenLoadingContainerTypeWriterContainer, WelcomeScreenLoadingContainerTypeWriterStatic, WelcomeScreenLoadingFrame, WelcomeScreenLoadingFrameIconHolder, WelcomeScreenLoadingMini, WelcomeScreenLoadingFrameX, WelcomeScreenTitleText, WelcomeScrenTitle } from "./WelcomeScreenStyle";
+import { WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenLoadingContainer, WelcomeScreenLoadingContainerItem, WelcomeScreenLoadingContainerTypeWriterContainer, WelcomeScreenLoadingContainerTypeWriterStatic, WelcomeScreenLoadingFrame, WelcomeScreenLoadingFrameIconHolder, WelcomeScreenLoadingMini, WelcomeScreenLoadingFrameX, WelcomeScreenTitleText, WelcomeScrenTitle, WelcomeButtonMobileText } from "./WelcomeScreenStyle";
 import Typewriter from 'typewriter-effect';
 
 const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
@@ -17,6 +17,7 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
         <>
             <WelcomeScreenButtonLeft onClick={enterClicked} entered={clicked} />
             <WelcomeScreenButtonRight onClick={enterClicked} entered={clicked} />
+            <WelcomeButtonMobileText onClick={enterClicked} entered={clicked}>Tap to enter</WelcomeButtonMobileText>
             <WelcomeButtonText onClick={enterClicked} entered={clicked}>Click to enter</WelcomeButtonText>
             <WelcomeScrenTitle entered={clicked} ><WelcomeScreenTitleText>John Leidy II</WelcomeScreenTitleText></WelcomeScrenTitle>
 

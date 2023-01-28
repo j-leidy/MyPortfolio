@@ -111,6 +111,9 @@ export const WelcomeButtonText = styled.div`
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    @media screen and (max-width: 550px){
+        display: none;
+    }
     @media screen and (min-width: 2560px){
         font-size: 60px;
         top: calc(50% - 30px);
@@ -118,6 +121,26 @@ export const WelcomeButtonText = styled.div`
     @media screen and (min-width: 1920px){
         font-size: 40px;
         top: calc(50% - 20px);
+    }
+`;
+export const WelcomeButtonMobileText = styled.div`
+    position: absolute;
+    color: ${AccentColorGreen};
+    font-size: 20px;
+    width: 100%;
+    top: calc(50% - 12px);
+    margin: auto;
+    z-index: ${(props) => (props.entered ? "-40" : "22")};
+    text-align: center;
+    animation: ${TextFader} 5s linear infinite;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    @media screen and (min-width: 2560px){
+        display: none;
+    }
+    @media screen and (min-width: 1920px){
+        display: none;
     }
 `;
 
