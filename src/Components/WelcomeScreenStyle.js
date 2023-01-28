@@ -125,8 +125,8 @@ export const WelcomeScrenTitle = styled.div`
     opacity: ${(props) => (props.entered ? "0" : "1")};
     width: 300px;
     height: 70px;
-    top: 10%;
     left: calc(50% - 150px);
+    top: 5%;
     font-weight: 600;
     font-size: 25px;
     text-align: center;
@@ -141,20 +141,18 @@ export const WelcomeScrenTitle = styled.div`
         font-size: 60px;
         width: 1000px;
         left: calc(50% - 500px);
-        top: 10%;
     }
     @media screen and (min-width: 1920px){
         font-size: 40px;
         width: 1000px;
         left: calc(50% - 500px);
-        top:5%;
     }
 
 `;
 export const WelcomeScreenTitleText = styled.div`
-    margin-top: 6%;
+    
     width: 100%;
-    height: 30px;
+    height: 100%;
     position: relative;
 `;
 
