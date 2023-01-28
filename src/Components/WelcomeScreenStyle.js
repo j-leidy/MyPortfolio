@@ -14,6 +14,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     border-bottom-left-radius: 100px;
     border-left: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
+    cursor: pointer;
     @media screen and (min-width: 1920px){
         position: absolute;
         left: calc(50% - 200px);
@@ -52,6 +53,7 @@ export const WelcomeScreenButtonRight = styled.div`
     top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
     border-right: 1px solid ${AccentColorGreen};
     transition: 1s all ease;
+    cursor: pointer;
     @media screen and (min-width: 1920px){
         position: absolute;
         right: calc(50% - 200px);
@@ -105,6 +107,7 @@ export const WelcomeButtonText = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "22")};
     text-align: center;
     animation: ${TextFader} 5s linear infinite;
+    cursor: pointer;
     @media screen and (min-width: 2560px){
         font-size: 60px;
         top: calc(50% - 30px);
