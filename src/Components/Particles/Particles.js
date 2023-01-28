@@ -4,38 +4,9 @@ import Particles from "react-tsparticles";
 
 
 const ParticlesComponent = ({ active, entered }) => {
-    let color = "#000000"
-    let color_rest = "#000000"
-    let z = 15;
-    let num = 30;
-    console.log("particles entered: ", entered);
     const particlesInit = async (main) => {
-        console.log(main);
         await loadFull(main);
     };
-    if (active === true) {
-        color = "#ffffff"
-        color_rest = "#000000"
-    }
-    if (active === false) {
-        if (entered === true) {
-            color = "#0A0A0A"
-            color_rest = "#ffffff"
-        }
-        if (entered === false) {
-            color = "#ffffff"
-            color_rest = "#000000"
-        }
-    }
-    if (entered === true) {
-        z = -15;
-        num = 10;
-
-    }
-    if (entered === false) {
-        z = 15;
-        num = 30;
-    }
     return (
         <Particles
             id="tsparticles"
@@ -43,18 +14,18 @@ const ParticlesComponent = ({ active, entered }) => {
             options={{
                 "fullScreen": {
                     "enable": true,
-                    "zIndex": z,
+                    "zIndex": entered ? -15 : 15,
                 },
                 "particles": {
                     "number": {
-                        "value": num,
+                        "value": entered ? 10 : 50,
                         "density": {
                             "enable": true,
                             "value_area": 100
                         }
                     },
                     "color": {
-                        "value": color_rest
+                        "value": active ? "#ffffff" : entered ? "#0A0A0A" : "#ffffff"
                     },
                     "shape": {
                         "type": "none",
@@ -95,7 +66,7 @@ const ParticlesComponent = ({ active, entered }) => {
                     "line_linked": {
                         "enable": true,
                         "distance": 100,
-                        "color": color_rest,
+                        "color": active ? "#000000" : entered ? "#ffffff" : "#000000",
                         "opacity": 1,
                         "width": 1
                     },
@@ -152,7 +123,7 @@ const ParticlesComponent = ({ active, entered }) => {
                 },
                 "retina_detect": true,
                 "background": {
-                    "color": color,
+                    "color": active ? "#ffffff" : entered ? "#0A0A0A" : "#ffffff",
                     "image": "",
                     "position": "absolute",
                     "repeat": "no-repeat",
@@ -161,7 +132,8 @@ const ParticlesComponent = ({ active, entered }) => {
                 "style": {
                     "transition": "1s all ease",
                     "width": "100%",
-                    "height": "100%"
+                    "height": "100%",
+                    "maxWidth": "100%"
                 }
             }}
 

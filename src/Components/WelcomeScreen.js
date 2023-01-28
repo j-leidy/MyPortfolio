@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TypewriterContainer, WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScrenTitle } from "./WelcomeScreenStyle";
+import { TypewriterContainer, WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenTitleText, WelcomeScrenTitle } from "./WelcomeScreenStyle";
 import Typewriter from 'typewriter-effect';
 
 const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
@@ -17,7 +17,7 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
             <WelcomeScreenButtonLeft onClick={enterClicked} entered={clicked} />
             <WelcomeScreenButtonRight onClick={enterClicked} entered={clicked} />
             <WelcomeButtonText onClick={enterClicked} entered={clicked}>Click to enter</WelcomeButtonText>
-            <WelcomeScrenTitle entered={clicked} >John Leidy II Portfolio</WelcomeScrenTitle>
+            <WelcomeScrenTitle entered={clicked} ><WelcomeScreenTitleText>John Leidy II Portfolio</WelcomeScreenTitleText></WelcomeScrenTitle>
             <TypewriterContainer entered={clicked}>
                 Initializing
                 <Typewriter
@@ -25,7 +25,8 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
                         strings: ["..."],
                         autoStart: true,
                         loop: true,
-                        cursor: ""
+                        cursor: "",
+
                     }}
                 />
             </TypewriterContainer>

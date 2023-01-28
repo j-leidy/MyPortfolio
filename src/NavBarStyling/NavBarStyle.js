@@ -8,7 +8,7 @@ import Darktwo from "../Icons/DarkLight.png"
 
 
 export const MobileNav = styled.nav`
-    z-index: 2;
+    z-index: ${(props) => (props.inside ? "2" : "0")};
     position: fixed;
     top: ${(props) => (props.inside ? "0" : "-50px")};
     opacity: ${(props) => (props.inside ? "1" : "0")};
@@ -21,12 +21,10 @@ export const MobileNav = styled.nav`
 export const MobileNavBar = styled.div`
     display: flex;
     background: #161618;
-    width: 100vw;
+    width: 100%;
     height: 6vh;
     margin: 0;
 `;
-
-
 
 export const MobileNavIconHolder = styled.div`
     margin-left: 15%;
