@@ -34,13 +34,13 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
                     <WelcomeScreenLoadingContainerTypeWriterStatic><span>root:</span><span>~</span>$</WelcomeScreenLoadingContainerTypeWriterStatic>
                     <Typewriter
                         options={{
-                            strings: ["REDACTED...", "........", "Init NAVBAR...", "Init HOME...", "........", "REDACTED...", "........", "Init ABOUT...", "Init PROJECTS...", "REDACTED...", "Init EXPERIENCE...", "init DEGREES...", "REDACTED...", "init CONTACT...", "building dependencies......", "REDACTED..."],
+                            strings: ["REDACTED...", "........", "Init navBar...", "Init home...", "........", "REDACTED...", "........", "Init about...", "Init projects...", "REDACTED...", "Init experience...", "init degrees...", "REDACTED...", "init contact...", "bundling dependencies......", "REDACTED..."],
                             autoStart: true,
                             loop: true,
                             cursor: "",
                             delay: 30,
                             deleteSpeed: 2,
-                            pauseFor: 400
+                            pauseFor: 400,
 
                         }}
                     />

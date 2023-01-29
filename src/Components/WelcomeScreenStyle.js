@@ -326,7 +326,7 @@ export const WelcomeScreenLoadingContainerItem = styled.div`
 export const WelcomeScreenLoadingContainerTypeWriterContainer = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "21")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
-    font-size: 12px;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
     transition: 1s all ease;
