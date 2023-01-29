@@ -111,7 +111,7 @@ const ParticlesComponent = ({ active, entered }) => {
                             "speed": 5
                         },
                         "repulse": {
-                            "distance": 50
+                            "distance": 100
                         },
                         "push": {
                             "particles_nb": 50

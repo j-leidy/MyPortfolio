@@ -18,12 +18,12 @@ export const Body = styled.div`
         background: rgba(10, 10, 10, 0);
     }
     background: ${(props) => (props.active ? "rgba(255,255,255, 0.95)" : "rgba(10,10,10,0.95)")};
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: row;
     color: #ffffff;
-    width: 80%;
+    width: 100%;
     height: 60vh;
     justify-content: center;
     align-items: left;

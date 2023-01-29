@@ -57,9 +57,13 @@ export const MobileNavIconHolder = styled.div`
     @media screen and (max-width: 850px){
         margin-left: 5%;
     }
+    @media screen and (min-width: 1920px){
+        margin-left: 5vw;
+    }
     @media screen and (min-width: 2560px){
         width: 60px;
         height: 60px;
+        margin-left: 5vw;
     }
 `;
 
@@ -79,10 +83,13 @@ export const BurgerCheckHolder = styled.div`
         top: 1.5vh;
         right: 4vw;
     }
+    @media screen and (min-width: 1920px){
+        right: 5vw;
+    }
     @media screen and (min-width: 2560px){
         width: 60px;
         height: 60px;
-        right: 13vw;
+        right: 5vw;
     }
     
 

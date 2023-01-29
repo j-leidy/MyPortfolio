@@ -3,80 +3,72 @@ import { AccentColorGreen } from "../colorPallete";
 
 export const WelcomeScreenButtonLeft = styled.div`
     position: absolute;
-    bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
-    left: calc(50% - 100px);
-    transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+    bottom: calc(50% - 100px);
+    left: ${(props) => (props.entered ? "calc(50% - 150px)" : "calc(50% - 100px)")};
     width: 100px;
     height: 200px;
-    background: ${(props) => (props.entered ? "white" : "black")};
-    z-index: 22;
+    background: black;
+    opacity: ${(props) => (props.entered ? "0" : "1")};
+    z-index: ${(props) => (props.entered ? "-16" : "22")};
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     border-left: 1px solid ${AccentColorGreen};
-    transition: 0.5s all ease;
+    transition: 2s all ease;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 1920px){
         position: absolute;
-        left: calc(50% - 150px);
-        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        left: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 150px)")};
         width: 150px;
         height: 300px;
-        z-index: 22;
         border-top-left-radius: 200px;
         border-bottom-left-radius: 200px;
-        bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 150px)")};
+        bottom: calc(50% - 150px);
     }
     @media screen and (min-width: 2560px){
         position: absolute;
-        left: calc(50% - 200px);
-        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        left: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 200px)")};
         width: 200px;
         height: 400px;
-        z-index: 22;
         border-top-left-radius: 500px;
         border-bottom-left-radius: 500px;
-        bottom: ${(props) => (props.entered ? "-2000px" : "calc(50% - 200px)")};
+        bottom: calc(50% - 200px);
     }
 `;
 export const WelcomeScreenButtonRight = styled.div`
     position: absolute;
-    right: calc(50% - 100px);
-    transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+    right: ${(props) => (props.entered ? "calc(50% - 150px)" : "calc(50% - 100px)")};
     width: 100px;
     height: 200px;
-    background: ${(props) => (props.entered ? "white" : "black")};
-    z-index: 22;
+    background: black;
+    opacity: ${(props) => (props.entered ? "0" : "1")};
+    z-index: ${(props) => (props.entered ? "-16" : "22")};
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 100px)")};
+    top: calc(50% - 100px);
     border-right: 1px solid ${AccentColorGreen};
-    transition: 1s all ease;
+    transition: 2s all ease;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     @media screen and (min-width: 1920px){
         position: absolute;
-        right: calc(50% - 150px);
-        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        right: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 150px)")};
         width: 150px;
         height: 300px;
-        z-index: 22;
         border-top-right-radius: 200px;
         border-bottom-right-radius: 200px;
-        top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 150px)")};
+        top: calc(50% - 150px);
     }
     @media screen and (min-width: 2560px){
         position: absolute;
-        right: calc(50% - 200px);
-        transform: ${(props) => (props.entered ? "rotate(-360deg)" : "")};
+        right: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 200px)")};
         width: 200px;
         height: 400px;
-        z-index: 22;
         border-top-right-radius: 500px;
         border-bottom-right-radius: 500px;
-        top: ${(props) => (props.entered ? "-2000px" : "calc(50% - 200px)")};
+        top: calc(50% - 200px);
     }
     
 `;
