@@ -337,7 +337,7 @@ export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
 
 export const WelcomeScreenLoadingContainerTitle = styled.div`
     position: absolute;
-    z-index: 23;
+    z-index: ${(props)=>(props.entered "-40" : "23")};
     bottom: 80px;
     left: 14%;
     font-size: 14px;

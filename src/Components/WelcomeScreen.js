@@ -22,7 +22,7 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
             <WelcomeScrenTitle entered={clicked} ><WelcomeScreenTitleText>John Leidy II</WelcomeScreenTitleText></WelcomeScrenTitle>
 
             <WelcomeScreenBody entered={clicked} />
-            <WelcomeScreenLoadingContainerTitle>Terminal</WelcomeScreenLoadingContainerTitle>
+            <WelcomeScreenLoadingContainerTitle entered = {clicked}>Terminal</WelcomeScreenLoadingContainerTitle>
             <WelcomeScreenLoadingFrame entered={clicked} />
             <WelcomeScreenLoadingFrameIconHolder entered={clicked}>
                 <WelcomeScreenLoadingMini>_</WelcomeScreenLoadingMini>
