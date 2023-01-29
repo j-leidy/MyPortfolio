@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenLoadingContainer, WelcomeScreenLoadingContainerItem, WelcomeScreenLoadingContainerTypeWriterContainer, WelcomeScreenLoadingContainerTypeWriterStatic, WelcomeScreenLoadingFrame, WelcomeScreenLoadingFrameIconHolder, WelcomeScreenLoadingMini, WelcomeScreenLoadingFrameX, WelcomeScreenTitleText, WelcomeScrenTitle, WelcomeButtonMobileText } from "./WelcomeScreenStyle";
+import { WelcomeButtonText, WelcomeScreenBody, WelcomeScreenButtonLeft, WelcomeScreenButtonRight, WelcomeScreenLoadingContainer, WelcomeScreenLoadingContainerItem, WelcomeScreenLoadingContainerTypeWriterContainer, WelcomeScreenLoadingContainerTypeWriterStatic, WelcomeScreenLoadingFrame, WelcomeScreenLoadingFrameIconHolder, WelcomeScreenLoadingMini, WelcomeScreenLoadingFrameX, WelcomeScreenTitleText, WelcomeScrenTitle, WelcomeButtonMobileText, WelcomeScreenLoadingContainerTitle } from "./WelcomeScreenStyle";
 import Typewriter from 'typewriter-effect';
 
 const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
@@ -22,6 +22,7 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
             <WelcomeScrenTitle entered={clicked} ><WelcomeScreenTitleText>John Leidy II</WelcomeScreenTitleText></WelcomeScrenTitle>
 
             <WelcomeScreenBody entered={clicked} />
+            <WelcomeScreenLoadingContainerTitle>Terminal</WelcomeScreenLoadingContainerTitle>
             <WelcomeScreenLoadingFrame entered={clicked} />
             <WelcomeScreenLoadingFrameIconHolder entered={clicked}>
                 <WelcomeScreenLoadingMini>_</WelcomeScreenLoadingMini>

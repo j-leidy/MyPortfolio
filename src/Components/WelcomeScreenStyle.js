@@ -283,6 +283,9 @@ export const WelcomeScreenLoadingFrameIconHolder = styled.div`
     transition: 2s all ease;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
+    @media screen and (max-width: 370px){
+        left: 84%;
+    }
     @media screen and (min-width: 1920px){
         left: calc(50% + 220px);
     }
@@ -338,5 +341,19 @@ export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
     margin-right: 5px;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
+`;
+
+export const WelcomeScreenLoadingContainerTitle = styled.div`
+    position: absolute;
+    z-index: 23;
+    bottom: 80px;
+    left: 14%;
+    font-size: 14px;
+    @media screen and (max-width: 370px){
+        left: 9%;
+    }
+    @media screen and (min-width: 1920px){
+        left: calc(50% - 240px);
+    }
 `;
 
