@@ -13,7 +13,7 @@ export const WelcomeScreenButtonLeft = styled.div`
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     border-left: 1px solid ${AccentColorGreen};
-    transition: opacity 0.5s, left 1s, z-index 0.6s;
+    transition: opacity 0.2s, left 0.5s, z-index 0.6s;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
@@ -48,7 +48,7 @@ export const WelcomeScreenButtonRight = styled.div`
     border-bottom-right-radius: 100px;
     top: calc(50% - 100px);
     border-right: 1px solid ${AccentColorGreen};
-    transition: opacity 0.5s, right 1s, z-index 0.6s;
+    transition: opacity 0.2s, right 0.5s, z-index 0.6s;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
