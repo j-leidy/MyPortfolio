@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ExperienceBody = styled.div`
-    margin-top: 5vh;
+    margin-top: 10vh;
     margin-bottom: 5vh;
     transition-property: color;
     transition-duration: 1s ease;

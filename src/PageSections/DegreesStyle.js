@@ -12,7 +12,6 @@ export const DegreesBody = styled.div`
     @media screen and (max-width: 550px){
         width: 80%;
     }
-    margin-bottom: 10vh;
 `;
 export const EntriesContainer = styled.div`
     width: 100%;
