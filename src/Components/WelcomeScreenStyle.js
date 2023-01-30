@@ -335,16 +335,19 @@ export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
     cursor: default;
 `;
 
+
+
 export const WelcomeScreenLoadingContainerTitle = styled.div`
     position: absolute;
-    z-index: ${(props)=>(props.entered "-40" : "23")};
+    z-index: ${(props) => (props.entered ? "-40" : "23")};
+    opacity: ${(props) => (props.entered ? "0" : "1")};
     bottom: 80px;
     left: 14%;
     font-size: 14px;
-    @media screen and (max-width: 370px){
+    @media screen and(max-width: 370px){
         left: 9%;
     }
-    @media screen and (min-width: 1920px){
+    @media screen and(min-width: 1920px){
         left: calc(50% - 240px);
     }
 `;
