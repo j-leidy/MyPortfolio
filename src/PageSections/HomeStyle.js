@@ -15,7 +15,7 @@ export const Body = styled.div`
         margin-top: 10vh;
         z-index: -1;
         border-right: none;
-        background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 10%, rgba(0,0,0,0) 100%);" : "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 10%, rgba(0,0,0,0) 100%)")};
+        background: ${(props) => (props.active ? "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 60%)" : " radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(0,0,0,0) 60%);")};
     }
     background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,0) 100%);" : "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 50%, rgba(0,0,0,0) 100%)")};
     margin-top: 6vh;

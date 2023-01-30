@@ -4,7 +4,7 @@ export const DesktopSkillsBody = styled.div`
     z-index: 1;
     transition-property: opacity;
     transition-duration: 1s;
-    background: ${(props) => (props.active ? "#ffffff" : "#0A0A0A")};
+    background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6320728975183824) 10%, rgba(255,255,255,0.8869748583026961) 20%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0.8953782196472339) 80%, rgba(255,255,255,0.648879620207458) 90%, rgba(255,255,255,0) 100%)" : "linear-gradient(0deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.6320728975183824) 10%, rgba(10,10,10,0.8869748583026961) 20%, rgba(10,10,10,1) 30%, rgba(10,10,10,1) 70%, rgba(10,10,10,0.8953782196472339) 80%, rgba(10,10,10,0.648879620207458) 90%, rgba(10,10,10,0) 100%)")};
     width: 70%;
     margin-left: auto;
     margin-right: auto;
