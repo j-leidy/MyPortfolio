@@ -15,9 +15,9 @@ export const Body = styled.div`
         margin-top: 10vh;
         z-index: -1;
         border-right: none;
-        background: rgba(10, 10, 10, 0);
+        background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 10%, rgba(0,0,0,0) 100%);" : "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 10%, rgba(0,0,0,0) 100%)")};
     }
-    background: ${(props) => (props.active ? "rgba(255,255,255, 0.95)" : "rgba(10,10,10,0.95)")};
+    background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,0) 100%);" : "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 50%, rgba(0,0,0,0) 100%)")};
     margin-top: 6vh;
     margin-bottom: 10vh;
     display: flex;
@@ -36,6 +36,18 @@ export const Body = styled.div`
     
 
 `;
+
+/*
+ background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 50%, rgba(0,0,0,0) 100%); 
+
+ background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(10,10,10,1) 30%, rgba(0,0,0,0) 100%); 
+
+
+
+*/
+
 
 export const HomeContent = styled.div`
     display: flex;

@@ -16,6 +16,7 @@ export const FooterBody = styled.div`
     }
     @media screen and (min-width: 2560px){
         font-size: 25px;
+        padding-bottom: 2%;
     }
 `;
 
