@@ -207,7 +207,7 @@ export const TypewriterContainer = styled.div`
 
 
 export const WelcomeScreenBody = styled.div`
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: ${(props) => (props.entered ? "-40" : "20")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
@@ -335,30 +335,17 @@ export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
     cursor: default;
 `;
 
-
-
 export const WelcomeScreenLoadingContainerTitle = styled.div`
     position: absolute;
-    z-index: ${(props) => (props.entered ? "-40" : "23")};
-    opacity: ${(props) => (props.entered ? "0" : "1")};
+    z-index: ${(props)=>(props.entered ? "-40" : "23")};
     bottom: 80px;
     left: 14%;
     font-size: 14px;
-
-    @media screen and (max-width: 370px){
+    @media screen and(max-width: 370px){
         left: 9%;
     }
-
-    @media screen and (max-width: 550px){
-        left: 14%;
-    }
-
     @media screen and (min-width: 1920px){
         left: calc(50% - 240px);
-    }
-    
-    @media screen and (min-width: 2560px){
-        lef: calc(50% - 240px);
     }
 `;
 
