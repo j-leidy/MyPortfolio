@@ -342,7 +342,7 @@ export const WelcomeScreenLoadingContainerTitle = styled.div`
     z-index: ${(props) => (props.entered ? "-40" : "23")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
     bottom: 80px;
-
+    left: 14%;
     font-size: 14px;
 
     @media screen and (max-width: 370px){
