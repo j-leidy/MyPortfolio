@@ -1,5 +1,21 @@
 import styled, { keyframes } from "styled-components";
-import { AccentColorGreen } from "../colorPallete";
+import { AccentColorGreen, AccentColorPurple } from "../colorPallete";
+
+
+const SocialAnim = keyframes`
+    0%{
+        border-color: ${AccentColorPurple};
+    }
+    20%{
+        border-color: ${AccentColorGreen};
+    }
+    80%{
+        border-color: ${AccentColorGreen};
+    }
+    100%{
+        border-color: ${AccentColorPurple};
+    }
+`;
 
 export const WelcomeScreenButtonLeft = styled.div`
     position: absolute;
@@ -17,6 +33,9 @@ export const WelcomeScreenButtonLeft = styled.div`
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
     @media screen and (min-width: 1920px){
         position: absolute;
         left: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 150px)")};
@@ -52,6 +71,9 @@ export const WelcomeScreenButtonRight = styled.div`
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
     @media screen and (min-width: 1920px){
         position: absolute;
         right: ${(props) => (props.entered ? "calc(50% - 450px)" : "calc(50% - 150px)")};
@@ -128,10 +150,16 @@ export const WelcomeButtonMobileText = styled.div`
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    @media screen and (min-width: 2560px){
+    @media screen and (min-width: 805px){
+        display: none;
+    }
+    @media screen and (min-width: 1300px){
         display: none;
     }
     @media screen and (min-width: 1920px){
+        display: none;
+    }
+    @media screen and (min-width: 2560px){
         display: none;
     }
 `;
@@ -140,38 +168,29 @@ export const WelcomeScrenTitle = styled.div`
     position: absolute;
     z-index: ${(props) => (props.entered ? "-40" : "22")};
     opacity: ${(props) => (props.entered ? "0" : "1")};
-    width: 300px;
-    height: 70px;
-    left: calc(50% - 150px);
-    top: 5%;
+    width: 140px;
+    height: 20px;
+    right: -1px;
+    bottom: -20px;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 16px;
     text-align: center;
     color: black;
-    border-radius: 10px;
-    transition: 1s all ease;
+    border-radius: 0 0 10px 10px;
     border-bottom: 1px solid ${AccentColorGreen};
+    border-right: 1px solid ${AccentColorGreen};
+    border-left: 1px solid ${AccentColorGreen};
+    transition: 1s all ease;
+    display: flex;
+    background: white;
     -webkit-tap-highlight-color: transparent;
-    @media screen and (max-width: 550px){
-        font-size: 30px;
-    }
-    @media screen and (min-width: 2560px){
-        font-size: 60px;
-        width: 1000px;
-        left: calc(50% - 500px);
-    }
-    @media screen and (min-width: 1920px){
-        font-size: 40px;
-        width: 1000px;
-        left: calc(50% - 500px);
-    }
+    animation: ${SocialAnim} 5s linear infinite;
+    
 
 `;
 export const WelcomeScreenTitleText = styled.div`
     cursor: default;
-    width: 100%;
-    height: 100%;
-    position: relative;
+    margin: auto;
 `;
 
 
@@ -190,16 +209,16 @@ export const TypewriterContainer = styled.div`
     transition: 1s all ease;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
-    @media screen and (min-width: 2560px){
-        font-size: 40px;
-        width: 1000px;
-        left: calc(50% - 110px);
-        top: 90%;
-    }
     @media screen and (min-width: 1920px){
         font-size: 30px;
         width: 1000px;
         left: calc(50% - 85px);
+        top: 90%;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 40px;
+        width: 1000px;
+        left: calc(50% - 110px);
         top: 90%;
     }
 `;
@@ -254,6 +273,9 @@ export const WelcomeScreenLoadingFrame = styled.div`
     transition: 1s all ease;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.75);
     @media screen and (min-width: 1920px){
         width: 504px;
         left: calc(50% - 252px);
@@ -268,19 +290,13 @@ export const WelcomeScreenLoadingFrameIconHolder = styled.div`
     display: flex;
     flex-direction: row;
     position: absolute;
-    bottom: ${(props) => (props.entered ? "-1000px" : "89px")};
-    left: 80%;
+    top: ${(props) => (props.entered ? "1000px" : "2px")};
+    right: 8px;
     color: white;
     padding: 0;
     transition: 2s all ease;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
-    @media screen and (max-width: 370px){
-        left: 84%;
-    }
-    @media screen and (min-width: 1920px){
-        left: calc(50% + 220px);
-    }
 `;
 
 export const WelcomeScreenLoadingFrameX = styled.div`
@@ -295,6 +311,7 @@ export const WelcomeScreenLoadingFrameX = styled.div`
     text-align: center;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
+    
 
 `;
 
@@ -333,19 +350,77 @@ export const WelcomeScreenLoadingContainerTypeWriterStatic = styled.div`
     margin-right: 5px;
     -webkit-tap-highlight-color: transparent;
     cursor: default;
+    display: flex;
+    flex-direction: row;
+    color: ${(props) => (props.RootColor)};
+`;
+
+export const WelcomeSCreenLoadingContainerTypeWriterStaticColored = styled.div`
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
+    color: ${(props) => (props.CustomColor)};
 `;
 
 export const WelcomeScreenLoadingContainerTitle = styled.div`
     position: absolute;
-    z-index: ${(props)=>(props.entered ? "-40" : "23")};
-    bottom: 80px;
-    left: 14%;
+    z-index: ${(props) => (props.entered ? "-40" : "23")};
+    top: 2px;
+    left: 10px;
     font-size: 14px;
-    @media screen and(max-width: 370px){
-        left: 9%;
-    }
+    
+`;
+//box-shadow: 0px 0px 60px 0px rgba(50,222,132,0.75);
+
+
+export const WelcomeScreenSocialBarContainer = styled.div`
+    z-index: ${(props) => (props.entered ? "-40" : "22")};
+    opacity: ${(props) => (props.entered ? "0" : "1")};
+    position: absolute;
+    left: calc(50% - 152px);
+    top: 2%;
+    width: 304px;
+    height 60px;
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border: 1px solid ${AccentColorGreen};
+    border-radius: 10px 10px 0 10px;
+    -webkit-tap-highlight-color: transparent;
+    animation: ${SocialAnim} 5s linear infinite;
     @media screen and (min-width: 1920px){
-        left: calc(50% - 240px);
+        width: 504px;
+        left: calc(50% - 252px);
+        height: 80px;
     }
 `;
 
+export const WelcomeScreenSocialLink = styled.a`
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    padding: auto;
+    z-index: 23;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    @media screen and (min-width: 1920px){
+        width: 40px;
+        height: 40px;
+    }
+
+`;
+
+
+
+
+
+export const WelcomeScreenSocialIcon = styled.img`
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+    background: white;
+    -webkit-tap-highlight-color: transparent;
+    @media screen and (min-width: 1920px){
+        width: 40px;
+        height: 40px;
+    }
+`;
