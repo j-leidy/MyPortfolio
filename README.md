@@ -1,4 +1,7 @@
 # John Leidy II Portfolio Website
+
+![alt text](https://github.com/j-leidy/MyPortfolio/blob/main/public/LandingScreenshot.png)
+
 ## Built using React.js
 
 This website is pretty straight forward. This is the implementation for Netlify. I am currently not using a backend, however I have a codebase with a backend fully implemented. 
