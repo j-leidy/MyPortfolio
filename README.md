@@ -1,6 +1,10 @@
 # John Leidy II Portfolio Website
 
-![alt text](https://github.com/j-leidy/MyPortfolio/blob/main/public/LandingScreenshot.png)
+
+<p align="center">
+    <img width="500" height="910" src="https://github.com/j-leidy/MyPortfolio/blob/main/public/LandingScreenshot.png">
+</p>
+
 
 ## Built using React.js
 
