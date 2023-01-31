@@ -22,7 +22,7 @@ Please view the License for proper use of the source code. Thank you.
 <summary>View Code</summary>
 
 #### JS File inside of your function component
-```
+```Javascript
 const AboutTitleRef = useRef();
 const [TitleVisible, setTitleVisible] = useState();
 
@@ -41,7 +41,7 @@ return(
 )
 ```
 #### Styled Component for Title
-```
+```Javascript
 export const AboutTitle = styled.div`
     transition: 3s all ease;
     opacity: ${(props) => (props.inView ? "1" : "0")};
@@ -56,7 +56,7 @@ export const AboutTitle = styled.div`
 <summary>View Code</summary>
 
 #### JS File inside of your class component
-```
+```Javascript
 constructor(){
     super()
     this.state = {
@@ -114,7 +114,7 @@ function App() {
 </details>
 
 
-## Below are screenshots of the website:
+## Below are more screenshots of the website:
 <details>
 
 <summary> Images </summary>
