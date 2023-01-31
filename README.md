@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img width="500" height="910" src="https://github.com/j-leidy/MyPortfolio/blob/main/public/LandingScreenshot.png">
+    <img width="410" height="910" src="https://github.com/j-leidy/MyPortfolio/blob/main/public/LandingScreenshot.png">
 </p>
 
 
