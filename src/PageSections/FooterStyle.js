@@ -12,7 +12,7 @@ export const FooterBody = styled.div`
     @media screen and (max-width: 550px){
         height: 100%;
         flex-direction: row;
-        padding-bottom: 5%;
+        padding-bottom: 10%;
     }
     @media screen and (min-width: 2560px){
         font-size: 25px;
