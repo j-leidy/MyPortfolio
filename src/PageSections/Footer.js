@@ -1,11 +1,15 @@
 import React from "react";
-import { AuthorFooter, AuthorItem, AuthorItemCopyright, AuthorName, FooterBody, GithubLink, ImageLink, LinkedInLink, LinkImage, SocialLinksFooter } from "./FooterStyle";
+import { AuthorFooter, AuthorItem, AuthorItemCopyright, AuthorName, FooterBody, SocialBarFooter, ImageLink, SocialBarFooterIcon } from "./FooterStyle";
 
-import GitIcon from "../Icons/GithubWhite.png"
-import LinkdIcon from  "../Icons/LIWhite.png"
+import GH from "../Icons/GHBW.png";
+import FB from "../Icons/FBBW.png";
+import IG from "../Icons/IGBW.png";
+import LI from "../Icons/LIBW.png";
+import TWIT from "../Icons/TWITBW.png";
+
 
 const Footer = () => {
-    return(
+    return (
         <FooterBody>
             <AuthorFooter>
                 <AuthorName>
@@ -21,18 +25,23 @@ const Footer = () => {
                     Source Code, Images, Text, Content  © 2023 John Leidy II
                 </AuthorItemCopyright>
             </AuthorFooter>
-            <SocialLinksFooter>
-                <GithubLink >
-                    <ImageLink href="https://github.com/j-leidy" target="_blank">
-                        <LinkImage src={GitIcon}/>
-                    </ImageLink>
-                </GithubLink>
-                <LinkedInLink>
-                    <ImageLink href= "https://www.linkedin.com/in/jrleidyii/" target= "_blank">
-                        <LinkImage src={LinkdIcon}/>
-                    </ImageLink>
-                </LinkedInLink>
-            </SocialLinksFooter>
+            <SocialBarFooter>
+                <ImageLink href="https://www.instagram.com/swankdayz/" target="_blank">
+                    <SocialBarFooterIcon src={IG} />
+                </ImageLink>
+                <ImageLink href="https://www.facebook.com/" target="_blank">
+                    <SocialBarFooterIcon src={FB} />
+                </ImageLink>
+                <ImageLink href="https://twitter.com/Liquiiiiid" target="_blank">
+                    <SocialBarFooterIcon src={TWIT} />
+                </ImageLink>
+                <ImageLink href="https://www.linkedin.com/in/jrleidyii/" target="_blank">
+                    <SocialBarFooterIcon src={LI} />
+                </ImageLink>
+                <ImageLink href="https://github.com/j-leidy" target="_blank">
+                    <SocialBarFooterIcon src={GH} />
+                </ImageLink>
+            </SocialBarFooter>
         </FooterBody>
     );
 };

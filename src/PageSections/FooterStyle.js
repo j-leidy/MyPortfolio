@@ -1,18 +1,17 @@
 import styled from "styled-components";
-
+import { AccentColorGreen } from "../colorPallete";
 export const FooterBody = styled.div`
     display: flex;
     z-index: 1;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    height: 15vh;
+    height: 30vh;
     background: #161618;
     color: white;
 
     @media screen and (max-width: 550px){
-        height: 10vh;
-        padding-top: 5%;
-        padding-bottom: 20%;
+        height: 100%;
+        flex-direction: row;
     }
     @media screen and (min-width: 2560px){
         font-size: 25px;
@@ -21,24 +20,28 @@ export const FooterBody = styled.div`
 `;
 
 export const AuthorFooter = styled.div`
-    width: 10%;
-    height: 50%;
+    width: auto;
+    height: auto;
     margin: auto;
     padding: auto;
-    text-align: left;
+    text-align: center;
 
     @media screen and (max-width: 550px){
-        height: 100%;
-        width: 40%;
+        height: auto;
+        width: auto;
+        text-align: left;
     }
 `;
 export const AuthorName = styled.div`
     width: 100%;
     color: #32de84;
-
     @media screen and (max-width: 550px){
         margin: 0;
         padding: 0;
+    }
+
+    @media screen and (min-width: 1800px){
+        font-size: 30px;
     }
 `;
 export const AuthorItem = styled.div`
@@ -47,6 +50,9 @@ export const AuthorItem = styled.div`
     @media screen and (max-width: 550px){
         margin: 0;
         padding: 0;
+    }
+    @media screen and (min-width: 1800px){
+        font-size: 20px;
     }
 `;
 export const AuthorItemCopyright = styled.div`
@@ -60,51 +66,38 @@ export const AuthorItemCopyright = styled.div`
     }
 `;
 
-export const SocialLinksFooter = styled.div`
-    width: 10%;
-    height: 100%;
-    margin: auto;
-    padding: auto;
-    text-align: right;
+export const SocialBarFooter = styled.div`
     @media screen and (max-width: 550px){
-        height: 100%;
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 5px;
+        border-radius: 10px;
+        background: white;
+        border: 1px solid ${AccentColorGreen};
     }
-    @media screen and (min-width: 2560px){
-        margin-top: 1%;
-    }
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 5px;
+    margin-top: 1%;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid ${AccentColorGreen};
+
 `;
 
-export const GithubLink = styled.div`
-    width: 100%;
-    height: 50%;
-    @media screen and (min-width: 2560px){
-        height: 50%;
+export const SocialBarFooterIcon = styled.img`
+    height: 40px;
+    widht: 40px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (max-width: 550px){
+        height: 30px;
+        width: 30px;
+        padding: 5px;
     }
-`;
-
-export const LinkedInLink = styled.div`
-    width: 100%;
-    height: 50%;
-    @media screen and (min-width: 2560px){
-        height: 50%;
-    }
-`;
-
-export const LinkImage = styled.img`
-    height: 30px;
-    width: 30px;
-    :hover{
-        box-shadow: 0px 0px 30px 0px rgba(50,222,132,0.9);
-        -webkit-box-shadow: 0px 0px 30px 0px rgba(50,222,132,0.9);
-        -moz-box-shadow: 0px 0px 30px 0px rgba(50,222,132,0.9);
-    }
-    border-radius: 50%;
-    @media screen and (min-width: 2560px){
-        width: 60px;
-        height: 60px;
-    }
-    
     
 `;
 
