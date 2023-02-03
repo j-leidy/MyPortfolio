@@ -2,33 +2,33 @@ import React, { useEffect, useRef, useState } from "react";
 import { EntryDuration, EntryParagraph, EntryTitle, EntryTitleDurationContainer, ExperienceBody, ExperienceEntry, ExperienceTitle } from "./ExperienceStyle";
 
 
-const Experience = ({lightdark}) => {
+const Experience = ({ lightdark }) => {
     const ExperienceTitleRef = useRef();
     const ExperienceEntryOneRef = useRef();
     const ExperienceEntryTwoRef = useRef();
     const [TitleVisible, setTitleVisible] = useState();
     const [ExperienceEntryOneVisible, setExperienceEntryOneVisible] = useState();
     const [ExperienceEntryTwoVisible, setExperienceEntryTwoVisible] = useState();
-    useEffect(()=>{
-        const observer = new IntersectionObserver(([entry])=>{
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
             setTitleVisible(entry.isIntersecting)
         });
         observer.observe(ExperienceTitleRef.current)
-        const observerEntryOne = new IntersectionObserver(([entry])=>{
+        const observerEntryOne = new IntersectionObserver(([entry]) => {
             setExperienceEntryOneVisible(entry.isIntersecting)
         });
         observerEntryOne.observe(ExperienceEntryOneRef.current)
-        const observerEntryTwo = new IntersectionObserver(([entry])=>{
+        const observerEntryTwo = new IntersectionObserver(([entry]) => {
             setExperienceEntryTwoVisible(entry.isIntersecting)
         });
         observerEntryTwo.observe(ExperienceEntryTwoRef.current)
-    },[ExperienceTitleRef,ExperienceEntryOneRef,ExperienceEntryTwoRef,TitleVisible,ExperienceEntryOneVisible,ExperienceEntryTwoVisible]);
-    return(
-        <ExperienceBody active = {lightdark}>
-            <ExperienceTitle ref={ExperienceTitleRef} inView = {TitleVisible}>
+    }, [ExperienceTitleRef, ExperienceEntryOneRef, ExperienceEntryTwoRef, TitleVisible, ExperienceEntryOneVisible, ExperienceEntryTwoVisible]);
+    return (
+        <ExperienceBody active={lightdark}>
+            <ExperienceTitle ref={ExperienceTitleRef} inView={TitleVisible}>
                 Experience
             </ExperienceTitle>
-            <ExperienceEntry ref={ExperienceEntryOneRef} inView = {ExperienceEntryOneVisible}>
+            <ExperienceEntry ref={ExperienceEntryOneRef} inView={ExperienceEntryOneVisible}>
                 <EntryTitleDurationContainer>
                     <EntryTitle>
                         Jimmy Johns
@@ -38,11 +38,11 @@ const Experience = ({lightdark}) => {
                     </EntryDuration>
                 </EntryTitleDurationContainer>
                 <EntryParagraph>
-                    In this position I utilized my ability to function well in a chaotic environment to efficiently deliver food to customers. 
-                    I worked with technology to route orders and learned the general structure of a city block number system.
+                    In this role, I leveraged my ability to thrive in chaotic environments to efficiently deliver food to customers.
+                    I used technology to route orders and familiarized myself with city block numbering systems.
                 </EntryParagraph>
             </ExperienceEntry>
-            <ExperienceEntry ref={ExperienceEntryTwoRef} inView = {ExperienceEntryTwoVisible}>
+            <ExperienceEntry ref={ExperienceEntryTwoRef} inView={ExperienceEntryTwoVisible}>
                 <EntryTitleDurationContainer>
                     <EntryTitle>
                         Progressive Lawnscaping
@@ -52,8 +52,8 @@ const Experience = ({lightdark}) => {
                     </EntryDuration>
                 </EntryTitleDurationContainer>
                 <EntryParagraph>
-                    During my time working in Lawnscaping I got hands on with tools and equipment to provide an aesthetically pleasing Landscape for the customers home. 
-                    We did everything from tree removal to patio installation. 
+                    In my role in landscaping, I gained hands-on experience with tools and equipment to create visually appealing landscapes for customers' homes.
+                    My tasks ranged from tree removal to patio installation.
                 </EntryParagraph>
             </ExperienceEntry>
         </ExperienceBody>

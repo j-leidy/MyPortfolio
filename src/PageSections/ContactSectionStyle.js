@@ -154,7 +154,6 @@ export const PhoneNumberInput = styled.input`
         font-size: 16px;
         border-width: 2px;
         color: ${(props) => (props.lightdark ? "white" : "black")};
-        border-color: ${(props) => (props.lightdark ? AccentColorGreen : "white")};
         background-color: ${(props) => (props.lightdark ? "black" : "white")};
         border-style: solid;
         border-radius: 5px;
