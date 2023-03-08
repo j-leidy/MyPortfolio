@@ -33,7 +33,7 @@ export const MobileNavBar = styled.div`
 `;
 
 export const MobileNavIconHolder = styled.div`
-    margin-left: 15%;
+    margin-left: 5vw;
     margin-top: auto;
     margin-bottom: auto;
     width: 40px;
@@ -58,7 +58,7 @@ export const MobileNavIconHolder = styled.div`
         margin-left: 5%;
     }
     @media screen and (min-width: 1920px){
-        margin-left: 5vw;
+        margin-left: 2vw;
     }
     @media screen and (min-width: 2560px){
         width: 60px;
@@ -89,7 +89,7 @@ export const BurgerCheckHolder = styled.div`
     @media screen and (min-width: 2560px){
         width: 60px;
         height: 60px;
-        right: 5vw;
+        right: 20px;
     }
     
 

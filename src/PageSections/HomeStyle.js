@@ -23,7 +23,7 @@ export const Body = styled.div`
     display: flex;
     flex-direction: row;
     color: #ffffff;
-    width: 100%;
+    width: 90%;
     height: 60vh;
     justify-content: center;
     align-items: left;
@@ -107,7 +107,6 @@ export const Portrait = styled.img`
 export const PortraitFullscreen = styled.img`
     margin: auto;
     padding: auto;
-    border: 1px solid #32de84;
     border-radius: 50%;
     width: 300px;
     height: 300px;
