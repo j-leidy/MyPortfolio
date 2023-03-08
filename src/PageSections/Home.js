@@ -1,7 +1,8 @@
 import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Body, BodyTitle, BodyText, BodyName, BodyDetails, StaticText, PortraitContainer, Portrait, TypeWriterHolder, HomeContent, PortraitFullscreen } from "./HomeStyle";
-import TempPortrait from '../Images/TempPortrait.jpg'
+
+import PortraitBW from '../Images/PortraitBW.jpg';
 
 const Home = ({ lightdark, welcome }) => {
     console.log(lightdark)
@@ -10,7 +11,7 @@ const Home = ({ lightdark, welcome }) => {
         <Body active={lightdark} inside={welcome}>
             <HomeContent inside={welcome}>
                 <PortraitContainer>
-                    <Portrait src={TempPortrait} />
+                    <Portrait src={PortraitBW} />
                 </PortraitContainer>
                 <BodyText>
                     <BodyTitle>
@@ -41,7 +42,7 @@ const Home = ({ lightdark, welcome }) => {
 
                 </BodyDetails>
             </HomeContent>
-            <PortraitFullscreen src={TempPortrait} />
+            <PortraitFullscreen src={PortraitBW} />
         </Body>
 
     );
