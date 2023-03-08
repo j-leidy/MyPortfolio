@@ -2,7 +2,7 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Body, BodyTitle, BodyText, BodyName, BodyDetails, StaticText, PortraitContainer, Portrait, TypeWriterHolder, HomeContent, PortraitFullscreen } from "./HomeStyle";
 
-import PortraitBW from '../Images/PortraitBW.jpg';
+import PortraitBW from '../Images/PortraitFlip.jpg';
 
 const Home = ({ lightdark, welcome }) => {
     console.log(lightdark)
