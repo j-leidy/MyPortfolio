@@ -15,7 +15,6 @@ const WelcomeScreen = ({ particlesStateSetter, homeStateSetter }) => {
         setClicked(true);
         particlesStateSetter(true);
         homeStateSetter(true);
-        Typewriter.stop();
     }
 
 

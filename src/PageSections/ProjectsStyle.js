@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { AccentColorGreen } from "../colorPallete";
 
 export const ProjectsBody = styled.div`
     transition-property: color;
     transition-duration: 1s ease;
     z-index: 1;
-    width: 70%;
+    width: 80%;
     height: 100%;
     color: ${(props) => (props.active ? "black" : "white")};
     margin-left: auto;
@@ -15,6 +16,7 @@ export const ProjectsBody = styled.div`
     @media screen and (max-width: 550px){
         width: 100%;
     }
+    overflow-anchor: none;
 `;
 
 // John Leidy built this website!
@@ -44,6 +46,17 @@ export const ProjectsTitle = styled.div`
 
     
     
+`;
+export const ProjectsTitleUnder = styled.div`
+    display: none;
+    @media screen and (max-width: 550px){
+        transition: 3s all ease;
+        opacity: ${(props) => (props.inView ? "1" : "0")};
+        font-size: 12px;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
 `;
 
 export const ProjectsDescription = styled.div`
@@ -106,6 +119,10 @@ export const ProjectsCard = styled.div`
         box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
         -webkit-box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
         -moz-box-shadow: 0px 0px 10px 1px rgba(50,222,132,0.75);
+        overflow: hidden;
+        transition: height 1s ease-out;
+        transition: 3s all ease;
+        opacity: ${(props) => (props.inView ? "1" : "0")};
     }
     border-radius: 20px;
     border: 1px solid #32de84;
@@ -141,23 +158,78 @@ export const ProjectsCardTitle = styled.div`
 export const ProjectsImage = styled.img`
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 20px;
     transition: 1s all ease;
     :hover{
-        background: #32de84;
+        background: none;
     }
     @media screen and (max-width: 550px){
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 0px 10px 10px 10px;
+        :hover{
+            background: none;
+        }
     }
 `;
 
+export const ProjectDescriptionListTitle = styled.div`
+    margin-top: 20px;
+    margin-left: 0;
+    color: ${AccentColorGreen};
+    text-align: left;
+    text-indent: 0;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const ProjectDescriptionList = styled.ul`
+    list-style: circle;
+`;
+
+export const ProjectDescriptionListItem = styled.li`
+
+`;
+
+export const MOBILEProjectCardDescription = styled.div`
+    transition: 0.3s all ease-in-out;
+    position: relative;
+    display: none;
+    @media screen and (max-width: 550px){
+        padding-top: ${(props) => (props.show ? "50px" : "0px")};
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        height: ${(props) => (props.show ? "auto" : "0px")};
+        opacity: ${(props) => (props.show ? "1" : "0")};
+    }
+`;
+
+export const MOBILEProjectCardDescriptionTitle = styled.div`
+    
+`;
+
+export const MOBILEProjectCardDescriptiontText = styled.div`
+
+`;
+
+export const MOBILEProjectCardDescriptionLink = styled.a`
+    text-decoration: underline;
+    color: ${AccentColorGreen};
+    :visited{
+        text-decoration: none;
+    }
+`;
+
+export const MOBILEProjectCardDescriptionLinkSpan = styled.span`
+    font-size: 8px;
+`;
 
 
 export const ProjectsLink = styled.a`
     transition: 1s all ease;
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 20px;
     width: 100%;
     margin: auto;
     :hover{
@@ -168,7 +240,7 @@ export const ProjectsLink = styled.a`
     }
 
     @media screen and (max-width: 550px){
-        border-radius: 10px;
+        border-radius: 0px 10px 10px 10px;
         :hover{
             box-shadow: 0px 0px 0px 0px rgba(50,222,132,0.75);
             -webkit-box-shadow: 0px 0px 0px px rgba(50,222,132,0.75);
