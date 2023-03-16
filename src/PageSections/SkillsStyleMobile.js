@@ -90,7 +90,7 @@ export const Glow = styled.div`
     animation: ${BackgroundAnim} 3s linear infinite;
 
     @media screen and (max-width: 550px){
-        left: 11%;
+        left: 13%;
     }
 `;
 export const IconText = styled.div`
