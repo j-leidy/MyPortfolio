@@ -22,6 +22,10 @@ class MainPage extends Component {
 
 
         this.checkRef = React.createRef();
+        this.liquibotRef = React.createRef();
+        this.liquibotwebsiteRef = React.createRef();
+        this.juicebotRef = React.createRef();
+        this.cplusDBRef = React.createRef();
         this.handleCheckbox = this.handleCheckbox.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
 
@@ -71,6 +75,8 @@ class MainPage extends Component {
         }, () => { })
         this.checkRef.current.checked = false;
     };
+
+
 
     render() {
         return (
@@ -127,8 +133,8 @@ class MainPage extends Component {
                     <div className="container" id="home"><Home lightdark={this.state.lightmode} welcome={this.props.enter} /></div>
                     <AnimArrow lightdark={this.state.lightmode} />
                     {/*<div id="WorkSection" ref={this.testscroll}><Work/></div>*/}
-                    <div className="container" id="about"><About lightdark={this.state.lightmode} /></div>
-                    <div className="container" id="projects"><Projects lightdark={this.state.lightmode} /></div>
+                    <div className="container" id="about"><About lightdark={this.state.lightmode} liquibotref={this.liquibotRef} liquibotwebsiteRef={this.liquibotwebsiteRef} juicebotRef={this.juicebotRef} cplusDBRef={this.cplusDBRef} /></div>
+                    <div className="container" id="projects"><Projects lightdark={this.state.lightmode} liquibotref={this.liquibotRef} liquibotwebsiteRef={this.liquibotwebsiteRef} juicebotRef={this.juicebotRef} cplusDBRef={this.cplusDBRef} /></div>
                     <div className="container" id="degrees"><Degrees lightdark={this.state.lightmode} /></div>
                     <div className="container" id="experience"><Experience lightdark={this.state.lightmode} /></div>
                     <div className="container" id="contact"><ContactSection lightdark={this.state.lightmode} /> </div>

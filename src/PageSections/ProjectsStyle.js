@@ -12,7 +12,7 @@ export const ProjectsBody = styled.div`
     margin-right: auto;
     margin-top: 5vh;
     padding-top: 5vh;
-    background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6320728975183824) 10%, rgba(255,255,255,0.8869748583026961) 20%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(255,255,255,0.8953782196472339) 80%, rgba(255,255,255,0.648879620207458) 90%, rgba(255,255,255,0) 100%)" : "linear-gradient(0deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.6320728975183824) 10%, rgba(10,10,10,0.8869748583026961) 20%, rgba(10,10,10,1) 30%, rgba(10,10,10,1) 70%, rgba(10,10,10,0.8953782196472339) 80%, rgba(10,10,10,0.648879620207458) 90%, rgba(10,10,10,0) 100%)")};
+    background: ${(props) => (props.active ? "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6320728975183824) 5%, rgba(255,255,255,0.8869748583026961) 10%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 80%, rgba(255,255,255,0.8953782196472339) 90%, rgba(255,255,255,0.648879620207458) 95%, rgba(255,255,255,0) 100%)" : "linear-gradient(0deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.6320728975183824) 5%, rgba(10,10,10,0.8869748583026961) 10%, rgba(10,10,10,1) 20%, rgba(10,10,10,1) 80%, rgba(10,10,10,0.8953782196472339) 90%, rgba(10,10,10,0.648879620207458) 95%, rgba(10,10,10,0) 100%)")};
     @media screen and (max-width: 550px){
         width: 100%;
     }
@@ -74,14 +74,18 @@ export const ProjectsDescription = styled.div`
         padding-bottom: 0px;
 
     }
-    @media screen and (max-width: 820px){
-        display: none;
+    @media screen and (max-width: 830px){
         padding-bottom: 0px;
+        display: none;
     }
     @media screen and (min-width: 2560px){
         font-size: 30px;
     }
     
+`;
+
+export const IpadDescription = styled.div`
+
 `;
 
 export const ProjectsTitleDesContainer = styled.div`
@@ -93,12 +97,13 @@ export const ProjectsTitleDesContainer = styled.div`
     @media screen and (max-width: 550px){
         width: 100%;
     }
+    
 `;
 
 export const ProjectsCard = styled.div`
     transition: 3s all ease;
     margin-bottom: 2vh;
-    margin-top: 5vh;
+    margin-top: 15vh;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -145,7 +150,9 @@ export const ProjectsCardTitle = styled.div`
         border: 1px solid #32de84;
         font-size: 20px;
     }
-
+    @media screen and (max-width: 900px){
+        color white;
+    }
     @media screen and (min-width: 990px){
         color: #32de84;
     }
@@ -204,6 +211,7 @@ export const MOBILEProjectCardDescription = styled.div`
         height: ${(props) => (props.show ? "auto" : "0px")};
         opacity: ${(props) => (props.show ? "1" : "0")};
     }
+   
 `;
 
 export const MOBILEProjectCardDescriptionTitle = styled.div`
@@ -248,5 +256,24 @@ export const ProjectsLink = styled.a`
             background: none;
         }
 
+    }
+`;
+
+export const ProjectsTitleIPADLink = styled.div`
+    display: block;
+    margin: auto;
+    text-decoration: underline;
+    color: ${AccentColorGreen};
+    margin-top: 5%;
+    height: auto;
+    font-size: 16px;
+
+    @media screen and (max-width: 550px){
+        display: none;
+    }
+    @media screen and (max-width: 820px){
+    }
+    @media screen and (min-width: 1000px){
+        display: none;
     }
 `;

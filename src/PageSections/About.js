@@ -3,7 +3,7 @@ import { AboutBody, AboutContent, AboutParagraph, AboutTitle } from "./AboutStyl
 import SkillsDesktop from "./SkillsDesktop";
 import SkillsMobile from "./SkillsMobile";
 
-const About = ({ lightdark }) => {
+const About = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cplusDBRef }) => {
     const AboutTitleRef = useRef();
     const AboutParagraphRef = useRef();
     const [TitleVisible, setTitleVisible] = useState();
@@ -18,6 +18,7 @@ const About = ({ lightdark }) => {
         });
         observerParagraph.observe(AboutParagraphRef.current)
     }, [AboutTitleRef, AboutParagraphRef, TitleVisible, ParagraphVisible]);
+
 
 
     return (
@@ -36,7 +37,7 @@ const About = ({ lightdark }) => {
                 </AboutContent>
             </AboutBody>
             <SkillsMobile lightdark={lightdark} />
-            <SkillsDesktop lightdark={lightdark} />
+            <SkillsDesktop lightdark={lightdark} liquibotref={liquibotref} liquibotwebsiteRef={liquibotwebsiteRef} juicebotRef={juicebotRef} cplusDBRef={cplusDBRef} />
         </>
     );
 };

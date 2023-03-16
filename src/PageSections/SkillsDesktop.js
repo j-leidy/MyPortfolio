@@ -10,72 +10,81 @@ import cssicon from '../Icons/cssicon.png';
 import htmlicon from '../Icons/htmlicon.png';
 import jsicon from '../Icons/jsicon.png';
 
-const SkillsDesktop = ({lightdark}) => {
+const SkillsDesktop = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cplusDBRef }) => {
     const SkillsBodyRef = useRef();
     const [BodyVisible, setBodyVisible] = useState();
-    useEffect(()=>{
-        const observer = new IntersectionObserver(([entry])=>{
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
             setBodyVisible(entry.isIntersecting)
         });
         observer.observe(SkillsBodyRef.current)
-    },[SkillsBodyRef,BodyVisible]);
-    return(
-        <DesktopSkillsBody ref={SkillsBodyRef} inView = {BodyVisible} active = {lightdark}>
+    }, [SkillsBodyRef, BodyVisible]);
+
+
+
+
+    const liquibotScroll = () => liquibotref.current.scrollIntoView({ behavior: 'smooth' })
+    const liquibotWebsiteScroll = () => liquibotwebsiteRef.current.scrollIntoView({ behavior: 'smooth' });
+    const juicebotScroll = () => juicebotRef.current.scrollIntoView({ behavior: 'smooth' });
+    const cplusScroll = () => cplusDBRef.current.scrollIntoView({ top: '200px', behavior: 'smooth' });
+
+    return (
+        <DesktopSkillsBody ref={SkillsBodyRef} inView={BodyVisible} active={lightdark}>
             <SkillsDesktopContent>
-                <DesktopSkillRow active = {lightdark}>
-                    <DesktopRowItemLeft>
-                        <DesktopRowItemLeftIcon src={iconc}/>
+                <DesktopSkillRow active={lightdark}>
+                    <DesktopRowItemLeft onClick={cplusScroll}>
+                        <DesktopRowItemLeftIcon src={iconc} />
                         <DesktopRowItemLeftText>
                             C++
                         </DesktopRowItemLeftText>
                     </DesktopRowItemLeft>
-                    <DesktopRowItemRight>
+                    <DesktopRowItemRight onClick={cplusScroll}>
                         <DesktopRowItemRightText>
                             SQLITE
                         </DesktopRowItemRightText>
-                        <DesktopRowItemRightIcon src= {iconsqlite}/>
+                        <DesktopRowItemRightIcon src={iconsqlite} />
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow active = {lightdark}>
-                    <DesktopRowItemLeft>
-                        <DesktopRowItemLeftIcon src={pythonicon}/>
+                <DesktopSkillRow active={lightdark}>
+                    <DesktopRowItemLeft onClick={liquibotScroll}>
+                        <DesktopRowItemLeftIcon src={pythonicon} />
                         <DesktopRowItemLeftText>
                             Python
                         </DesktopRowItemLeftText>
                     </DesktopRowItemLeft>
-                    <DesktopRowItemRight>
+                    <DesktopRowItemRight onClick={juicebotScroll}>
                         <DesktopRowItemRightText>
                             Mongo DB
                         </DesktopRowItemRightText>
-                        <DesktopRowItemRightIcon src= {mongodbicon}/>
+                        <DesktopRowItemRightIcon src={mongodbicon} />
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow active = {lightdark}>
-                    <DesktopRowItemLeft>
-                        <DesktopRowItemLeftIcon src={discordicon}/>
+                <DesktopSkillRow active={lightdark}>
+                    <DesktopRowItemLeft onClick={liquibotScroll}>
+                        <DesktopRowItemLeftIcon src={discordicon} />
                         <DesktopRowItemLeftText>
                             Discord
                         </DesktopRowItemLeftText>
                     </DesktopRowItemLeft>
-                    <DesktopRowItemRight>
+                    <DesktopRowItemRight onClick={liquibotWebsiteScroll}>
                         <DesktopRowItemRightText>
                             CSS
                         </DesktopRowItemRightText>
-                        <DesktopRowItemRightIcon src= {cssicon}/>
+                        <DesktopRowItemRightIcon src={cssicon} />
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
-                <DesktopSkillRow active = {lightdark}>
-                    <DesktopRowItemLeft>
-                        <DesktopRowItemLeftIcon src={htmlicon}/>
+                <DesktopSkillRow active={lightdark}>
+                    <DesktopRowItemLeft onClick={liquibotWebsiteScroll}>
+                        <DesktopRowItemLeftIcon src={htmlicon} />
                         <DesktopRowItemLeftText>
                             HTML
                         </DesktopRowItemLeftText>
                     </DesktopRowItemLeft>
-                    <DesktopRowItemRight>
+                    <DesktopRowItemRight onClick={liquibotWebsiteScroll}>
                         <DesktopRowItemRightText>
                             Javascript
                         </DesktopRowItemRightText>
-                        <DesktopRowItemRightIcon src= {jsicon}/>
+                        <DesktopRowItemRightIcon src={jsicon} />
                     </DesktopRowItemRight>
                 </DesktopSkillRow>
             </SkillsDesktopContent>

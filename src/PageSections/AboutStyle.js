@@ -13,6 +13,9 @@ export const AboutBody = styled.div`
     @media screen and (max-width: 550px){
         width: 80%;
     }
+    @media screen and (max-width: 900px){
+        width: 80%;
+    }
 `;
 export const AboutContent = styled.div`
     z-index: -1;
@@ -27,7 +30,9 @@ export const AboutContent = styled.div`
         padding-right:0;
     }
     @media screen and (max-width: 820px){
-        width: 100%;
+        width: 95%;
+        padding-right: 1%;
+        padding-left: 1%;
     }
 `;
 export const AboutTitle = styled.div`

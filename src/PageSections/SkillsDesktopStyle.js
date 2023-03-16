@@ -52,11 +52,14 @@ export const DesktopRowItemLeft = styled.div`
     align-items: left;
     border: 1px solid #32de84;
     border-radius: 20px;
+    transition: 0.2s all ease;
+    transform: scale(1);
     :hover{
         box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         background: #32de84;
+        transform: scale(1.1);
     }
 
 `;
@@ -70,11 +73,14 @@ export const DesktopRowItemRight = styled.div`
     align-items: right;
     border: 1px solid #32de84;
     border-radius: 20px;
+    transform: scale(1);
+    transition: 0.2s all ease;
     :hover{
         box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
         background: #32de84;
+        transform: scale(1.1);
     }
 
 `;

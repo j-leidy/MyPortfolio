@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { MOBILEProjectCardDescription, MOBILEProjectCardDescriptionLink, MOBILEProjectCardDescriptionLinkSpan, ProjectDescriptionList, ProjectDescriptionListItem, ProjectDescriptionListTitle, ProjectsBody, ProjectsCard, ProjectsCardTitle, ProjectsContent, ProjectsDescription, ProjectsImage, ProjectsTitle, ProjectsTitleDesContainer, ProjectsTitleUnder } from "./ProjectsStyle";
+import { MOBILEProjectCardDescription, MOBILEProjectCardDescriptionLink, MOBILEProjectCardDescriptionLinkSpan, ProjectDescriptionList, ProjectDescriptionListItem, ProjectDescriptionListTitle, ProjectsBody, ProjectsCard, ProjectsCardTitle, ProjectsContent, ProjectsDescription, ProjectsImage, ProjectsTitle, ProjectsTitleDesContainer, ProjectsTitleIPADLink, ProjectsTitleUnder } from "./ProjectsStyle";
 
 import JuiceBotImage from '../Images/test.png'
 import DbImg from '../Images/CDBCard.png'
@@ -7,7 +7,9 @@ import LiquiBotImage from '../Images/LiquiBotCard.png'
 import LiquiBotWebsiteFinal from '../Images/LiquiBotWebsiteFinal.png'
 //https://github.com/j-leidy/C-DatabaseExplorer
 
-const Projects = ({ lightdark }) => {
+//refs are passed down from the main page parent. This allows us to pass them into the about section.
+//By doing this we are able to have div clicks in the about section/skills navigate to a project containing a skill!
+const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cplusDBRef }) => {
 
     const ProjectsTitleRef = useRef();
     const [TitleVisible, setTitleVisible] = useState();
@@ -15,16 +17,16 @@ const Projects = ({ lightdark }) => {
     const ProjectsTitleUnderRef = useRef();
     const [TitleUnderVisible, setTitleUnderVisible] = useState();
 
-    const ProjectsCardRefOne = useRef();
+    //const ProjectsCardRefOne = useRef(); this is currently liquibotref from the main page
     const [CardOneVisible, setCardOneVisible] = useState();
 
-    const ProjectsCardRefTwo = useRef();
+    //const ProjectsCardRefTwo = useRef(); this is now liquibotwebsiteRef
     const [CardTwoVisible, setCardTwoVisible] = useState();
 
-    const ProjectsCardRefThree = useRef();
+    //const ProjectsCardRefThree = useRef(); this is now juicebotRef
     const [CardThreeVisible, setCardThreeVisible] = useState();
 
-    const ProjectsCardRefFour = useRef();
+    //const ProjectsCardRefFour = useRef(); this is now cplusDBRef
     const [CardFourVisible, setCardFourVisible] = useState();
 
     const MobileCardDescriptionOneRef = useRef();
@@ -69,24 +71,24 @@ const Projects = ({ lightdark }) => {
         const observerCardOne = new IntersectionObserver(([entry]) => {
             setCardOneVisible(entry.isIntersecting)
         });
-        observerCardOne.observe(ProjectsCardRefOne.current)
+        observerCardOne.observe(liquibotref.current)
 
         const observerCardTwo = new IntersectionObserver(([entry]) => {
             setCardTwoVisible(entry.isIntersecting)
         });
-        observerCardTwo.observe(ProjectsCardRefTwo.current)
+        observerCardTwo.observe(liquibotwebsiteRef.current)
 
         const observerCardThree = new IntersectionObserver(([entry]) => {
             setCardThreeVisible(entry.isIntersecting)
         });
-        observerCardThree.observe(ProjectsCardRefThree.current)
+        observerCardThree.observe(juicebotRef.current)
 
         const observerCardFour = new IntersectionObserver(([entry]) => {
             setCardFourVisible(entry.isIntersecting)
         });
-        observerCardFour.observe(ProjectsCardRefFour.current)
+        observerCardFour.observe(cplusDBRef.current)
 
-    }, [ProjectsTitleRef, TitleVisible, ProjectsTitleUnderRef, TitleUnderVisible, ProjectsCardRefOne, CardOneVisible, ProjectsCardRefTwo, CardTwoVisible, ProjectsCardRefThree, CardThreeVisible, ProjectsCardRefFour, CardFourVisible]);
+    }, [ProjectsTitleRef, TitleVisible, ProjectsTitleUnderRef, TitleUnderVisible, liquibotref, CardOneVisible, liquibotwebsiteRef, CardTwoVisible, juicebotRef, CardThreeVisible, cplusDBRef, CardFourVisible]);
 
 
 
@@ -98,11 +100,12 @@ const Projects = ({ lightdark }) => {
                 <ProjectsTitle ref={ProjectsTitleRef} inView={TitleVisible}>
                     Projects
                 </ProjectsTitle>
-                <ProjectsTitleUnder ref={ProjectsTitleUnderRef} inView={TitleUnderVisible}>Click on a card to view more information!</ProjectsTitleUnder>
-                <ProjectsCard ref={ProjectsCardRefOne} inView={CardOneVisible} onClick={() => handleClick("one")}>
+                <ProjectsTitleUnder ref={ProjectsTitleUnderRef} inView={TitleUnderVisible}>Tap on a card to view more information!</ProjectsTitleUnder>
+                <ProjectsCard ref={liquibotref} inView={CardOneVisible} onClick={() => handleClick("one")}>
                     <ProjectsTitleDesContainer>
                         <ProjectsCardTitle>
                             LiquiBot
+                            <ProjectsTitleIPADLink href="https://liquibot.netlify.app/" target="_blank">LiquiBot's Website</ProjectsTitleIPADLink>
                         </ProjectsCardTitle>
                         <ProjectsDescription>
                             Welcome to LiquiBot! This Discord Bot is JuiceBot's successor. JuiceBot was my first experience with Discord.py. This time around the speed and scalability was geratly improved.
@@ -158,10 +161,11 @@ const Projects = ({ lightdark }) => {
                 </ProjectsCard>
 
 
-                <ProjectsCard ref={ProjectsCardRefTwo} inView={CardTwoVisible} onClick={() => handleClick("two")}>
+                <ProjectsCard ref={liquibotwebsiteRef} inView={CardTwoVisible} onClick={() => handleClick("two")}>
                     <ProjectsTitleDesContainer>
                         <ProjectsCardTitle>
                             LiquiBot Website
+                            <ProjectsTitleIPADLink href="https://liquibot.netlify.app/" target="_blank">LiquiBot's Website</ProjectsTitleIPADLink>
                         </ProjectsCardTitle>
                         <ProjectsDescription>
                             This is a React.js website built for LiquiBot. It is a single page static website meant to display the fucnctionality of the bot. It displays some commands with descriptions as well as some stats.
@@ -197,10 +201,11 @@ const Projects = ({ lightdark }) => {
                 </ProjectsCard>
 
 
-                <ProjectsCard ref={ProjectsCardRefThree} inView={CardThreeVisible} onClick={() => handleClick("three")}>
+                <ProjectsCard ref={juicebotRef} inView={CardThreeVisible} onClick={() => handleClick("three")}>
                     <ProjectsTitleDesContainer>
                         <ProjectsCardTitle>
                             JuiceBot
+                            <ProjectsTitleIPADLink href="https://github.com/j-leidy" target="_blank">GitHub</ProjectsTitleIPADLink>
                         </ProjectsCardTitle>
                         <ProjectsDescription>
                             Welcome to JuiceBot! This was the starting point for what is now LiquiBot. It was my first experience with a discord.py bot. A list of features and technologies used are listed below. This bot is no longer active!
@@ -242,10 +247,11 @@ const Projects = ({ lightdark }) => {
                         </ProjectDescriptionList>
                     </MOBILEProjectCardDescription>
                 </ProjectsCard>
-                <ProjectsCard ref={ProjectsCardRefFour} inView={CardFourVisible} onClick={() => handleClick("four")}>
+                <ProjectsCard ref={cplusDBRef} inView={CardFourVisible} onClick={() => handleClick("four")}>
                     <ProjectsTitleDesContainer>
                         <ProjectsCardTitle>
                             C++ DB Explorer
+                            <ProjectsTitleIPADLink href="https://github.com/j-leidy/C-DatabaseExplorer" target="_blank">C++ DB Repository </ProjectsTitleIPADLink>
                         </ProjectsCardTitle>
                         <ProjectsDescription>
                             Command line executor of SQL commands. This program implements almost all SQL commands in C++ using SQLITE3. With this program users are able to not only manipulate .db files in every way, but also create their own .db from the ground up.
