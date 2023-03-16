@@ -150,8 +150,9 @@ export const ProjectsCardTitle = styled.div`
         background: #32de84;
         border: 1px solid #32de84;
         font-size: 20px;
+        color: black;
     }
-    @media screen and (max-width: 900px){
+    @media screen and (min-width: 800px){
         color white;
     }
     @media screen and (min-width: 990px){
