@@ -22,7 +22,9 @@ const SkillsDesktop = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef
 
 
 
-
+    //scrollers using refs from mainpage class... 
+    //These refs are passed into here and assigned over in Projects.js to each project card
+    //in order to prevent the header from hiding the title of the project... we use the css property scroll-margin-top (top: num) does not work on scrollintoview in this case
     const liquibotScroll = () => liquibotref.current.scrollIntoView({ behavior: 'smooth' })
     const liquibotWebsiteScroll = () => liquibotwebsiteRef.current.scrollIntoView({ behavior: 'smooth' });
     const juicebotScroll = () => juicebotRef.current.scrollIntoView({ behavior: 'smooth' });
