@@ -28,7 +28,7 @@ const SkillsDesktop = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef
     const liquibotScroll = () => liquibotref.current.scrollIntoView({ behavior: 'smooth' })
     const liquibotWebsiteScroll = () => liquibotwebsiteRef.current.scrollIntoView({ behavior: 'smooth' });
     const juicebotScroll = () => juicebotRef.current.scrollIntoView({ behavior: 'smooth' });
-    const cplusScroll = () => cplusDBRef.current.scrollIntoView({ top: '200px', behavior: 'smooth' });
+    const cplusScroll = () => cplusDBRef.current.scrollIntoView({ behavior: 'smooth' });
 
     return (
         <DesktopSkillsBody ref={SkillsBodyRef} inView={BodyVisible} active={lightdark}>
