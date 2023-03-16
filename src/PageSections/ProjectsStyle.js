@@ -106,7 +106,7 @@ export const ProjectsCard = styled.div`
     margin-top: 15vh;
     margin-left: auto;
     margin-right: auto;
-    scroll-margin-top: 15vh;
+    scroll-margin-top: 7vh;
     padding: 20px;
     width: 90%;
     height: 100%;
