@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { MOBILEProjectCardDescription, MOBILEProjectCardDescriptionLink, MOBILEProjectCardDescriptionLinkSpan, ProjectDescriptionList, ProjectDescriptionListItem, ProjectDescriptionListTitle, ProjectsBody, ProjectsCard, ProjectsCardTitle, ProjectsContent, ProjectsDescription, ProjectsImage, ProjectsTitle, ProjectsTitleDesContainer, ProjectsTitleIPADLink, ProjectsTitleUnder } from "./ProjectsStyle";
+import { DesktopDescriptionButton, DesktopDescriptionButtonText, DesktopListContainerDescription, MOBILEProjectCardDescription, MOBILEProjectCardDescriptionLink, MOBILEProjectCardDescriptionLinkSpan, ProjectDescriptionList, ProjectDescriptionListItem, ProjectDescriptionListTitle, ProjectsBody, ProjectsCard, ProjectsCardTitle, ProjectsContent, ProjectsDescription, ProjectsImage, ProjectsTitle, ProjectsTitleDesContainer, ProjectsTitleIPADLink, ProjectsTitleUnder } from "./ProjectsStyle";
 
 import JuiceBotImage from '../Images/test.png'
 import DbImg from '../Images/CDBCard.png'
@@ -41,6 +41,12 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
     const MobileCardDescriptionFourRef = useRef();
     const [DescriptionFourActive, setDescriptionFourActive] = useState(false);
 
+    const [DesktopDescriptionOneActive, setDesktopDescriptionOneActive] = useState(false);
+    const [DesktopDescriptionTwoActive, setDesktopDescriptionTwoActive] = useState(false);
+    const [DesktopDescriptionThreeActive, setDesktopDescriptionThreeActive] = useState(false);
+    const [DesktopDescriptionFourActive, setDesktopDescriptionFourActive] = useState(false);
+
+
 
     const handleClick = useCallback((which_button) => {
         if (which_button === "one") {
@@ -56,6 +62,21 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
             setDescriptionFourActive(!DescriptionFourActive);
         }
     }, [DescriptionOneActive, DescriptionTwoActive, DescriptionThreeActive, DescriptionFourActive]);
+
+    const handleClickDesktop = useCallback((which_button) => {
+        if (which_button === "one") {
+            setDesktopDescriptionOneActive(!DesktopDescriptionOneActive)
+        }
+        else if (which_button === "two") {
+            setDesktopDescriptionTwoActive(!DesktopDescriptionTwoActive)
+        }
+        else if (which_button === "three") {
+            setDesktopDescriptionThreeActive(!DesktopDescriptionThreeActive)
+        }
+        else if (which_button === "four") {
+            setDesktopDescriptionFourActive(!DesktopDescriptionFourActive)
+        }
+    }, [DesktopDescriptionOneActive, DesktopDescriptionTwoActive, DesktopDescriptionThreeActive, DesktopDescriptionFourActive])
 
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
@@ -107,33 +128,41 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
                             LiquiBot
                             <ProjectsTitleIPADLink href="https://liquibot.netlify.app/" target="_blank">LiquiBot's Website</ProjectsTitleIPADLink>
                         </ProjectsCardTitle>
+
                         <ProjectsDescription>
                             Welcome to LiquiBot! This Discord Bot is JuiceBot's successor. JuiceBot was my first experience with Discord.py. This time around the speed and scalability was geratly improved.
                             Using Discord.py v2.0 with asyncio in Python. The repository for this project is private. Please contact me below if you would like to take a look!
                             <ProjectDescriptionListTitle>
                                 <MOBILEProjectCardDescriptionLink href="https://liquibot.netlify.app/" target="_blank">LiquiBot's Website <MOBILEProjectCardDescriptionLinkSpan>In Progress</MOBILEProjectCardDescriptionLinkSpan></MOBILEProjectCardDescriptionLink>
+                                <DesktopDescriptionButton onClick={() => handleClickDesktop("one")}>
+                                    <DesktopDescriptionButtonText active={lightdark}>
+                                        More Info
+                                    </DesktopDescriptionButtonText>
+                                </DesktopDescriptionButton>
                             </ProjectDescriptionListTitle>
-                            <ProjectDescriptionListTitle>
-                                Functionality
-                            </ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Leaderboards</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Leveling</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Trading</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>In Game Store</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Equipment</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Mining Skill</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Smithing Skill</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Combat Skill</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
-                            <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Deployment: Arch-Linux VPS</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Language: Python</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Data storage: JSON</ProjectDescriptionListItem>
+                            <DesktopListContainerDescription show={DesktopDescriptionOneActive}>
+                                <ProjectDescriptionListTitle>
+                                    Functionality
+                                </ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Leaderboards</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Leveling</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Trading</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>In Game Store</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Equipment</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Mining Skill</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Smithing Skill</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Combat Skill</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                                <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Deployment: Arch-Linux VPS</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Language: Python</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Data storage: JSON</ProjectDescriptionListItem>
 
-                            </ProjectDescriptionList>
+                                </ProjectDescriptionList>
+                            </DesktopListContainerDescription>
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsImage src={LiquiBotImage} />
@@ -171,18 +200,25 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
                             This is a React.js website built for LiquiBot. It is a single page static website meant to display the fucnctionality of the bot. It displays some commands with descriptions as well as some stats.
                             <ProjectDescriptionListTitle>
                                 <MOBILEProjectCardDescriptionLink href="https://liquibot.netlify.app/" target="_blank">LiquiBot's Website <MOBILEProjectCardDescriptionLinkSpan>In Progress</MOBILEProjectCardDescriptionLinkSpan></MOBILEProjectCardDescriptionLink>
+                                <DesktopDescriptionButton onClick={() => handleClickDesktop("two")}>
+                                    <DesktopDescriptionButtonText active={lightdark}>
+                                        More Info
+                                    </DesktopDescriptionButtonText>
+                                </DesktopDescriptionButton>
                             </ProjectDescriptionListTitle>
-                            <ProjectDescriptionListTitle>
-                                Technologies Used
-                            </ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Deployment: Netlify</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Framework: React.js</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>JavaScript</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>HTML5</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>CSS3</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
+                            <DesktopListContainerDescription show={DesktopDescriptionTwoActive}>
+                                <ProjectDescriptionListTitle>
+                                    Technologies Used
+                                </ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Deployment: Netlify</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Framework: React.js</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>JavaScript</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>HTML5</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>CSS3</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                            </DesktopListContainerDescription>
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsImage src={LiquiBotWebsiteFinal} />
@@ -211,21 +247,28 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
                             Welcome to JuiceBot! This was the starting point for what is now LiquiBot. It was my first experience with a discord.py bot. A list of features and technologies used are listed below. This bot is no longer active!
                             <ProjectDescriptionListTitle>
                                 <MOBILEProjectCardDescriptionLink href="https://github.com/j-leidy" target="_blank">GitHub<MOBILEProjectCardDescriptionLinkSpan>JuiceBot is private</MOBILEProjectCardDescriptionLinkSpan></MOBILEProjectCardDescriptionLink>
+                                <DesktopDescriptionButton onClick={() => handleClickDesktop("three")}>
+                                    <DesktopDescriptionButtonText active={lightdark}>
+                                        More Info
+                                    </DesktopDescriptionButtonText>
+                                </DesktopDescriptionButton>
                             </ProjectDescriptionListTitle>
-                            <ProjectDescriptionListTitle>Functionality</ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Leaderboards</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Leveling</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>In Game Store</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Mining Skill</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Smithing Skill</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
-                            <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Language: Python</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Data storage: JSON</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
+                            <DesktopListContainerDescription show={DesktopDescriptionThreeActive}>
+                                <ProjectDescriptionListTitle>Functionality</ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Leaderboards</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Leveling</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>In Game Store</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Mining Skill</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Smithing Skill</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                                <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Language: Python</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Data storage: JSON</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                            </DesktopListContainerDescription>
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsImage src={JuiceBotImage} />
@@ -257,27 +300,34 @@ const Projects = ({ lightdark, liquibotref, liquibotwebsiteRef, juicebotRef, cpl
                             Command line executor of SQL commands. This program implements almost all SQL commands in C++ using SQLITE3. With this program users are able to not only manipulate .db files in every way, but also create their own .db from the ground up.
                             <ProjectDescriptionListTitle>
                                 <MOBILEProjectCardDescriptionLink href="https://github.com/j-leidy/C-DatabaseExplorer" target="_blank">C++ DB Repository <MOBILEProjectCardDescriptionLinkSpan> Public</MOBILEProjectCardDescriptionLinkSpan></MOBILEProjectCardDescriptionLink>
+                                <DesktopDescriptionButton onClick={() => handleClickDesktop("four")}>
+                                    <DesktopDescriptionButtonText active={lightdark}>
+                                        More Info
+                                    </DesktopDescriptionButtonText>
+                                </DesktopDescriptionButton>
                             </ProjectDescriptionListTitle>
-                            <ProjectDescriptionListTitle>Functionality</ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Create .db file</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Use existing .db file</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Create table</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Drop table</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Insert</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Update</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Delete row</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Print table</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Print all tables</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
-                            <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
-                            <ProjectDescriptionList>
-                                <ProjectDescriptionListItem>Deployment: Local CMD</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Wrappers: SQLITE3</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Language: C++</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
-                                <ProjectDescriptionListItem>Data storage: .db</ProjectDescriptionListItem>
-                            </ProjectDescriptionList>
+                            <DesktopListContainerDescription show={DesktopDescriptionFourActive}>
+                                <ProjectDescriptionListTitle>Functionality</ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Create .db file</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Use existing .db file</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Create table</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Drop table</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Insert</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Update</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Delete row</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Print table</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Print all tables</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                                <ProjectDescriptionListTitle>Technologies Used</ProjectDescriptionListTitle>
+                                <ProjectDescriptionList>
+                                    <ProjectDescriptionListItem>Deployment: Local CMD</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Wrappers: SQLITE3</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Language: C++</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Version Control: GitHub</ProjectDescriptionListItem>
+                                    <ProjectDescriptionListItem>Data storage: .db</ProjectDescriptionListItem>
+                                </ProjectDescriptionList>
+                            </DesktopListContainerDescription>
                         </ProjectsDescription>
                     </ProjectsTitleDesContainer>
                     <ProjectsImage src={DbImg} />

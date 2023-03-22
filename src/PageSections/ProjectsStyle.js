@@ -68,6 +68,7 @@ export const ProjectsDescription = styled.div`
     font-size: 20px;
     text-indent: 15%;
     margin-top: 5vh;
+    display: block;
     @media screen and (max-width: 550px){
         display: none;
         font-size: 16px;
@@ -87,6 +88,34 @@ export const ProjectsDescription = styled.div`
 export const IpadDescription = styled.div`
 
 `;
+
+export const DesktopDescriptionButton = styled.div`
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 1px solid ${AccentColorGreen};
+    cursor: pointer;
+    transition: 0.2s all ease;
+    transform: scale(1);
+    :hover{
+        box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -webkit-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        -moz-box-shadow: 0px 0px 60px 1px rgba(50,222,132,0.75);
+        background: #32de84;
+        transform: scale(1.1);
+    }
+`;
+
+export const DesktopDescriptionButtonText = styled.div`
+    text-align: center;
+    color: ${(props) => (props.active ? "black" : "white")};
+    margin: auto;
+`;
+
 
 export const ProjectsTitleDesContainer = styled.div`
     display: flex;
@@ -164,6 +193,12 @@ export const ProjectsCardTitle = styled.div`
     
 `;
 
+export const DesktopListContainerDescription = styled.div`
+    transition: 3s all ease;
+    display: ${(props) => (props.show ? "block" : "none")};
+
+`;
+
 export const ProjectsImage = styled.img`
     width: 100%;
     height: 100%;
@@ -226,6 +261,7 @@ export const MOBILEProjectCardDescriptiontText = styled.div`
 
 export const MOBILEProjectCardDescriptionLink = styled.a`
     text-decoration: underline;
+    text-align: center;
     color: ${AccentColorGreen};
     :visited{
         text-decoration: none;
