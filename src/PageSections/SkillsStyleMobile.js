@@ -75,7 +75,7 @@ export const IconWithText = styled.div`
     border-radius: 50%;
     
     @media screen and (max-width: 900px){
-        right: 5%;
+        right: 6.5%;
     }
     
 `;
@@ -90,7 +90,7 @@ export const Glow = styled.div`
     background: linear-gradient(90deg, rgba(63,212,251,1) 0%, rgba(50,222,132,1) 53%, rgba(255,235,0,1) 76%, rgba(255,46,0,1) 100%);
     animation: ${BackgroundAnim} 3s linear infinite;
     @media screen and (max-width: 550px){
-        left: 12%;
+        left: 10%;
     }
 `;
 export const IconText = styled.div`
