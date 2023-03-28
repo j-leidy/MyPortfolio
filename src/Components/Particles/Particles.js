@@ -21,7 +21,7 @@ const ParticlesComponent = ({ active, entered }) => {
                         "value": entered ? 20 : 80,
                         "density": {
                             "enable": true,
-                            "value_area": 500
+                            "value_area": 800
                         }
                     },
                     "color": {
