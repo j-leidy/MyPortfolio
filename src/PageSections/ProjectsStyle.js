@@ -199,11 +199,13 @@ export const DesktopListContainerDescription = styled.div`
 
 `;
 
+
 export const ProjectsImage = styled.img`
     width: 100%;
     height: 100%;
     border-radius: 0px 20px 20px 20px;
     transition: 1s all ease;
+    overflow: auto;
     :hover{
         background: none;
     }
