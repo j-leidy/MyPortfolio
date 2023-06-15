@@ -9,6 +9,10 @@ body {
   overflow-y: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   height: 100%;
 
