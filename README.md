@@ -145,10 +145,6 @@ function App() {
 
 </details>
 
-## You can also directly visit the live website:
-
-https://leidydev.netlify.app/
-
 **Thanks for stopping by!**
 
 ### John
